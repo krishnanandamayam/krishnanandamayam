@@ -151,6 +151,7 @@ dialog .hint { color: var(--ink-2); font-size: .85rem; }
 dialog menu { display: flex; justify-content: flex-end; gap: .6rem; padding: 0; margin: 1rem 0 0; }
 
 @media (max-width: 40rem) {
+  html { scroll-padding-top: 7rem; }
   .brand { display: none; }
   .toolbar { gap: .4rem; font-size: .85rem; }
   select { max-width: 9.5rem; }

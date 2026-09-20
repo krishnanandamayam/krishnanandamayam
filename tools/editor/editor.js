@@ -222,11 +222,16 @@
     const tokens = src.split(/(\s+)/);
     const words = tokens.map((t, i) => ({ t, i })).filter((x) => x.t.trim() && norm(x.t));
     const mine = lastPreview ? lastPreview.saraLaTelugu.join(' ').split(/\s+/).map(norm).filter(Boolean) : [];
-    const keep = lcsKeep(words.map((w) => norm(w.t)), mine);
+    const theirs = words.map((w) => norm(w.t));
+    const keep = lcsKeep(theirs, mine);
     const differs = new Set(words.filter((_, k) => !keep.has(k)).map((w) => w.i));
     tokens.forEach((t, i) => box.append(differs.has(i) && mine.length ? Object.assign(document.createElement('mark'), { textContent: t }) : t));
+    const keptMine = lcsKeep(mine, theirs);
+    const onlyMine = mine.filter((_, k) => !keptMine.has(k));
     $('#source-note').textContent = mine.length
-      ? `${differs.size} of ${words.length} words differ from the సరళ తెలుగు rendition of your HK. A difference is a place to look — either side may be the one that is wrong.`
+      ? `${differs.size} of ${words.length} sheet words (marked) are not in the సరళ తెలుగు rendition of your HK`
+        + (onlyMine.length ? `; ${onlyMine.length} word${onlyMine.length === 1 ? "" : "s"} of your rendition not in the sheet: ${onlyMine.slice(0, 12).join(' · ')}${onlyMine.length > 12 ? ' …' : ''}` : '')
+        + '. A difference is a place to look — either side may be the one that is wrong.'
       : '';
   }
 
