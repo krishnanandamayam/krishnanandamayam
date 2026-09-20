@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-script="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE_EN}}</title>
+<meta name="description" content="{{TITLE_EN}}: a stotra grantha readable in Telugu, Devanagari, Kannada, Tamil, Malayalam, Odia, Gujarati and other scripts, with meanings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="print.css" media="print">
+<style id="page-size">@page { size: A4; }</style>
+</head>
+<body>
+
+<div class="toolbar" role="toolbar" aria-label="Reading options">
+  <a class="brand" href="#top">{{TITLE_EN}}</a>
+  <label class="field">
+    <span class="sr">Script</span>
+    <select id="script" aria-label="Script">{{SCRIPT_OPTIONS}}</select>
+  </label>
+  <div class="seg" role="group" aria-label="Anusvara style">
+    <button type="button" id="mode-saraLa" data-mode="saraLa" aria-pressed="true" title="Simple: anusvara for nasals (గంగా)"><span class="indic" data-ui="saraLa">సరళ</span></button>
+    <button type="button" id="mode-zuddha" data-mode="zuddha" aria-pressed="false" title="Precise: class nasals written out (గఙ్గా)"><span class="indic" data-ui="zuddha">శుద్ధ</span></button>
+  </div>
+  <div class="seg" role="group" aria-label="Show all meanings">
+    <button type="button" id="all-en" aria-pressed="false" title="Show every English meaning">English</button>
+    <button type="button" id="all-te" aria-pressed="false" title="Show every Telugu meaning" hidden>తెలుగు</button>
+  </div>
+  <span class="spacer"></span>
+  <button type="button" class="btn" id="open-toc">Contents</button>
+  <button type="button" class="btn primary" id="open-print">Print / PDF</button>
+</div>
+
+<header class="masthead" id="top">
+  <p class="invocation indic" aria-hidden="true">ॐ</p>
+  <h1 class="indic" data-e="title">{{TITLE_LINES}}</h1>
+  <p class="title-en">{{TITLE_EN}}</p>
+  {{AUTHOR}}
+</header>
+
+<nav class="toc" id="toc" aria-label="Contents" data-part="toc">
+  <h2>Contents</h2>
+  <ol>{{TOC}}</ol>
+</nav>
+
+{{PREFACES}}
+
+<main id="grantha" lang="{{LANG}}">
+{{BODY}}
+</main>
+
+<footer class="colophon">
+  <p class="indic" data-e="title" data-inline></p>
+  <p>Every script on this page is generated from one Harvard-Kyoto text, using
+     <a href="https://www.aksharamukha.com/">Aksharamukha</a>.</p>
+</footer>
+
+<dialog id="print-dialog" aria-labelledby="print-title">
+  <form method="dialog" id="print-form">
+    <h2 id="print-title">Print / save as PDF</h2>
+    <label class="row">Script
+      <select name="script" id="print-script">{{SCRIPT_OPTIONS}}</select>
+    </label>
+    <fieldset class="row">
+      <legend>Anusvara style</legend>
+      <label><input type="radio" name="mode" value="saraLa" checked> సరళ · simple (గంగా)</label>
+      <label><input type="radio" name="mode" value="zuddha"> శుద్ధ · precise (గఙ్గా)</label>
+    </fieldset>
+    <fieldset class="row">
+      <legend>Paper</legend>
+      <label><input type="radio" name="paper" value="A4" checked> A4</label>
+      <label><input type="radio" name="paper" value="letter"> US Letter</label>
+    </fieldset>
+    <fieldset class="row">
+      <legend>Include</legend>
+      <label><input type="checkbox" name="en" checked> English meanings</label>
+      <label id="print-te-row" hidden><input type="checkbox" name="te"> Telugu meanings</label>
+      <label><input type="checkbox" name="toc" checked> Contents page</label>
+      <span id="print-prefaces"></span>
+    </fieldset>
+    <fieldset class="row">
+      <legend>Sections</legend>
+      <label><input type="checkbox" id="print-all" checked> Whole grantha</label>
+      <div id="print-parts" class="parts" hidden></div>
+    </fieldset>
+    <p class="hint">In the print window choose “Save as PDF”. The paper size above is applied for you.</p>
+    <menu>
+      <button type="button" class="btn" id="print-cancel">Cancel</button>
+      <button type="submit" class="btn primary" id="print-go">Print</button>
+    </menu>
+  </form>
+</dialog>
+
+<script type="application/json" id="cfg">{{CONFIG}}</script>
+<script src="app.js"></script>
+</body>
+</html>

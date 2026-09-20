@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HK editor · Sri Krishnanandamayam</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Telugu:wght@400;600&family=Noto+Serif:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="/edit/editor.css">
+</head>
+<body>
+
+<aside class="side">
+  <header>
+    <strong>HK editor</strong>
+    <a href="/" target="reader">open reader ↗</a>
+  </header>
+  <input type="search" id="search" placeholder="Verse no. or HK text…" aria-label="Find a verse">
+  <div class="filters">
+    <label><input type="checkbox" id="f-issues"> has issues <span id="n-issues" class="count"></span></label>
+    <label><input type="checkbox" id="f-dirty"> edited, uncommitted <span id="n-dirty" class="count"></span></label>
+  </div>
+  <nav id="list" aria-label="Entries"></nav>
+</aside>
+
+<main>
+  <div class="bar">
+    <button type="button" id="prev" title="Previous (Alt+↑)">↑ Prev</button>
+    <button type="button" id="next" title="Next (Alt+↓)">Next ↓</button>
+    <h1 id="heading">…</h1>
+    <span id="badge" class="badge"></span>
+    <span class="grow"></span>
+    <button type="button" id="revert" title="Put back the text of the last git commit">Revert to committed</button>
+    <button type="button" id="save" class="primary" title="Save (⌘S / Ctrl+S)">Save</button>
+  </div>
+
+  <div class="cols">
+    <section class="work">
+      <div id="hk-wrap">
+        <label class="lbl" for="hk">Harvard-Kyoto <span class="muted">— ground truth</span></label>
+        <div class="hk-box">
+          <div id="hk-marks" class="hk-marks" aria-hidden="true"></div>
+          <textarea id="hk" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></textarea>
+        </div>
+        <div id="zuddha-hint" class="hint-row" hidden>
+          <span>Not in శుద్ధ form.</span>
+          <button type="button" id="normalize">Normalize (to_zuddha)</button>
+        </div>
+        <ul id="issues" class="issues"></ul>
+
+        <div class="preview-head">
+          <span class="lbl">Rendition</span>
+          <select id="pv-script" aria-label="Preview script"></select>
+          <div class="seg">
+            <button type="button" data-pv-mode="zuddha" aria-pressed="true">శుద్ధ</button>
+            <button type="button" data-pv-mode="saraLa" aria-pressed="false">సరళ</button>
+          </div>
+        </div>
+        <div id="preview" class="preview"></div>
+      </div>
+
+      <div id="text-wrap" hidden>
+        <label class="lbl" for="text">Preface text</label>
+        <textarea id="text" class="prose-input" rows="14"></textarea>
+      </div>
+
+      <div id="en-wrap">
+        <label class="lbl" for="en">English meaning</label>
+        <textarea id="en" class="prose-input" rows="6"></textarea>
+      </div>
+      <div id="te-wrap">
+        <label class="lbl" for="te">తెలుగు తాత్పర్యం <span class="muted">— Telugu meaning</span></label>
+        <textarea id="te" class="prose-input te" rows="6" lang="te"></textarea>
+      </div>
+    </section>
+
+    <section class="ref">
+      <span class="lbl">Sheet’s Telugu column <span class="muted">— reference only, never saved</span></span>
+      <div id="source" class="source" lang="te"></div>
+      <p class="muted small" id="source-note"></p>
+
+      <details class="cheat">
+        <summary>Harvard-Kyoto cheat sheet</summary>
+        <table>
+          <tr><td>a A i I u U</td><td>అ ఆ ఇ ఈ ఉ ఊ</td></tr>
+          <tr><td>R RR lR</td><td>ఋ ౠ ఌ</td></tr>
+          <tr><td>e ai o au</td><td>ఏ ఐ ఓ ఔ</td></tr>
+          <tr><td>E O</td><td>ఎ ఒ (short, Telugu)</td></tr>
+          <tr><td>M H</td><td>ం ః</td></tr>
+          <tr><td>k kh g gh G</td><td>క ఖ గ ఘ ఙ</td></tr>
+          <tr><td>c ch j jh J</td><td>చ ఛ జ ఝ ఞ</td></tr>
+          <tr><td>T Th D Dh N</td><td>ట ఠ డ ఢ ణ</td></tr>
+          <tr><td>t th d dh n</td><td>త థ ద ధ న</td></tr>
+          <tr><td>p ph b bh m</td><td>ప ఫ బ భ మ</td></tr>
+          <tr><td>y r l v L</td><td>య ర ల వ ళ</td></tr>
+          <tr><td>z S s h</td><td>శ ష స హ</td></tr>
+          <tr><td>.  ..  '</td><td>।  ॥  ఽ</td></tr>
+        </table>
+      </details>
+    </section>
+  </div>
+
+  <footer class="git">
+    <div id="git-status"></div>
+    <pre id="git-cmd"></pre>
+  </footer>
+</main>
+
+<script src="/edit/editor.js"></script>
+</body>
+</html>

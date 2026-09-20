@@ -1,0 +1,56 @@
+/* The paper size itself is set by <style id="page-size">, which app.js rewrites from the
+   print dialog (A4 or US Letter). Everything else about the printed book is here. */
+
+@page {
+  margin: 20mm 18mm 22mm;
+  @bottom-center { content: counter(page); font: 9pt "Noto Serif", Georgia, serif; color: #555; }
+}
+@page :first {
+  @bottom-center { content: none; }
+}
+
+:root {
+  --paper: #fff; --paper-2: #fff; --ink: #000; --ink-2: #444; --rule: #bbb;
+  --accent: #6d1a12; --gold: #8a6a1f;
+}
+html { scroll-behavior: auto; }
+body { background: #fff; color: #000; font-size: 10.5pt; line-height: 1.5; }
+
+.toolbar, dialog, .m summary, .colophon a { display: none !important; }
+a { color: inherit; text-decoration: none; }
+
+.masthead, .toc, .preface, main, .colophon { max-width: none; padding-inline: 0; }
+
+/* title page */
+.masthead { break-after: page; padding-top: 32vh; }
+h1 { font-size: 30pt; }
+.invocation { font-size: 22pt; }
+
+.toc { break-after: page; border: 0; }
+.toc ol { columns: 1; }
+.toc li { border-bottom: 1px dotted #bbb; }
+.preface { break-after: page; padding-top: 0; }
+
+.sec { break-before: page; padding-top: 0; }
+.sec:first-of-type, .sec#s00 { break-before: auto; }
+.sec > h2 { font-size: 16pt; break-after: avoid; }
+.sec-en { break-after: avoid; }
+
+.verse { break-inside: avoid; padding: 9pt 0 8pt 30pt; border-bottom: 0.5pt solid #ccc; background: none !important; }
+.no { top: 11pt; font-size: 8pt; min-width: 22pt; border-color: #999; }
+.lines { font-size: 12.5pt; }
+.indic { line-height: 1.75; }
+.ln { break-inside: avoid; }
+/* a verse too long for one page has to be allowed to break */
+.verse.long { break-inside: auto; }
+
+.meanings { display: block; margin-top: 4pt; }
+.m { display: block; }
+.m-body { margin-top: 3pt; font-size: 9.5pt; line-height: 1.45; padding-left: 8pt; border-left: 1.5pt solid #ccc; }
+.m-body p { margin: 0 0 3pt; orphans: 2; widows: 2; }
+
+/* choices from the print dialog */
+body.print-no-en .m-en, body.print-no-te .m-te, body.print-no-toc .toc { display: none !important; }
+[data-print-skip] { display: none !important; }
+
+.colophon { padding-block: 24pt 0; font-size: 8.5pt; }

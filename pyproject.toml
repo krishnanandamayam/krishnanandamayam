@@ -1,0 +1,19 @@
+[project]
+name = "krishnanandamayam"
+version = "0.1.0"
+description = "Sri Krishnanandamayam: a multi-script stotra grantha, built from one Harvard-Kyoto ground truth"
+requires-python = ">=3.11,<3.14"  # aksharamukha imports ast.Str, removed in 3.14
+dependencies = [
+    "aksharamukha>=2.3",
+    "ruamel.yaml>=0.18",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "openpyxl>=3.1",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

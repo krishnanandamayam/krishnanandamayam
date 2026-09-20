@@ -1,0 +1,160 @@
+:root {
+  --paper: #fbf6ea;
+  --paper-2: #f4ecd9;
+  --ink: #2a1d12;
+  --ink-2: #6b5a48;
+  --rule: #e2d5b8;
+  --accent: #8a2318;
+  --accent-ink: #fff8ea;
+  --gold: #b8862b;
+  --indic-font: "Noto Serif Telugu";
+  --text-font: "Noto Serif", Georgia, "Times New Roman", serif;
+  --measure: 44rem;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #17120d;
+    --paper-2: #211a12;
+    --ink: #efe4cf;
+    --ink-2: #b3a58d;
+    --rule: #3a2f21;
+    --accent: #e39a5b;
+    --accent-ink: #1a120a;
+    --gold: #d2a54a;
+  }
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.0625rem/1.65 var(--text-font);
+}
+a { color: var(--accent); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+/* Text in the chosen script. Conjunct-heavy scripts need the extra leading. */
+.indic { font-family: var(--indic-font), var(--text-font); line-height: 1.9; }
+html[data-script="roman"] .indic { line-height: 1.7; font-style: italic; }
+html[data-script="roman"] h1.indic, html[data-script="roman"] h2.indic { font-style: normal; }
+
+/* ---------- toolbar ---------- */
+.toolbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .6rem;
+  padding: .5rem max(1rem, calc((100vw - 64rem) / 2));
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+  font-size: .9rem;
+}
+.brand { font-weight: 600; color: var(--accent); text-decoration: none; margin-right: .4rem; white-space: nowrap; }
+.spacer { flex: 1 1 0; }
+select, .btn, .seg button {
+  font: inherit; color: var(--ink); background: var(--paper-2);
+  border: 1px solid var(--rule); border-radius: .5rem; padding: .35rem .7rem; min-height: 2.25rem;
+  cursor: pointer;
+}
+select { max-width: 13.5rem; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.seg { display: inline-flex; }
+.seg button { border-radius: 0; margin-left: -1px; }
+.seg button:first-child { border-radius: .5rem 0 0 .5rem; margin-left: 0; }
+.seg button:last-child, .seg button:has(+ [hidden]) { border-radius: 0 .5rem .5rem 0; }
+.seg button:only-child, .seg button:first-child:has(+ [hidden]) { border-radius: .5rem; }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); position: relative; }
+.seg button .indic { line-height: 1.3; font-style: normal !important; }
+:is(select, button, summary, a):focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+body.loading .lines, body.loading h1, body.loading h2.indic { opacity: .45; transition: opacity .15s; }
+
+/* ---------- page ---------- */
+.masthead, .toc, .preface, main, .colophon {
+  max-width: var(--measure); margin-inline: auto; padding-inline: 1rem;
+}
+.masthead { text-align: center; padding-block: 3.5rem 2.5rem; }
+.invocation { font-size: 2rem; color: var(--gold); margin: 0 0 .5rem; line-height: 1; }
+h1 { font-size: clamp(2rem, 7vw, 3.1rem); font-weight: 600; color: var(--accent); margin: 0; line-height: 1.5; }
+.title-en { margin: .3rem 0 0; letter-spacing: .14em; text-transform: uppercase; font-size: .85rem; color: var(--ink-2); }
+.author { margin: 1.4rem 0 0; font-size: 1.15rem; }
+.author-en { margin: 0; color: var(--ink-2); }
+.ln { display: block; }
+
+.toc { border-block: 1px solid var(--rule); padding-block: 1.25rem; }
+.toc h2, .preface > h2 { font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; margin: 0 0 .75rem; }
+.preface > h2[lang="te"] { font-size: 1.2rem; letter-spacing: 0; text-transform: none; }
+.toc ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 2rem; }
+.toc li { break-inside: avoid; display: flex; gap: .5rem; align-items: baseline; padding: .3rem 0; }
+.toc a { text-decoration: none; flex: 1; }
+.toc a:hover { text-decoration: underline; }
+.toc .indic { line-height: 1.6; }
+.toc-en { display: block; color: var(--ink-2); font-size: .82rem; line-height: 1.35; }
+.toc .indic + .toc-en { margin-top: -.15rem; }
+.toc-range { color: var(--ink-2); font-size: .8rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.preface { padding-block: 2.5rem 1rem; }
+.prose p { margin: 0 0 .9rem; }
+.preface blockquote { margin: 1.2rem 0; padding: .2rem 0 .2rem 1rem; border-left: 3px solid var(--gold); font-size: 1.1rem; }
+
+.sec { padding-top: 2.75rem; }
+.sec > h2 { text-align: center; color: var(--accent); font-size: 1.55rem; font-weight: 600; margin: 0; }
+.sec > h2::after { content: "❖"; display: block; color: var(--gold); font-size: .9rem; line-height: 1.6; }
+.sec-en { text-align: center; color: var(--ink-2); margin: 0 0 1rem; font-size: .95rem; }
+
+.verse { position: relative; padding: 1.4rem 0 1.1rem 3.25rem; border-bottom: 1px solid var(--rule); }
+.verse:target { background: linear-gradient(90deg, color-mix(in srgb, var(--gold) 16%, transparent), transparent 70%); }
+.no {
+  position: absolute; left: 0; top: 1.55rem; min-width: 2.4rem; text-align: center;
+  font-size: .8rem; font-variant-numeric: tabular-nums; color: var(--ink-2); text-decoration: none;
+  border: 1px solid var(--rule); border-radius: 1rem; padding: .05rem .4rem; line-height: 1.5;
+}
+.no:hover { color: var(--accent); border-color: var(--accent); }
+.lines { font-size: 1.25rem; overflow-wrap: anywhere; }
+.lines .ln { padding-left: 1.2em; text-indent: -1.2em; }
+
+.meanings { display: flex; flex-wrap: wrap; gap: .25rem .75rem; margin-top: .6rem; }
+.m { flex: 0 1 auto; }
+.m[open] { flex-basis: 100%; }
+.m summary {
+  display: inline-block; list-style: none; cursor: pointer; user-select: none;
+  font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2);
+  border: 1px solid var(--rule); border-radius: 1rem; padding: .1rem .7rem;
+}
+.m summary::-webkit-details-marker { display: none; }
+.m summary::before { content: "+ "; }
+.m[open] summary::before { content: "– "; }
+.m[open] summary { color: var(--accent); border-color: var(--accent); }
+.m-te summary { text-transform: none; letter-spacing: 0; font-size: .85rem; }
+.m-body { margin-top: .6rem; padding-left: 1rem; border-left: 2px solid var(--rule); color: var(--ink); font-size: 1rem; }
+.m-body p { margin: 0 0 .6rem; }
+
+.colophon { text-align: center; color: var(--ink-2); font-size: .85rem; padding-block: 3rem 4rem; }
+.colophon .indic { color: var(--gold); font-size: 1.1rem; margin: 0; }
+
+/* ---------- print dialog ---------- */
+dialog {
+  border: 1px solid var(--rule); border-radius: .9rem; background: var(--paper); color: var(--ink);
+  padding: 1.4rem 1.5rem; width: min(30rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem);
+  font-size: .95rem;
+}
+dialog::backdrop { background: rgb(20 12 4 / .55); }
+dialog h2 { margin: 0 0 1rem; font-size: 1.2rem; color: var(--accent); }
+dialog .row { display: block; border: 0; padding: 0; margin: 0 0 1rem; }
+dialog legend, dialog label.row { font-weight: 600; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); padding: 0; }
+dialog label.row select { display: block; margin-top: .3rem; width: 100%; max-width: none; text-transform: none; letter-spacing: 0; font-weight: 400; }
+dialog fieldset label { display: block; padding: .15rem 0; }
+dialog .parts { max-height: 11rem; overflow: auto; border: 1px solid var(--rule); border-radius: .5rem; padding: .4rem .7rem; margin-top: .4rem; }
+dialog .hint { color: var(--ink-2); font-size: .85rem; }
+dialog menu { display: flex; justify-content: flex-end; gap: .6rem; padding: 0; margin: 1rem 0 0; }
+
+@media (max-width: 40rem) {
+  .brand { display: none; }
+  .toolbar { gap: .4rem; font-size: .85rem; }
+  select { max-width: 9.5rem; }
+  .verse { padding-left: 0; padding-top: 2.6rem; }
+  .no { top: .9rem; }
+  .lines { font-size: 1.15rem; }
+}

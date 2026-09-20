@@ -1,0 +1,126 @@
+# The scripts the site offers. To add one: copy a block, set `name` to the Aksharamukha script
+# name (https://www.aksharamukha.com/documentation), pick a Google Font, and rebuild.
+#
+# For each mode:
+#   hk        which HK convention is fed to the transliterator: "zuddha" or "saraLa"
+#   nativize  Aksharamukha's nativize flag. It means something different for every script, so the
+#             anusvara behaviour never relies on it; it is on only where a script's own
+#             orthography needs it (short e/o marks, য়, Tamil without superscripts).
+#   post      Aksharamukha post-options
+
+default = "telugu"
+
+[[script]]
+id = "telugu"
+name = "Telugu"
+label = "తెలుగు"
+english = "Telugu"
+lang = "te"
+font = "Noto Serif Telugu"
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }
+
+[[script]]
+id = "devanagari"
+name = "Devanagari"
+label = "देवनागरी"
+english = "Devanagari"
+lang = "sa"
+font = "Noto Serif Devanagari"
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }
+
+[[script]]
+id = "kannada"
+name = "Kannada"
+label = "ಕನ್ನಡ"
+english = "Kannada"
+lang = "kn"
+font = "Noto Serif Kannada"
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }
+
+[[script]]
+id = "tamil"
+name = "Tamil"
+label = "தமிழ்"
+english = "Tamil"
+lang = "ta"
+font = "Noto Serif Tamil"
+# Tamil has one letter for ka kha ga gha. zuddha marks them with superscript numerals;
+# saraLa is plain Tamil. Tamil writes class nasals natively, so both take zuddha HK.
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "zuddha", nativize = true, post = ["TamilRemoveApostrophe", "TamilRemoveNumbers"] }
+
+[[script]]
+id = "malayalam"
+name = "Malayalam"
+label = "മലയാളം"
+english = "Malayalam"
+lang = "ml"
+font = "Noto Serif Malayalam"
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }
+
+[[script]]
+id = "odia"
+name = "Oriya"
+label = "ଓଡ଼ିଆ"
+english = "Odia"
+lang = "or"
+font = "Noto Serif Oriya"
+zuddha = { hk = "zuddha", nativize = true }
+saraLa = { hk = "saraLa", nativize = true }
+
+[[script]]
+id = "gujarati"
+name = "Gujarati"
+label = "ગુજરાતી"
+english = "Gujarati"
+lang = "gu"
+font = "Noto Serif Gujarati"
+zuddha = { hk = "zuddha", nativize = true }
+saraLa = { hk = "saraLa", nativize = true }
+
+[[script]]
+id = "bengali"
+name = "Bengali"
+label = "বাংলা"
+english = "Bengali"
+lang = "bn"
+font = "Noto Serif Bengali"
+zuddha = { hk = "zuddha", nativize = true }
+saraLa = { hk = "saraLa", nativize = true }
+
+[[script]]
+id = "gurmukhi"
+name = "Gurmukhi"
+label = "ਗੁਰਮੁਖੀ"
+english = "Gurmukhi"
+lang = "pa"
+font = "Noto Serif Gurmukhi"
+zuddha = { hk = "zuddha", nativize = true }
+saraLa = { hk = "saraLa", nativize = true }
+# Aksharamukha writes the pranava as Ik Onkar, which belongs to Sikh scripture.
+replace = { "ੴ" = "ਓਂ" }
+
+[[script]]
+id = "grantha"
+name = "Grantha"
+label = "𑌗𑍍𑌰𑌨𑍍𑌥"
+english = "Grantha"
+lang = "sa"
+font = "Noto Sans Grantha"
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }
+
+[[script]]
+id = "roman"
+name = "IAST"
+label = "Roman (IAST)"
+english = "Roman with diacritics"
+lang = "sa-Latn"
+font = "Noto Serif"
+roman = true
+zuddha = { hk = "zuddha", nativize = false }
+saraLa = { hk = "saraLa", nativize = false }

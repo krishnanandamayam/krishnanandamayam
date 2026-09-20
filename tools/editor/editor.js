@@ -1,0 +1,297 @@
+/* HK editor. Talks to tools/serve.py; saves one entry at a time into data/grantha.yaml. */
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const FIELDS = ['hk', 'en', 'te', 'text'];
+  const NON_HK = /[BCFKPQVWXYZfqwx]/g;
+  const TE_PREFACE = 'ముందుమాట (Telugu preface)';
+
+  let entries = [];       // rows of the list
+  let current = null;     // the loaded entry { id, type, fields, committed, sourceTelugu }
+  let pv = { script: 'telugu', mode: 'zuddha' };
+  let lastPreview = null;
+
+  const api = async (path, body) => {
+    const r = await fetch(path, body === undefined ? {} : {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || r.statusText);
+    return data;
+  };
+
+  // ---- list ---------------------------------------------------------------------------------
+  function visible(e) {
+    const q = $('#search').value.trim();
+    if ($('#f-issues').checked && !e.issues) return false;
+    if ($('#f-dirty').checked && !e.uncommitted) return false;
+    if (!q) return true;
+    return e.no === q || e.id === q || e.label.toLowerCase().includes(q.toLowerCase()) || (/^\d/.test(q) && e.no.startsWith(q));
+  }
+
+  function drawList() {
+    const list = $('#list');
+    list.replaceChildren();
+    let group = null;
+    const shown = entries.filter(visible);
+    const groups = [...new Set(entries.map((e) => e.group))];
+    if (!groups.includes(TE_PREFACE)) groups.splice(1, 0, TE_PREFACE);
+    for (const g of groups) {
+      const rows = shown.filter((e) => e.group === g);
+      if (!rows.length && g !== TE_PREFACE) continue;
+      const h = document.createElement('h3');
+      h.textContent = g;
+      list.append(h);
+      for (const e of rows) {
+        const a = document.createElement('a');
+        a.href = '#' + e.id;
+        a.dataset.id = e.id;
+        if (current && current.id === e.id) a.setAttribute('aria-current', 'true');
+        const n = Object.assign(document.createElement('span'), { className: 'n', textContent: e.no || (e.type === 'section' ? '§' : e.type === 'verse' ? '·' : '¶') });
+        const t = Object.assign(document.createElement('span'), { className: 't', textContent: e.label || '(empty)' });
+        const f = Object.assign(document.createElement('span'), { className: 'f' });
+        if (e.issues) f.append(Object.assign(document.createElement('i'), { className: 'dot issue', title: `${e.issues} finding(s)` }));
+        if (e.uncommitted) f.append(Object.assign(document.createElement('i'), { className: 'dot dirty', title: 'edited, not committed' }));
+        a.append(n, t, f);
+        list.append(a);
+      }
+      if (g === TE_PREFACE) {
+        for (const [kind, label] of [['prose', '+ add a paragraph'], ['sloka', '+ add a sloka (HK)']]) {
+          const a = Object.assign(document.createElement('a'), { href: '#', textContent: '' });
+          a.append(Object.assign(document.createElement('span'), { className: 'n', textContent: '' }),
+                   Object.assign(document.createElement('span'), { className: 't', textContent: label }));
+          a.addEventListener('click', async (ev) => {
+            ev.preventDefault();
+            const { id } = await api('/api/preface/te/add', { type: kind });
+            await refreshList();
+            location.hash = id;
+          });
+          list.append(a);
+        }
+      }
+    }
+    $('#n-issues').textContent = `(${entries.filter((e) => e.issues).length})`;
+    $('#n-dirty').textContent = `(${entries.filter((e) => e.uncommitted).length})`;
+  }
+
+  function drawGit(git) {
+    const box = $('#git-status');
+    if (!git.repo) { box.textContent = 'Not a git repository yet.'; $('#git-cmd').textContent = ''; return; }
+    const n = entries.filter((e) => e.uncommitted).length;
+    const dirty = git.dirty.some((l) => l.includes('data/grantha.yaml'));
+    box.textContent = dirty
+      ? `${n} edited entr${n === 1 ? 'y' : 'ies'} saved in data/grantha.yaml, not yet committed (branch ${git.branch}). This editor never runs git — when you are ready:`
+      : `data/grantha.yaml matches the last commit (branch ${git.branch}).`;
+    $('#git-cmd').textContent = dirty
+      ? 'cd ~/krishnanandamayam\ngit diff data/grantha.yaml\ngit commit -m "Correct HK" data/grantha.yaml\ngit push'
+      : '';
+  }
+
+  async function refreshList() {
+    const data = await api('/api/entries');
+    entries = data.entries;
+    drawList();
+    drawGit(data.git);
+  }
+
+  // ---- entry --------------------------------------------------------------------------------
+  const values = () => Object.fromEntries(FIELDS.filter((k) => k in current.fields).map((k) => [k, $('#' + k).value.replace(/\r\n/g, '\n').replace(/^\n+|\n+$/g, '')]));
+  const isDirty = () => !!current && FIELDS.some((k) => k in current.fields && values()[k] !== current.fields[k]);
+  const isUncommitted = () => !!current && !!current.committed && FIELDS.some((k) => k in current.fields && (current.committed[k] ?? '') !== current.fields[k]);
+
+  function drawBadge() {
+    const b = $('#badge');
+    const state = isDirty() ? 'unsaved' : isUncommitted() ? 'uncommitted' : 'saved';
+    b.className = 'badge ' + state;
+    b.textContent = { unsaved: 'unsaved changes', uncommitted: 'saved · not committed', saved: current && current.committed ? 'matches last commit' : 'saved' }[state];
+    $('#save').disabled = !isDirty();
+    const canRevert = current && current.committed && FIELDS.some((k) => k in current.fields && (current.committed[k] ?? '') !== values()[k]);
+    $('#revert').disabled = !canRevert;
+  }
+
+  function fill(entry) {
+    current = entry;
+    const f = entry.fields;
+    for (const k of FIELDS) $('#' + k).value = f[k] ?? '';
+    $('#hk-wrap').hidden = !('hk' in f);
+    $('#text-wrap').hidden = !('text' in f);
+    $('#en-wrap').hidden = !('en' in f);
+    $('#te-wrap').hidden = !('te' in f);
+    $('.ref').hidden = !('hk' in f);
+    const kind = { verse: 'Verse', section: 'Section title', sloka: 'Preface sloka', prose: 'Preface paragraph' }[entry.type];
+    $('#heading').textContent = `${kind} ${entry.no || ''}`.trim() + `  ·  ${entry.id}`;
+    document.title = `${entry.no || entry.id} · HK editor`;
+    for (const a of $$('#list a[data-id]')) a.toggleAttribute('aria-current', false);
+    const here = $(`#list a[data-id="${CSS.escape(entry.id)}"]`);
+    if (here) { here.setAttribute('aria-current', 'true'); here.scrollIntoView({ block: 'nearest' }); }
+    drawMarks();
+    drawBadge();
+    lastPreview = null;
+    if ('hk' in f) preview(); else { $('#preview').replaceChildren(); drawSource(); }
+  }
+
+  async function open(id) {
+    if (current && current.id === id) return;
+    if (isDirty() && !confirm('This entry has unsaved changes. Leave without saving?')) {
+      history.replaceState(null, '', '#' + current.id);
+      return;
+    }
+    try { fill(await api('/api/entry/' + encodeURIComponent(id))); }
+    catch (err) { alert(err.message); }
+  }
+
+  async function save() {
+    if (!isDirty()) return;
+    $('#save').disabled = true;
+    $('#save').textContent = 'Saving…';
+    try {
+      const data = await api('/api/entry/' + encodeURIComponent(current.id), values());
+      current = data;
+      for (const k of FIELDS) if (k in data.fields) $('#' + k).value = data.fields[k];
+      await refreshList();
+      const here = $(`#list a[data-id="${CSS.escape(current.id)}"]`);
+      if (here) here.setAttribute('aria-current', 'true');
+    } catch (err) { alert('Not saved: ' + err.message); }
+    $('#save').textContent = 'Save';
+    drawMarks();
+    drawBadge();
+  }
+
+  // ---- HK box: underline letters that are not Harvard-Kyoto ----------------------------------
+  function drawMarks() {
+    const box = $('#hk-marks');
+    box.replaceChildren();
+    const text = $('#hk').value;
+    let pos = 0;
+    for (const m of text.matchAll(NON_HK)) {
+      box.append(text.slice(pos, m.index), Object.assign(document.createElement('mark'), { textContent: m[0] }));
+      pos = m.index + 1;
+    }
+    box.append(text.slice(pos) + '\n');
+    box.scrollTop = $('#hk').scrollTop;
+  }
+  $('#hk').addEventListener('scroll', () => { $('#hk-marks').scrollTop = $('#hk').scrollTop; });
+
+  // ---- live rendition -----------------------------------------------------------------------
+  let timer = 0;
+  let seq = 0;
+  function schedulePreview() {
+    $('#preview').classList.add('stale');
+    clearTimeout(timer);
+    timer = setTimeout(preview, 220);
+  }
+  async function preview() {
+    const mine = ++seq;
+    try {
+      const data = await api('/api/preview', { hk: $('#hk').value, script: pv.script, mode: pv.mode });
+      if (mine !== seq) return;
+      lastPreview = data;
+      const box = $('#preview');
+      box.classList.remove('stale');
+      box.replaceChildren(...data.lines.map((t) => Object.assign(document.createElement('span'), { textContent: t })));
+      const font = scriptFonts.get(pv.script);
+      if (font) box.style.fontFamily = `"${font}", "Noto Serif", serif`;
+      const notZuddha = data.zuddha !== $('#hk').value;
+      $('#zuddha-hint').hidden = !notZuddha;
+      $('#issues').replaceChildren(...data.issues.filter((i) => !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
+      drawSource();
+    } catch (err) { console.error(err); }
+  }
+
+  // ---- reference: the sheet's Telugu, with words that differ from the HK rendition marked ----
+  const norm = (w) => w.replace(/[।॥|.,;:!?"'“”‘’()\[\]\-‌‍]/g, '');
+  function lcsKeep(a, b) {
+    const n = a.length, m = b.length;
+    const t = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
+    for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) t[i][j] = a[i] === b[j] ? t[i + 1][j + 1] + 1 : Math.max(t[i + 1][j], t[i][j + 1]);
+    const keep = new Set();
+    for (let i = 0, j = 0; i < n && j < m;) {
+      if (a[i] === b[j]) { keep.add(i); i++; j++; } else if (t[i + 1][j] >= t[i][j + 1]) i++; else j++;
+    }
+    return keep;
+  }
+  function drawSource() {
+    const box = $('#source');
+    box.replaceChildren();
+    const src = current ? current.sourceTelugu : '';
+    if (!src) {
+      $('#source-note').textContent = current && 'hk' in current.fields ? 'The sheet has no Telugu for this entry.' : '';
+      return;
+    }
+    const tokens = src.split(/(\s+)/);
+    const words = tokens.map((t, i) => ({ t, i })).filter((x) => x.t.trim() && norm(x.t));
+    const mine = lastPreview ? lastPreview.saraLaTelugu.join(' ').split(/\s+/).map(norm).filter(Boolean) : [];
+    const keep = lcsKeep(words.map((w) => norm(w.t)), mine);
+    const differs = new Set(words.filter((_, k) => !keep.has(k)).map((w) => w.i));
+    tokens.forEach((t, i) => box.append(differs.has(i) && mine.length ? Object.assign(document.createElement('mark'), { textContent: t }) : t));
+    $('#source-note').textContent = mine.length
+      ? `${differs.size} of ${words.length} words differ from the సరళ తెలుగు rendition of your HK. A difference is a place to look — either side may be the one that is wrong.`
+      : '';
+  }
+
+  // ---- wiring -------------------------------------------------------------------------------
+  const scriptFonts = new Map();
+  const loadedFonts = new Set(['Noto Serif Telugu', 'Noto Serif']);
+  async function initScripts() {
+    const { scripts } = await api('/api/scripts');
+    const sel = $('#pv-script');
+    for (const s of scripts) {
+      scriptFonts.set(s.id, s.font);
+      sel.append(Object.assign(document.createElement('option'), { value: s.id, textContent: s.label }));
+    }
+    sel.value = pv.script;
+    sel.addEventListener('change', () => {
+      pv.script = sel.value;
+      const font = scriptFonts.get(pv.script);
+      if (font && !loadedFonts.has(font)) {
+        loadedFonts.add(font);
+        document.head.append(Object.assign(document.createElement('link'), { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=' + font.replace(/ /g, '+') + ':wght@400;600&display=swap' }));
+      }
+      preview();
+    });
+  }
+  for (const b of $$('[data-pv-mode]')) b.addEventListener('click', () => {
+    pv.mode = b.dataset.pvMode;
+    for (const o of $$('[data-pv-mode]')) o.setAttribute('aria-pressed', String(o === b));
+    preview();
+  });
+
+  $('#hk').addEventListener('input', () => { drawMarks(); drawBadge(); schedulePreview(); });
+  for (const k of ['en', 'te', 'text']) $('#' + k).addEventListener('input', drawBadge);
+  $('#save').addEventListener('click', save);
+  $('#normalize').addEventListener('click', () => {
+    if (!lastPreview) return;
+    $('#hk').value = lastPreview.zuddha;
+    $('#hk').dispatchEvent(new Event('input'));
+  });
+  $('#revert').addEventListener('click', () => {
+    if (!current.committed) return;
+    for (const k of FIELDS) if (k in current.fields) $('#' + k).value = current.committed[k] ?? '';
+    $('#hk').dispatchEvent(new Event('input'));
+    drawBadge();
+  });
+
+  function step(delta) {
+    const shown = entries.filter(visible);
+    const i = shown.findIndex((e) => current && e.id === current.id);
+    const next = shown[i + delta] || (i === -1 ? shown[0] : null);
+    if (next) location.hash = next.id;
+  }
+  $('#prev').addEventListener('click', () => step(-1));
+  $('#next').addEventListener('click', () => step(1));
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') { e.preventDefault(); save(); }
+    if (e.altKey && e.key === 'ArrowDown') { e.preventDefault(); step(1); }
+    if (e.altKey && e.key === 'ArrowUp') { e.preventDefault(); step(-1); }
+  });
+  for (const id of ['search', 'f-issues', 'f-dirty']) $('#' + id).addEventListener('input', drawList);
+  window.addEventListener('hashchange', () => open(decodeURIComponent(location.hash.slice(1))));
+  window.addEventListener('beforeunload', (e) => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+
+  (async () => {
+    await Promise.all([initScripts(), refreshList()]);
+    const first = decodeURIComponent(location.hash.slice(1)) || (entries.find((e) => e.type === 'verse') || entries[0]).id;
+    if (location.hash.slice(1) === first) open(first); else location.hash = first;
+  })();
+})();
