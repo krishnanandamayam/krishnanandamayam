@@ -190,7 +190,7 @@
       if (el.dataset.part === 'toc') continue;
       el.toggleAttribute('data-print-skip', !wanted.has(el.dataset.part));
     }
-    for (const a of $$('.toc li a')) a.parentElement.toggleAttribute('data-print-skip', !wanted.has(a.hash.slice(1)));
+    for (const li of $$('.toc li[data-toc]')) li.toggleAttribute('data-print-skip', !wanted.has(li.dataset.toc));
 
     const sc = scripts.get(state.script);
     if (data) await fontsReady(sc.font, Object.values(data.e).slice(0, 40).flat().join(' '));

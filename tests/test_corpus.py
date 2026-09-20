@@ -9,6 +9,7 @@ from tools.hk import to_saraLa, to_zuddha
 
 DOC = store.load()
 HK = [(e["id"], str(e["hk"])) for e in store.entries(DOC) if e.get("hk")]
+HK += [(e["id"] + ".title", str(e["title"])) for e in store.entries(DOC) if e.get("title")]
 IDS = [i for i, _ in HK]
 
 
@@ -59,3 +60,13 @@ def test_only_nasal_letters_ever_change(hk):
 def test_verses_without_english_are_reported_not_fatal():
     missing = [v["id"] for v in DOC["items"] if v["type"] == "verse" and not str(v.get("en") or "").strip()]
     assert isinstance(missing, list)  # listed in data/ISSUES.md; the build does not fail on them
+
+
+def test_every_verse_has_text_or_a_header():
+    for v in DOC["items"]:
+        if v["type"] == "verse":
+            assert str(v.get("hk") or "").strip() or str(v.get("title") or "").strip(), v["id"]
+
+
+def test_headers_are_one_line():
+    assert all("\n" not in str(v["title"]) for v in DOC["items"] if v.get("title"))

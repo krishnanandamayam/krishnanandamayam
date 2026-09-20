@@ -7,8 +7,6 @@ editor (`uv run python -m tools.serve`, then http://localhost:8000/edit).
 
 - no. 91: the HK is a verse to Sri Rama (`…bhadrAdrirAmaM…`), but the English translation
   is about Sri Krishna (Rasa dance, Govardhana). The translation probably belongs elsewhere.
-- no. 0: the HK cell is `(Hey Priyabhakta)`, which is English spelling, not Harvard-Kyoto
-  (`he priyabhakta`).
 - nos. 102, 105a and 106 carry the same verse (`bahurUpa zrIkRSNadhyAnam`) with different
   English translations.
 - The Telugu preface (ముందుమాట) is empty: the sheet has no Telugu prose. Add it in the editor.
@@ -37,23 +35,7 @@ editor (`uv run python -m tools.serve`, then http://localhost:8000/edit).
 
 ## Findings in the HK text
 
-- 0 (`v0`): letters outside Harvard-Kyoto: P
-- 7 (`v7`): ':' after a vowel, possibly a visarga typed as colon (use H): bhavAnI:
-- 28 (`v28`): ':' after a vowel, possibly a visarga typed as colon (use H): tapa:
-- 38 (`v38`): ':' after a vowel, possibly a visarga typed as colon (use H): nandi:
-- 52 (`v52`): ':' after a vowel, possibly a visarga typed as colon (use H): kAGkSa:
-- 62 (`v62`): ':' after a vowel, possibly a visarga typed as colon (use H): naraikavijaya:
-- 74 (`v74`): ':' after a vowel, possibly a visarga typed as colon (use H): kuGkamapUjAmicchatidevi:, viSNu:
 - 76 (`v76`): possible line-break residue inside a word: 'vi. zva'
 - 76 (`v76`): possible line-break residue inside a word: 've . dansarv'
-- 79 (`v79`): ':' after a vowel, possibly a visarga typed as colon (use H): jIviteccha:, prabhutyAyu:
-- 82 (`v82`): ':' after a vowel, possibly a visarga typed as colon (use H): devatA:, suta:
-- 92 (`v92`): ':' after a vowel, possibly a visarga typed as colon (use H): cakSINamAyu:
-- 94 (`v94`): ':' after a vowel, possibly a visarga typed as colon (use H): gItAvaLi:
-- 97 (`v97`): ':' after a vowel, possibly a visarga typed as colon (use H): paraJjyoti:
+- 94 (`v94`): `gItAvaLi:` was left as it is. The sheet's own Telugu has a danda there (గీతావళి|), so this colon may be a danda rather than a visarga.
 - 98 (`v98`): backslash in text
-- 99 (`v99`): ':' after a vowel, possibly a visarga typed as colon (use H): kRSNasUkti:
-- 100 (`v100`): ':' after a vowel, possibly a visarga typed as colon (use H): teja:
-- 165 (`v165`): ':' after a vowel, possibly a visarga typed as colon (use H): govinodamu:
-- 182 (`v182`): ':' after a vowel, possibly a visarga typed as colon (use H): nama:
-- 183 (`v183`): ':' after a vowel, possibly a visarga typed as colon (use H): bhagavadgItAsUktimuktAvaLi:, nArAyaNASTAkSari:, viSNo:

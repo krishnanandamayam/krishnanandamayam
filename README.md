@@ -33,6 +33,25 @@ git push
 
 Pushing to `main` runs the tests, builds the site and publishes it to GitHub Pages.
 
+## Verse headers
+
+A verse can carry its own header in a `title:` field (HK), separate from the verse text in
+`hk:`. It is shown above the verse and listed in Contents under its section. In the editor it is
+the "Header (HK)" box; leave it empty for a verse without one.
+
+## Sanskrit inside English (or Telugu) prose
+
+In a preface paragraph or a meaning, put Harvard-Kyoto between dollar signs, the way inline
+math is written in LaTeX:
+
+```
+You ($jIvAtma$) are always part of my universal soul ($paramAtma$).
+```
+
+The marked run follows the reader's script choice (జీవాత్మ, जीवात्म, jīvātma …); the rest is
+shown as typed. A run cannot span a line break; a literal dollar sign is `\$`. The editor shows
+the rendered paragraph under the text box as you type.
+
 ## The two anusvara conventions
 
 `data/grantha.yaml` is kept in **zuddha** form; the tests fail if it is not.

@@ -19,14 +19,14 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from io import StringIO
 from urllib.parse import unquote, urlparse
 
-from tools import build, render, store
+from tools import build, inline, render, store
 from tools import hk as HK
 
 ROOT = store.ROOT
 SITE = ROOT / "site"
 EDITOR = ROOT / "tools" / "editor"
 LOCK = threading.Lock()  # one writer / one Aksharamukha call at a time
-FIELDS = ("hk", "en", "te", "text")
+FIELDS = ("title", "hk", "en", "te", "text")
 
 
 # ---------------------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ def committed_entries() -> dict[str, dict]:
     doc = committed_doc()
     if doc is None:
         return {}
-    return {e["id"]: {k: str(e.get(k) or "") for k in FIELDS if k in e} for e in store.entries(doc)}
+    return {e["id"]: fields_of(e) for e in store.entries(doc)}
 
 
 # ---------------------------------------------------------------------------------------------
@@ -92,8 +92,16 @@ def committed_entries() -> dict[str, dict]:
 # ---------------------------------------------------------------------------------------------
 
 
+def fields_of(e) -> dict[str, str]:
+    """The editable fields of an entry. Every verse has a header slot, filled or not."""
+    out = {k: str(e.get(k) or "") for k in FIELDS if k in e}
+    if e["type"] == "verse":
+        out = {"title": str(e.get("title") or ""), **out}
+    return out
+
+
 def label_of(e) -> str:
-    body = str(e.get("hk") or e.get("text") or "")
+    body = str(e.get("title") or e.get("hk") or e.get("text") or "")
     return re.sub(r"\s+", " ", body)[:60]
 
 
@@ -116,9 +124,11 @@ def api_entries():
 
 def _row(e, group, head):
     issues = HK.lint(str(e["hk"])) if e.get("hk") else []
+    if e.get("title"):
+        issues += HK.lint(str(e["title"]))
     if e["type"] == "verse" and not str(e.get("en") or "").strip():
         issues.append("no English translation")
-    current = {k: str(e.get(k) or "") for k in FIELDS if k in e}
+    current = fields_of(e)
     return {
         "id": e["id"],
         "type": e["type"],
@@ -138,7 +148,7 @@ def api_entry(entry_id: str):
         "id": e["id"],
         "type": e["type"],
         "no": e.get("no", ""),
-        "fields": {k: str(e.get(k) or "") for k in FIELDS if k in e},
+        "fields": fields_of(e),
         "committed": head,
         "sourceTelugu": SOURCE_TE.get(entry_id, ""),
     }
@@ -152,12 +162,39 @@ def api_preview(body):
     with LOCK:
         shown = render.render(hk, script, body.get("mode") or "zuddha")
         sarala_te = render.render(hk, "telugu", "saraLa")
+    title = str(body.get("title", ""))
+    with LOCK:
+        title_shown = " ".join(render.render(title, script, body.get("mode") or "zuddha")) if title.strip() else ""
     return {
+        "titleLine": title_shown,
+        "titleZuddha": HK.to_zuddha(title),
+        "titleIssues": [i for i in HK.lint(title) if not i.startswith("not in zuddha")],
         "lines": shown,
         "saraLaTelugu": sarala_te,
         "zuddha": HK.to_zuddha(hk),
         "issues": HK.lint(hk),
     }
+
+
+def api_preview_prose(body):
+    """Prose with its inline ``$hk$`` runs rendered, for the box under a prose field."""
+    script = body.get("script") or "telugu"
+    if script not in render.config()["by_id"]:
+        raise KeyError(script)
+    mode = body.get("mode") or "zuddha"
+    paras, issues = [], []
+    with LOCK:
+        for para in build.paragraphs(str(body.get("text", ""))):
+            segs = []
+            for kind, part in inline.split(para):
+                if kind == "hk":
+                    issues += [f"${part}$: {i}" for i in HK.lint(part)]
+                    part = " ".join(render.render(part, script, mode))
+                segs.append([kind, part])
+            paras.append(segs)
+    if str(body.get("text", "")).replace("\\$", "").count("$") % 2:
+        issues.append("an inline $…$ run is not closed")
+    return {"paragraphs": paras, "issues": issues}
 
 
 def api_save(entry_id: str, body):
@@ -166,11 +203,16 @@ def api_save(entry_id: str, body):
         e = store.find(doc, entry_id)
         changed = []
         for k in FIELDS:
-            if k in body and k in e:
-                new = str(body[k]).replace("\r\n", "\n").strip("\n")
-                if str(e.get(k) or "") != new:
-                    e[k] = store.text(new)
-                    changed.append(k)
+            if k not in body or k not in fields_of(e):
+                continue
+            new = str(body[k]).replace("\r\n", "\n").strip("\n")
+            if str(e.get(k) or "") == new:
+                continue
+            if k == "title":
+                store.set_title(e, new)
+            else:
+                e[k] = store.text(new)
+            changed.append(k)
         if changed:
             store.save(doc)
             build.build(quiet=True)
@@ -270,6 +312,8 @@ class Handler(BaseHTTPRequestHandler):
             path = unquote(urlparse(self.path).path)
             if path == "/api/preview":
                 return self._json(api_preview(body))
+            if path == "/api/preview-prose":
+                return self._json(api_preview_prose(body))
             if path.startswith("/api/entry/"):
                 return self._json(api_save(path.rsplit("/", 1)[1], body))
             if path == "/api/preface/te/add":

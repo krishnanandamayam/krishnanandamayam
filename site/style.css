@@ -82,12 +82,19 @@ h1 { font-size: clamp(2rem, 7vw, 3.1rem); font-weight: 600; color: var(--accent)
 .author { margin: 1.4rem 0 0; font-size: 1.15rem; }
 .author-en { margin: 0; color: var(--ink-2); }
 .ln { display: block; }
+/* inline $hk$ inside prose */
+.il { line-height: inherit; font-size: 1.04em; color: var(--accent); white-space: normal; }
 
 .toc { border-block: 1px solid var(--rule); padding-block: 1.25rem; }
 .toc h2, .preface > h2 { font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; margin: 0 0 .75rem; }
 .preface > h2[lang="te"] { font-size: 1.2rem; letter-spacing: 0; text-transform: none; }
 .toc ol { list-style: none; margin: 0; padding: 0; columns: 2 16rem; column-gap: 2rem; }
-.toc li { break-inside: avoid; display: flex; gap: .5rem; align-items: baseline; padding: .3rem 0; }
+.toc li { padding: .3rem 0; }
+.toc-row, .toc-sub li { display: flex; gap: .5rem; align-items: baseline; }
+.toc-row { break-inside: avoid; break-after: avoid; }
+.toc ol.toc-sub { columns: auto; margin: .15rem 0 .2rem; padding-left: .9rem; border-left: 1px solid var(--rule); font-size: .88rem; }
+.toc-sub li { padding: .08rem 0; break-inside: avoid; }
+.toc-sub a { color: var(--ink); }
 .toc a { text-decoration: none; flex: 1; }
 .toc a:hover { text-decoration: underline; }
 .toc .indic { line-height: 1.6; }
@@ -112,6 +119,7 @@ h1 { font-size: clamp(2rem, 7vw, 3.1rem); font-weight: 600; color: var(--accent)
   border: 1px solid var(--rule); border-radius: 1rem; padding: .05rem .4rem; line-height: 1.5;
 }
 .no:hover { color: var(--accent); border-color: var(--accent); }
+.vtitle { margin: 0 0 .35rem; font-size: 1.08rem; font-weight: 600; color: var(--accent); line-height: 1.7; }
 .lines { font-size: 1.25rem; overflow-wrap: anywhere; }
 .lines .ln { padding-left: 1.2em; text-indent: -1.2em; }
 
@@ -151,7 +159,7 @@ dialog .hint { color: var(--ink-2); font-size: .85rem; }
 dialog menu { display: flex; justify-content: flex-end; gap: .6rem; padding: 0; margin: 1rem 0 0; }
 
 @media (max-width: 40rem) {
-  html { scroll-padding-top: 7rem; }
+  html { scroll-padding-top: 9.5rem; }
   .brand { display: none; }
   .toolbar { gap: .4rem; font-size: .85rem; }
   select { max-width: 9.5rem; }

@@ -3,7 +3,7 @@
   'use strict';
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const FIELDS = ['hk', 'en', 'te', 'text'];
+  const FIELDS = ['title', 'hk', 'en', 'te', 'text'];
   const NON_HK = /[BCFKPQVWXYZfqwx]/g;
   const TE_PREFACE = 'ముందుమాట (Telugu preface)';
 
@@ -115,6 +115,7 @@
     const f = entry.fields;
     for (const k of FIELDS) $('#' + k).value = f[k] ?? '';
     $('#hk-wrap').hidden = !('hk' in f);
+    $('#title-wrap').hidden = !('title' in f);
     $('#text-wrap').hidden = !('text' in f);
     $('#en-wrap').hidden = !('en' in f);
     $('#te-wrap').hidden = !('te' in f);
@@ -129,6 +130,7 @@
     drawBadge();
     lastPreview = null;
     if ('hk' in f) preview(); else { $('#preview').replaceChildren(); drawSource(); }
+    previewAllProse();
   }
 
   async function open(id) {
@@ -184,7 +186,7 @@
   async function preview() {
     const mine = ++seq;
     try {
-      const data = await api('/api/preview', { hk: $('#hk').value, script: pv.script, mode: pv.mode });
+      const data = await api('/api/preview', { hk: $('#hk').value, title: $('#title').value, script: pv.script, mode: pv.mode });
       if (mine !== seq) return;
       lastPreview = data;
       const box = $('#preview');
@@ -192,7 +194,10 @@
       box.replaceChildren(...data.lines.map((t) => Object.assign(document.createElement('span'), { textContent: t })));
       const font = scriptFonts.get(pv.script);
       if (font) box.style.fontFamily = `"${font}", "Noto Serif", serif`;
-      const notZuddha = data.zuddha !== $('#hk').value;
+      const tp = $('#title-preview');
+      tp.replaceChildren(data.titleLine, ...data.titleIssues.map((i) => Object.assign(document.createElement('span'), { className: 'warn', textContent: '⚠ ' + i })));
+      if (font) tp.style.fontFamily = `"${font}", "Noto Serif", serif`;
+      const notZuddha = data.zuddha !== $('#hk').value || data.titleZuddha !== $('#title').value;
       $('#zuddha-hint').hidden = !notZuddha;
       $('#issues').replaceChildren(...data.issues.filter((i) => !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
       drawSource();
@@ -254,20 +259,52 @@
         document.head.append(Object.assign(document.createElement('link'), { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=' + font.replace(/ /g, '+') + ':wght@400;600&display=swap' }));
       }
       preview();
+      previewAllProse();
     });
   }
   for (const b of $$('[data-pv-mode]')) b.addEventListener('click', () => {
     pv.mode = b.dataset.pvMode;
     for (const o of $$('[data-pv-mode]')) o.setAttribute('aria-pressed', String(o === b));
     preview();
+    previewAllProse();
   });
 
   $('#hk').addEventListener('input', () => { drawMarks(); drawBadge(); schedulePreview(); });
-  for (const k of ['en', 'te', 'text']) $('#' + k).addEventListener('input', drawBadge);
+  $('#title').addEventListener('input', () => { drawBadge(); schedulePreview(); });
+  // prose fields: show the paragraph with its inline $hk$ runs rendered
+  const proseTimers = {};
+  async function previewProse(k) {
+    const box = $('#pp-' + k);
+    const text = $('#' + k).value;
+    if (!text.includes('$')) { box.hidden = true; return; }
+    try {
+      const data = await api('/api/preview-prose', { text, script: pv.script, mode: pv.mode });
+      if ($('#' + k).value !== text) return;
+      box.hidden = false;
+      const font = scriptFonts.get(pv.script);
+      box.replaceChildren(...data.paragraphs.map((segs) => {
+        const p = document.createElement('p');
+        for (const [kind, body] of segs) {
+          if (kind === 'text') { p.append(body); continue; }
+          const span = Object.assign(document.createElement('span'), { className: 'il', textContent: body });
+          if (font) span.style.fontFamily = `"${font}", serif`;
+          p.append(span);
+        }
+        return p;
+      }), ...data.issues.map((i) => Object.assign(document.createElement('p'), { className: 'warn', textContent: '⚠ ' + i })));
+    } catch (err) { console.error(err); }
+  }
+  const previewAllProse = () => { for (const k of ['en', 'te', 'text']) previewProse(k); };
+  for (const k of ['en', 'te', 'text']) $('#' + k).addEventListener('input', () => {
+    drawBadge();
+    clearTimeout(proseTimers[k]);
+    proseTimers[k] = setTimeout(() => previewProse(k), 250);
+  });
   $('#save').addEventListener('click', save);
   $('#normalize').addEventListener('click', () => {
     if (!lastPreview) return;
     $('#hk').value = lastPreview.zuddha;
+    $('#title').value = lastPreview.titleZuddha;
     $('#hk').dispatchEvent(new Event('input'));
   });
   $('#revert').addEventListener('click', () => {

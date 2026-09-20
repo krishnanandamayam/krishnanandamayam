@@ -54,3 +54,15 @@ def find(doc, entry_id: str):
         if e["id"] == entry_id:
             return e
     raise KeyError(entry_id)
+
+
+def set_title(verse, title: str) -> None:
+    """A verse's own header (HK). Kept just before `hk`; the key is absent when there is none."""
+    title = (title or "").strip()
+    if not title:
+        verse.pop("title", None)
+    elif "title" in verse:
+        verse["title"] = title
+    else:
+        keys = list(verse.keys())
+        verse.insert(keys.index("hk") if "hk" in keys else len(keys), "title", title)

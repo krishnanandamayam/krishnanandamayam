@@ -38,6 +38,11 @@
   <div class="cols">
     <section class="work">
       <div id="hk-wrap">
+        <div id="title-wrap">
+          <label class="lbl" for="title">Header (HK) <span class="muted">— optional; shown above the verse and listed in Contents</span></label>
+          <input id="title" class="hk-line" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off">
+          <div id="title-preview" class="title-preview"></div>
+        </div>
         <label class="lbl" for="hk">Harvard-Kyoto <span class="muted">— ground truth</span></label>
         <div class="hk-box">
           <div id="hk-marks" class="hk-marks" aria-hidden="true"></div>
@@ -61,17 +66,20 @@
       </div>
 
       <div id="text-wrap" hidden>
-        <label class="lbl" for="text">Preface text</label>
+        <label class="lbl" for="text">Preface text <span class="muted">— write Sanskrit inline as $hk$, e.g. the $jIvAtma$</span></label>
         <textarea id="text" class="prose-input" rows="14"></textarea>
+        <div class="prose-preview" id="pp-text" hidden></div>
       </div>
 
       <div id="en-wrap">
-        <label class="lbl" for="en">English meaning</label>
+        <label class="lbl" for="en">English meaning <span class="muted">— inline $hk$ allowed</span></label>
         <textarea id="en" class="prose-input" rows="6"></textarea>
+        <div class="prose-preview" id="pp-en" hidden></div>
       </div>
       <div id="te-wrap">
         <label class="lbl" for="te">తెలుగు తాత్పర్యం <span class="muted">— Telugu meaning</span></label>
         <textarea id="te" class="prose-input te" rows="6" lang="te"></textarea>
+        <div class="prose-preview" id="pp-te" hidden></div>
       </div>
     </section>
 

@@ -13,7 +13,7 @@ import json
 import re
 import sys
 
-from tools import render, store
+from tools import inline, render, store
 
 SITE = store.ROOT / "site"
 DEFAULT_MODE = "saraLa"
@@ -43,8 +43,20 @@ def esc(s: str) -> str:
     return html.escape(s or "", quote=True)
 
 
-def prose_html(text: str) -> str:
-    return "".join(f"<p>{esc(p)}</p>" for p in paragraphs(text))
+def prose_html(text: str, entry_id: str, field: str, e: dict) -> str:
+    """Paragraphs of prose; every inline ``$hk$`` run becomes a span that follows the script."""
+    out, n = "", 0
+    for para in paragraphs(text):
+        out += "<p>"
+        for kind, body in inline.split(para):
+            if kind == "text":
+                out += esc(body)
+                continue
+            fid = inline.fragment_id(entry_id, field, n)
+            n += 1
+            out += f'<span class="indic il" data-e="{fid}" data-inline>{esc(" ".join(e[fid]))}</span>'
+        out += "</p>"
+    return out
 
 
 def lines_html(lines: list[str]) -> str:
@@ -54,13 +66,22 @@ def lines_html(lines: list[str]) -> str:
 # --------------------------------------------------------------------------------------
 
 
+def title_id(verse) -> str:
+    return f"{verse['id']}.title"
+
+
 def hk_entries(doc) -> list[tuple[str, str]]:
     """(id, hk) for everything that follows the script switch."""
     out = [("title", doc["title"]["hk"])]
     author = (doc["title"].get("author") or {}).get("hk")
     if author:
         out.append(("author", author))
-    out += [(e["id"], e["hk"]) for e in store.entries(doc) if e.get("hk")]
+    for e in store.entries(doc):
+        if e.get("hk"):
+            out.append((e["id"], e["hk"]))
+        if e.get("title"):
+            out.append((title_id(e), e["title"]))
+        out += inline.entry_fragments(e)
     return out
 
 
@@ -110,14 +131,33 @@ def verse_html(v, e) -> str:
         if (v.get(lang) or "").strip():
             meanings += (
                 f'<details class="m m-{lang}"><summary>{label}</summary>'
-                f'<div class="m-body" lang="{lang}">{prose_html(v[lang])}</div></details>'
+                f'<div class="m-body" lang="{lang}">{prose_html(v[lang], v["id"], lang, e)}</div></details>'
             )
     num = f'<a class="no" href="#{v["id"]}" title="Link to verse {no}">{no}</a>' if no else ""
+    head = ""
+    if v.get("title"):
+        tid = title_id(v)
+        head = f'<h3 class="vtitle indic" data-e="{tid}" data-inline>{esc(" ".join(e[tid]))}</h3>'
+    lines = ""
+    if v.get("hk"):  # a verse can be a header and nothing else
+        lines = f'<div class="lines indic" data-e="{v["id"]}">{lines_html(e[v["id"]])}</div>'
     return (
-        f'<article class="verse" id="{v["id"]}">{num}'
-        f'<div class="lines indic" data-e="{v["id"]}">{lines_html(e[v["id"]])}</div>'
+        f'<article class="verse" id="{v["id"]}">{num}{head}{lines}'
         f'<div class="meanings">{meanings}</div></article>'
     )
+
+
+def toc_titles(verses, e) -> str:
+    """The verses of a section that carry their own header, as a nested contents list."""
+    rows = ""
+    for v in verses:
+        if v.get("title"):
+            tid = title_id(v)
+            rows += (
+                f'<li><a href="#{v["id"]}"><span class="indic" data-e="{tid}" data-inline>'
+                f'{esc(" ".join(e[tid]))}</span></a> <span class="toc-range">{esc(v.get("no") or "")}</span></li>'
+            )
+    return f'<ol class="toc-sub">{rows}</ol>' if rows else ""
 
 
 def live_blocks(doc, lang):
@@ -135,7 +175,7 @@ def preface_html(doc, lang, e) -> str:
         if b["type"] == "sloka":
             body += f'<blockquote class="lines indic" data-e="{b["id"]}">{lines_html(e[b["id"]])}</blockquote>'
         else:
-            body += f'<div class="prose" lang="{lang}">{prose_html(b["text"])}</div>'
+            body += f'<div class="prose" lang="{lang}">{prose_html(b["text"], b["id"], "text", e)}</div>'
     return (
         f'<section class="preface" id="preface-{lang}" data-part="preface-{lang}">'
         f'<h2 lang="{lang}">{esc(pf["title"])}</h2>{body}</section>'
@@ -151,7 +191,10 @@ def build_html(doc, data) -> str:
     toc, body = "", ""
     for lang in ("en", "te"):
         if live_blocks(doc, lang):
-            toc += f'<li><a href="#preface-{lang}" lang="{lang}">{esc(doc["prefaces"][lang]["title"])}</a></li>'
+            toc += (
+                f'<li data-toc="preface-{lang}"><div class="toc-row"><a href="#preface-{lang}" lang="{lang}">'
+                f'{esc(doc["prefaces"][lang]["title"])}</a></div></li>'
+            )
     part_list = []
     for n, (sec, verses) in enumerate(sections(doc)):
         sid = sec["id"] if sec else "s00"
@@ -168,7 +211,10 @@ def build_html(doc, data) -> str:
             head = ""
             toc_label = '<span class="toc-en">Opening verses</span>'
             plain = "Opening verses"
-        toc += f'<li><a href="#{sid}">{toc_label}</a> <span class="toc-range">{esc(rng)}</span></li>'
+        toc += (
+            f'<li data-toc="{sid}"><div class="toc-row"><a href="#{sid}">{toc_label}</a> '
+            f'<span class="toc-range">{esc(rng)}</span></div>{toc_titles(verses, e)}</li>'
+        )
         part_list.append({"id": sid, "label": plain, "range": rng})
         body += (
             f'<section class="sec" id="{sid}" data-part="{sid}">{head}'
