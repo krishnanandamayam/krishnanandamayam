@@ -57,3 +57,5 @@ body.print-no-en .m-en, body.print-no-te .m-te, body.print-no-toc .toc { display
 [data-print-skip] { display: none !important; }
 
 .colophon { padding-block: 24pt 0; font-size: 8.5pt; }
+
+.pfh { font-size: 12pt; break-after: avoid; }

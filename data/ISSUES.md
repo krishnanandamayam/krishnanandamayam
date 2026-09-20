@@ -9,8 +9,24 @@ editor (`uv run python -m tools.serve`, then http://localhost:8000/edit).
   is about Sri Krishna (Rasa dance, Govardhana). The translation probably belongs elsewhere.
 - nos. 102, 105a and 106 carry the same verse (`bahurUpa zrIkRSNadhyAnam`) with different
   English translations.
-- The Telugu preface (ముందుమాట) is empty: the sheet has no Telugu prose. Add it in the editor.
-- There are no Telugu tatparyas yet; the `te` field of every verse is empty.
+
+## From the Telugu document (Google Doc 1qbUreHq…)
+
+- The Telugu preface (ముందుమాట) and the Telugu meanings of verses 1-25 and 54 come from it.
+  Its Telugu-script slokas in the preface were converted to HK (please check them).
+- The author's postal address and phone number in the doc's opening note were **left out** on
+  purpose: the site is public.
+- Verses 26 onward have no per-verse meaning in the doc. It has only range summaries
+  (`59 నుంచి 160 వరకు గీతికలకు తాత్పర్యములు`, e.g. "68 - 74: …"), a Satyanarayana vrata summary,
+  the ten-fold worship list and the dasyadasakam. None of that was imported.
+- The doc numbers verses differently from the sheet from about no. 53 on (it merges 53 and 54,
+  and its 106 is a different verse from the sheet's 106), so nothing beyond no. 25 was matched
+  by number. The one meaning inside the doc's no. 53 was placed by content on the sheet's no. 54.
+- no. 11: the sheet's HK is a copy of no. 29 (`duSTazikSaNam ziSTarakSaNam…`) but its English
+  translation and the doc's no. 11 are about Ganapati, Siva, Brahma, Vishnu, Ayyappa and Sai.
+  The doc's sloka would be `gaNezam gaurIzam vANIzam ramezam, zabarigirivAsinam cAruNAcalezam .
+  zrI ziRDIkSetrezam puTTaparthivAsinam tatsarvezam smarAmi sadA zrI sAyIzam ..` — not applied,
+  because you said the sheet's HK is the ground truth. Say the word and I will replace it.
 
 ## Preface slokas converted from Devanagari to HK (please check)
 

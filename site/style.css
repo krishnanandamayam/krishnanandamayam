@@ -104,6 +104,8 @@ h1 { font-size: clamp(2rem, 7vw, 3.1rem); font-weight: 600; color: var(--accent)
 
 .preface { padding-block: 2.5rem 1rem; }
 .prose p { margin: 0 0 .9rem; }
+.pfh { margin: 1.6rem 0 .5rem; font-size: 1.05rem; font-weight: 600; color: var(--accent); }
+.prose:first-of-type .pfh:first-child { margin-top: 0; }
 .preface blockquote { margin: 1.2rem 0; padding: .2rem 0 .2rem 1rem; border-left: 3px solid var(--gold); font-size: 1.1rem; }
 
 .sec { padding-top: 2.75rem; }

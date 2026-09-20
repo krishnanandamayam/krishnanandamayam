@@ -174,7 +174,118 @@ prefaces:
           the nation submitting everything to him. This is the surest way to reach Him for re-merger."
   te:
     title: ముందుమాట
-    blocks: []
+    blocks:
+      - type: prose
+        id: pt01
+        text: |-
+          ## ప్రారంభ విన్నపము
+
+          హే ప్రియభక్తా!
+
+          "శ్రీకృష్ణం వందే జగద్గురుం"
+
+          తేజఃస్వరూపుడైన శ్రీ శ్రీకృష్ణభగవానుడు, గత ఐదు సంవత్సరములుగా, దఫ దఫాలుగా ప్రసాదించిన, స్వేచ్ఛాగాన ధ్యానగీతావళి “శ్రీ శ్రీకృష్ణానందమయము” ను ఇందుతో జత చేయుచున్నాను. దైవాంశ సంభూతులగు మీరున్నూ భగవత్ప్రసాదమును స్వీకరింతురుగాక!
+
+          - విశ్వమంతయు ప్రేమమయము – శ్రీకృష్ణసంభూతము
+
+          - ప్రేమశాశ్వతము – సంతృప్తసహజీవనము దాని తత్వము
+
+          - ప్రేమయే జీవితమునకు ఆధారభూతము
+
+          - ప్రేమమయమైన సంతోషజీవితమునందరును గడుపుదురుగాక!
+
+          - ధ్యాన ధన్యులై మోక్షసాధకులౌదురుగాక!
+
+          తత్సర్వసర్వేశ్వరుడగు శ్రీ శ్రీకృష్ణభగవానుని కరుణాకటాక్షములు అనంతముగా మనందరిపై కురిపించుచునే యుండుగాక అనే ప్రార్థనతో...
+
+          కల్లూరి సూర్యప్రకాశమూర్తి
+
+          శ్రీకృష్ణప్రియమగు శ్రీకర సం॥ర శరదృతు ఆశ్వయుజ శు॥ పంచమీ స్థిరవారమున శ్రీకృష్ణార్పణముగా సమర్పించడమైనది (01-10-2011).
+      - type: prose
+        id: pt02
+        text: '## మంగళ శ్లోకము'
+      - type: sloka
+        id: pt03
+        hk: |-
+          oM helAlIlAhAsavilAsa rasalAsya zizum tam .
+          hiraNmayI hRdayAravindam harim nArAyaNam .
+          veNunAdodbhavA adbhutAnurAga jharI rAdhAbhirAmam .
+          hiraNyagarbham zrI kRSNam vande mokSadam vande me mokSadam ..
+      - type: prose
+        id: pt04
+        text: |-
+          స్థూలముగా భావము:
+
+          కొంటెగా, నవ్వుతూ, చిలిపి చేష్టలు చేసే చిన్ని పాపడు, శ్రీ మహాలక్ష్మికి హృదయ సరోజమైనవాడు, సర్వదోష హారి, ప్రళయ కాలమున నీరుని నివాసముగా గల శాశ్వతుడు, తన అద్భుతమైన వేణునాదము నుండి జనించిన రాగప్రవాహమైన రాధామనోరంజకుడు, హిరణ్యగర్భుడు (దేవాదిదేవుడు) అగు శ్రీకృష్ణునికి ప్రణామము. వారే సర్వులకు మోక్షమిచ్చువారు. నన్ను ముక్తి పొందునట్లు చేయు ఆరాధ్య దైవములు వీరే. అట్టి ముకుందునికి వందనములు.
+
+          మా పురోహితులు బ్రహ్మశ్రీ కొడమంచి శ్రీనివాస శాస్త్రుల వారి వ్యాఖ్యాన సారాంశము:
+
+          చిన్నివానిగా, లీలగా, అవలీలగా, అమాయకంగా నవ్వుతూ, చిలిపి పనులతో చిదానందం కలిగిస్తూ, అనుగ్రహించి, అన్ని రసాలకు పరమావధి అగు భక్తిరసం రగిల్చి, నా హృదయాన్ని పుటం వేసిన బంగారంలా పవిత్రపరచి, తన పాదాలను ఆ కమలంలో నిలిపి, నాచే ధ్యానింపచేసిన దయామయులు; సర్వపాపములు హరించే స్వామి, ప్రళయాంతమున నీరు నివాసముగా గల చిద్విలాసాల ముద్దుపాపడు, తన అద్భుతమైన మురళీగానమనే జలపాతంలో అన్ని లోకాలను ప్రేమతో నింపు కన్నయ్య, రాధకు మనోరంజకుడైన దేవాదిదేవుడు, మోక్షమిచ్చే శ్రీకృష్ణునికి ప్రణామము. క్షమాసింధువు, సర్వవరదుడై, నన్నీ జన్మాంతమున ముక్తివంతునిగా తన చరణములలో విలీనము చేసుకొనే అనాథనాథుడు, నా ఆరాధ్యదైవము, ముకుందునికి సర్వవేళలా వందనములు.
+      - type: prose
+        id: pt05
+        text: |-
+          ## మనవి
+
+          ఓం శ్రీ మహాగణాధిపతయే నమః
+
+          హరే రామ హరే రామ రామ రామ హరే హరే
+
+          హరే కృష్ణ హరే కృష్ణ కృష్ణ కృష్ణ హరే హరే
+
+          వ్రాయించువారు యోగేశ్వర శ్రీరామేశ్వరులట
+
+          త్వయ్ వ్రాయించునవి శ్రీ పదధ్యాన గీతావళియట!
+
+          శ్రేయం వీటి గానం రాధాకృష్ణా కృపాసాధనంట!
+
+          సర్వం ఇయ్యది జీవితమ్ము మోక్ష సాధనమ్మునకట!!
+      - type: prose
+        id: pt06
+        text: |-
+          ## తత్సర్వేశ్వర ధ్యానారంభం
+
+          శ్రీ గంగా గౌరీశసుతస్తుతిః
+      - type: sloka
+        id: pt07
+        hk: |-
+          oM vighnezvara namastubhyam, subrahmaNyezvarAgraja .
+          dhyAnArambham kariSyAmi, siddhirbhavatu me sadA ..
+      - type: prose
+        id: pt08
+        text: 'భావము: తత్సర్వేశ్వరుని అమిత కృపవల్ల మానసికంగా పుణ్య గోదావరీ గంగాస్నానంతో పునీతమై, త్రికరణశుద్ధిగా త్రిలోకాలకు తల్లిదండ్రులైన పార్వతీ పరమేశ్వరులకు వందనమాచరించి, తత్వాచార్యులైన వాసుదేవ శ్రీకృష్ణస్మరణ చేసి, శ్రీపదధ్యానం మొదలెడుతున్నాను. ఓ విఘ్నేశ్వరా! శ్రీ సుబ్రహ్మణ్యేశ్వరునికి అన్నగా, శ్రీ కుమారగురువై, అన్నివేళలా అగ్రపూజలందుకునే దైవమా! నమస్కారం. యీ మోక్షసాధన సంకల్పం సిద్ధించేటట్లు అనుగ్రహించు.'
+      - type: prose
+        id: pt09
+        text: శ్రీ సర్వగురు ప్రస్తుతిః
+      - type: sloka
+        id: pt10
+        hk: oM zrI dattAtreyam, trimUrtyeka rUpam, avadhUtam, anasUyAtri varaputram, zrIpAda zrIvallabham, nRsiMhasarasvatim, vizvavibhum, zrI mANikyaprabhum . akkalkoTa svAminam, zrI SirDI (puTTaparti) sAyIzeti paJcAvatAra dharam, zrI gurudattam, digambaram, zrI dakSiNAmUrtim, viSNusAyUjyadam me, zrI zrIrAmam, kRSNam vande jagadgurum ..
+      - type: prose
+        id: pt11
+        text: 'భావము: త్రిమూర్తుల అంశతో వారి స్వరూపంగా అనసూయా-అత్రుల వరపుత్రుడుగా జన్మించిన మహాయోగి దత్తాత్రేయులు; శ్రీపాద శ్రీవల్లభునిగా, నృసింహసరస్వతిగా, మాణిక్యప్రభుగా, అక్కల్కోట సాధువుగా, శ్రీ షిర్డీ (పుట్టపర్తి) సాయిబాబాగా ఐదు అవతారాలెత్తి జ్ఞానబోధ చేసిన శ్రీ గురుదత్తులు, దక్షిణామూర్తివారు; నాకు విష్ణుసాయుజ్యం ప్రసాదించే ఆరాధ్యదైవం శ్రీరాముడు; లోకాలన్నిటికీ గురువైన శ్రీకృష్ణునికి నమస్కృతులు.'
+      - type: prose
+        id: pt12
+        text: సర్వేశ్వర సంస్తుతిః (మధురసాస్వాదనం)
+      - type: sloka
+        id: pt13
+        hk: oM mAdhavam, madhurAdhipam, madhusUdanam, manoharam, mahAzivArcakamacyuta marcita manantam . dhanvantarim, vizvabhiSak nArAyaNam, mama sarvarogaghnam, mokSadam, kRSNam vande vAsudevam ..
+      - type: prose
+        id: pt14
+        text: |-
+          భావము: శ్రీపతి, మధురాధిపతి, మధుసంహారి, భక్తుల మనస్సు సదా హరించి అందు విహరించేవాడు; శ్రీ సాంబసదాశివుని అర్చించే ఆదిదైవం, అచ్యుతుని ఆరాధించే ఆదివైద్యులు అంబికానాథులు; ధన్వంతరి, విశ్వచికిత్సకులు శ్రీమన్నారాయణులు; నా శారీరిక, మానసిక, ఆధ్యాత్మిక, వైరాగ్యవిరుద్ధమైన సర్వరోగములను నశింపచేసి మోక్షమును ప్రసాదించే వాసుదేవ శ్రీకృష్ణ పరమాత్మకు ప్రణామము.
+
+          "కృష్" ధాతువునకు "ణ" కారము కలిసినచో "అస్తిత్వము - ఆనందము" అను అర్థము వచ్చును. లోకములోని సమస్త పాపములను ఆకర్షించి నశింపచేస్తూ, జీవులకు తత్వబోధన ద్వారా భక్తిని కలిగించి, మానవుని అస్తిత్వమునకు అర్థము తెలియపరచి, బ్రహ్మానందమునొసగే ఆనందస్వరూపుడు శ్రీకృష్ణపరబ్రహ్మ. ఇంత అర్థము ఇమిడివున్న "శ్రీకృష్ణ" నామకరణమును గర్గమహర్షి నందనందనునికి చేసెను. పరిపూర్ణావతార పురుషోత్తమునికి, సర్వార్థసిద్ధికరునికి, శ్రీకరునికి, శ్రీప్రదాత శ్రీహరికి, ముద్దుకృష్ణునికి వందనం, అభివందనం.
+
+          ఓం శాంతిః శాంతిః శాంతిః | హరిః ఓమ్ తత్ సత్ | సర్వం శ్రీ రాధాకృష్ణార్పణమస్తు
+      - type: prose
+        id: pt15
+        text: |-
+          ## శ్రీ "శ్రీ కృష్ణానందలహరి" – పీఠిక
+
+          దైవ ప్రేరిత మనోభావతరంగాల ప్రతిరూప స్వేచ్ఛాగీతికలు. సకల దేవతల ప్రస్తుతి కలదు. "త" అక్షరము గొప్పది; రామాయణం "తపస్స్వాధ్యాయ నిరతం తపస్వీ..." శ్లోకముతో ప్రారంభం. మన మొదటి గీతిక "త"కారా రంభం, చివరి గీతిక "త"కార సంపూర్తి. గాయత్రీ మంత్రములోని 24 అక్షరములు, రామాయణంలోని 24 వేల శ్లోకముల వలె 24 గీతికలు. మొదటి శ్లోకం "దైవతం"తో, చివరి శ్లోకం "మోక్షదాం"తో పూర్తవుతాయి. దైవధ్యానమునకు పరమావధి మోక్షం కోరటమే కదా!
+
+          ముక్తాయింపుగా 22, 23 శ్లోకములు: మొదటిది శ్రీ విష్ణు అష్టాక్షరీ, శ్రీ శివ పంచాక్షరీ, తారకరామ, శక్తి, లక్ష్మీ బీజాక్షరములతో కూడినది. నాల్గు పాదములు నాల్గు దిక్కుల సూచనగా పాదమునకు 16 అక్షరములతో ఎటు తిరిగినా షోడశకళా ప్రపూర్ణుడైన పురుషోత్తముడే దిక్కని ప్రబోధిస్తున్నట్లు ప్రభవించినది. రెండవది సర్వశ్రేష్ఠమైన శివవిష్ణువుల సంయుక్త రూపమైన సదాశివాత్మలింగమును తులసీ మారేడుదళములతో సహా ఆరాధించటం విష్ణుసాయుజ్యం ఇచ్చేదిగా నిరూపితమైనది. చివరగా అన్ని భేషజాలను విడిచి "నీ పాదాల నాశ్రయించిన నన్ను కాచి రక్షించి మోక్షం ఇమ్మని యాచించటం" ఆత్మార్ఫణం – ఆనందో బ్రహ్మ.
+
+          తేది: 21-01-2007, వ్యయ సం॥ర ప్రథమ మాఘ ఆదివారంనాడు శ్రీ భద్రాద్రి శ్రీరామచంద్రస్వామికి దర్శన, అర్చనా పూర్వకముగా ఈ శ్లోకముల మూలప్రతిని సమర్పించడమైనది.
 items:
   - type: verse
     id: v1
@@ -185,7 +296,7 @@ items:
       dayAnidhim kaivalyada svayam prakAza mUrtim zubhakaram zivam viSNum.
       yogezvara zrI rAdhAkRSNam, tam sadA namAmi zrI lakSmI nArAyaNa daivatam..
     en: The effulgent Lord Sri Ram, who is present in all sacrifices, austerities, and prescribed duties, the supreme embodiment who is worshipped for every objective, the infallible one, the eternal, one who delivers due to ceaseless mercy, one who appears on his own, the all auspicious Lord Shiva, Lord Vishnu, master of mystic Yoga Sri Radha Krishna, the embodiment of all Sri Lakshmi Narayana; to you I offer my humble obligation again and again.
-    te: ''
+    te: 'తేజస్సుతో నిండి, యజ్ఞము, దానము, తపస్సు వంటి అన్ని కర్మలయందుండు శ్రీరాముడు, సర్వేశ్వరుడు, అన్ని ప్రయోజనములకై ఆరాధించబడే అనంతుడు, శాశ్వతంగా వుండేవాడు, దయతో మోక్షమిచ్చే స్వయంప్రకాశకుడు, శుభకరుడైన శివ-విష్ణు స్వరూపుడు, విశ్వప్రేమికులైన రాధాకృష్ణులందరి స్వరూపమైన శ్రీ లక్ష్మీనారాయణునికి సదా నమస్కారములు.'
   - type: verse
     id: v2
     no: '2'
@@ -193,7 +304,7 @@ items:
       zrI vighnezvaram sarva vighnaharam kumAragurum ca sumukham phAlacandram.
       smarAmi prathamam surAgra pUjitam gaurIzakumAram siddhArtha gaNezam..
     en: I first remember Lord Vighneswara, who destroys all impediments and obstacles, the spiritual master of Lord Kartikeya, who has a moon-like face, he who is worshipped first among the demigods, the son of mother Parvati, one who fulfills all desires.
-    te: ''
+    te: 'అన్ని విఘ్నములను నశింపచేసే, కుమారస్వామికి గురువు, చంద్రుని వంటి ముఖము గల, దేవతలందరి కంటే ముందుగా పూజింపవలసిన పార్వతీతనయుడైన గణేశుని తలచుకుంటున్నాను.'
   - type: verse
     id: v3
     no: '3'
@@ -201,7 +312,7 @@ items:
       praNAmi jagadvIram, vizvaH zreyakArakam, viSNum jiSNum, muktidam advitIyam acyutam, jagannAtha vallabham..
       dhyAyAmi devakIsutam aniruddham Adi daivatam. deva devezvaram zrI harim, AdimadhyAntarasthitam sthiram..
     en: I offer my obeisances to the SPGH Sri Hari, the infallible Lord, the lord of the universe, the uplifter of this world, Sri Vishnu, the son of Devaki, the Primeval Lord who is unrivaled, the beginning, the middle, and the end of the creation; the unchangeable one.
-    te: ''
+    te: 'సర్వలోకాల శ్రేయస్సుకు కారకుడు, అద్వితీయుడు, ముక్తిప్రదాత, దేవకీసుతుడు, సృష్టికి ఆది-మధ్య-అంతములందు స్థిరముగా ఉండే శ్రీహరిని ప్రార్థిస్తున్నాను.'
   - type: verse
     id: v4
     no: '4'
@@ -209,19 +320,19 @@ items:
       pazyAmi paramezvaram vizvezam virUpAkSam memokSadam. phAlAkSam pazupatim satyam zivam sundaram..
       zambhum vizvambharam sAmbam Izvaram zAntam mahezvaram. vizvam sarvam vizvezvaram zivamayam, sadAvandeham tam vizvanAtham..
     en: The controller of the entire world, the beautiful-eyed, the one with a third eye on his face, the one who gives peace and happiness to all living entities, the one who protects the downtrodden upon the mere utterance of his name “sambho”, the one who beholds all the planetary systems, the bestower of wealth, the personification of peace, equal to all, all-auspicious, all-pervasive, supreme controller; perceiving him always through my mind’s eye, I offer him my obeisances.
-    te: ''
+    te: 'విశ్వమును పాలించే ఈశ్వరుడు, ముక్కంటి, పశుపతి, సత్యం శివం సుందర స్వరూపుడు, "శంభో" అని ఆక్రోశిస్తే ఆదుకునే మహేశ్వరుని మనోనేత్రంతో దర్శిస్తూ నమస్కరిస్తున్నాను.'
   - type: verse
     id: v5
     no: '5'
     hk: namAminanda kizoram, zrI kRSNam lokarakSakam, gItAcAryam satya priyam ca, nadAzrI zivadhyAna yoginam, zrIzam zrIkaram zreyam zaurim, rukmiNI prANavallabham, ramyam zrIrAdhAmAdhavam, rAsalIlA vinodinam..
     en: Son of Nanda Maharaja, Protector of the worlds, Sri Krishna, he who presented the truth through the teachings of the Bhagavad Gita, he who always meditates upon Lord Shiva, the all-auspicious bestower, the husband of Rukmini Devi, the one who never separates from Radha Rani, the one who mischievously displays conjugal love; to that Supreme Lord, I offer my obeisances.
-    te: ''
+    te: 'లోకరక్షకుడు, గీతాచార్యుడు, నిత్య శివధ్యానయోగి, రుక్మిణీప్రాణనాథుడు, రాధాసహితుడైన రాసలీలావినోది శ్రీకృష్ణునికి నమస్కారము.'
   - type: verse
     id: v6
     no: '6'
     hk: rAmam zrIrAmam lokAn ramayantItirAmaH iti sArthaka nAmatAraka rAmam | kaikeyI nandanam kausalyAsutam, vaidehI vallabha dazaratha rAmam . vizvAmitra priyam vaziSTha viziSTa ziSyam ca satyavAkpAlana zobhita eka patnI vratAdi sakala guNAbhirAmam. paramezvara pUjita nadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam. zaraNA gata rakSaka, bhakta janapoSaka jagadabhirAmam zrI rAmam. jJAna vAziSThArtham ca yoga vAziSTham vizva tejasam zrIrAmam. kAruNyadhAmam kaivalyadam kaLyANa zrI kodaNDarAmam. tam namAmi nirantaram mamArAdhya rAmam manobhirAmam ca hanumatsevita rAmam param jyotiH parandhAmaH zrI zrIrAmam..
     en: One who gives pleasure to all the worlds (befitting his name), the dear son of Kausalya and Dasaratha, the husband of Sita Devi, the favorite student of Vishwamitra, the follower of the vow of having a single wife, the follower of his father’s instructions, the possessor of great qualities like truthfulness, offering respects to Lord Shiva, protector of refuge, he who gives liberation out of mercy, one who ensures his devotees get all they require, the representation of the term “Gnyanavastha” - the possessor of all scientific knowledge, the personification of “Yogavasishta”, the bestower of liberation, the proprietor of all the worlds, the auspicious, the greatest bowman, my favorite Supreme Lord, the one who is ever-faithfully served by Hanuman, to that Sri Rama, I offer my humble obeisances.
-    te: ''
+    te: 'లోకములను ఆనందింపజేసే తారకరాముడు, ఏకపత్నీవ్రతుడు, సత్యవాక్పాలకుడు, శివార్చకుడు, హనుమత్సేవితుడైన కోదండరామునికి నిరంతర ప్రణామాలు.'
   - type: verse
     id: v7
     no: '7'
@@ -232,7 +343,7 @@ items:
     en: |-
       Son of Lord Siva and Kesava, residing on the top of Sabarigiri, renowned as Manikantha; to that Ayyappa I offer my obeisances.
       Sprouted from the lotus feet of Sri Mahavishnu, residing on the head of Lord Siva, one who purifies the three worlds - to that Ganga Mata, I offer my obeisances.
-    te: ''
+    te: 'శబరిగిరివాసుడైన అయ్యప్పస్వామికి, విష్ణుపాదోద్భవ-శివజటావిహారిణియైన గంగాభవానికి నమస్కారములు.'
   - type: verse
     id: v8
     no: '8'
@@ -240,13 +351,13 @@ items:
       prAtarjapet pitAmaham ca madhyAhne mahezvara rUpiNIm.
       sandhyAkAlevibhum viSNum nityam zrI devIm zrI gAyatrI mAtaram..
     en: I worship Gayatri thrice a day, for she represents Lord Brahma at dawn, Lord Shiva at noon, and Lord Vishnu at dusk.
-    te: ''
+    te: 'ప్రాతఃకాలమున బ్రహ్మ, మధ్యాహ్నమున మహేశ్వర, సాయంకాలమున విష్ణురూపిణియైన గాయత్రీమాతను నిత్యము ధ్యానిస్తున్నాను.'
   - type: verse
     id: v9
     no: '9'
     hk: namostu mAtApitarau namostu pratyakSa devau sucarita zobhitau. dhanyosmi zrI janakajananyau, dhanyosmi yuvayoH garbhodbhavam bhAgyam me mokSakArakam..
     en: To my parents, the personification of the divine, who have a spotless character, the glorious personalities, I offer my obeisances to you. It is my great fortune to have been born from your womb, entitling me to liberation.
-    te: ''
+    te: 'ప్రత్యక్షదైవాలైన తల్లిదండ్రులకు ప్రణామాలు. మీ గర్భమున జన్మించిన భాగ్యము నాకు ముక్తిదాయకము.'
   - type: verse
     id: v10
     no: '10'
@@ -254,13 +365,13 @@ items:
     en: |-
       The mercy of the Supreme Lord has no parallel, is ultimate, does not need to be asked, cannot be described, is unimaginable to the human mind, and gives happiness greater than the entire world.
       (If we live with a proper mindset, the Lord helps and protects; he protects those who take refuge)
-    te: ''
+    te: 'దేవుని దయ సాటిలేనిది, ఊహాతీతమైనది, విశ్వమంత విశాలమైన ఆనందమయ ప్రసాదము.'
   - type: verse
     id: v11
     no: '11'
     hk: duSTazikSaNam, ziSTarakSaNam, zrI kRSNAvatAraramya gamyam. vRSabha, zakaTa, kaMsa, naraka, zizupAlAdyasura saMharaNam. lIlAmAnuSa vigraham, bAlA lIlAvinodinam manoharam. yogavidyA vidhAtAram nRtyagAna rasarAgamayam, bhaje ..
     en: I always remember the personal forms of their Lordships Ganapati, Lord Siva, Lord Brahma, Lord Vishnu, Ayyappa, Subrahmanya/Kumara Swamy, Sai of Shiridi, and Puttaparthi.
-    te: ''
+    te: 'గణపతి, శివుడు, బ్రహ్మ, విష్ణువు, అయ్యప్ప, అరుణాచలేశ్వర, షిర్డీ-పుట్టపర్తి సాయీశ్వరుల ఏకరూపుని స్మరిస్తున్నాను.'
   - type: verse
     id: v12
     no: '12'
@@ -268,7 +379,7 @@ items:
       "zrI hanumantam AJjaneyam dhanyam, sadA zrIrAma nAma dhyAna daivatam.
       zAkinI DhAkinyAdi duSTasUdanam, vande, bhava bhayaroga zokaharam harim .."
     en: I offer my obeisances to Anjaneya, the son of Anjana Devi, who always recited Lord Rama’s name; the one who destroys all ghosts, removes fear from everyone, eradicates diseases, drives out misery, and protects his devotees.
-    te: ''
+    te: 'శ్రీరామనామ ధ్యాని, సమస్త దుష్టగ్రహ-భవభయరోగశోక నివారిణియైన ఆంజనేయస్వామికి వందనములు.'
   - type: verse
     id: v13
     no: '13'
@@ -276,7 +387,7 @@ items:
       namAmi zivazivAnI kumAram, zrIvallIzam, tArakAsura sUdanam.
       mamasarvArthadam, surasenAninam, zrI subrahmaNyezvara daivatam..
     en: I offer my obeisances to the son of Shiva and Shivani, the master of Valli, the killer of Tarakasura. The one who gives meaning to my life, the leader of the devatas, Sri Subrahmanyeswara - my respects to you.
-    te: ''
+    te: 'తారకాసుర సంహారి, సురసేనాని, సర్వార్థప్రదాత శ్రీ సుబ్రహ్మణ్యేశ్వరునికి నమస్కారములు.'
   - type: verse
     id: v14
     no: '14'
@@ -284,7 +395,7 @@ items:
       vandeham zrI veGkaTezam sadA zrInivAnam, Azritavatsalam ca zrIvatsasam.
       kaliyuga pratyakSa daivatam memokSadam zrI sarvezam smarAmitam saptagirivAsinam..
     en: Obeisances to Sri Venkatesa, Sri Srinivasa, the eternal abode of Sri, shelter for refugees, having the Sri Vatsa sign, directly appearing in Kali Yuga, deliverer of liberation, the Supreme Lord - I salute you, the Lord of the Seven Hills.
-    te: ''
+    te: 'కలియుగ ప్రత్యక్షదైవమైన తిరుమల వేంకటేశ్వరస్వామికి ప్రణామాలు.'
   - type: verse
     id: v15
     no: '15'
@@ -292,7 +403,7 @@ items:
       "bhajeham ramya guNadhAmam maithilI manobhirAmam zrIrAmam. sAketa sArvabhaumam, satya sandham saccidAnandam zivapriyam.
       bhaktAbhISTa varadam abhayadam zrIdharam hanumadIzvaram, kausalyAnanda rAmam kaivalyadam, dAzarathim, zrIraghurAmam.."
     en: All glories to you, Sri Rama, the embodiment of all auspicious qualities, he who attracts the mind of the daughter of the king of Mithila (Sita), the King of Ayodhya who resides in Satchitananda, dear to Lord Siva, bestower of devotees’ desires, bestower of fearlessness in Lord Hanuman, one who gives happiness to Kausalya, one who liberates, the son of Daradha - Sri Raghu Rama.
-    te: ''
+    te: 'సీతాపతి, అయోధ్యాధిపతి, సత్యసంధుడు, హనుమత్సేవితుడైన శ్రీరాముని భజిస్తున్నాను.'
   - type: verse
     id: v16
     no: '16'
@@ -302,13 +413,13 @@ items:
       harim zrImannArAyaNam zrI mahAviSNum zivantam.
       hiraNyagarbham zrI rAdhAkRSNam, vande mokSadam .."
     en: Having a mischievous smile and playful behavior, the ever-youthful Krishna, who resides in the thoughts of Rukmini Devi, who is the origin of Lord Krishna & Lord Shiva, who is the one who showed his Universal Form, and who is the bestower of liberation - to that Radha Krishna, I bow down.
-    te: ''
+    te: 'లక్ష్మీహృదయారవిందుడు, శివ-విష్ణు స్వరూపుడు, ముక్తిప్రదాతయైన రాధాకృష్ణునికి నమోవాకాలు.'
   - type: verse
     id: v17
     no: '17'
     hk: tejomayIm zrI mahAlakSmIm sarvazubhakAriNIm suzlokAm zrIlam jayAm zrI devIm, aSTaizvarya dAyinIm, vande viSNu vakSaH prakAza razmim, varadAm zrI vaiSNavIm ..
     en: Shining brightly, oh cause for all auspicious deeds, the bestower of all opulence, residing on the chest of Sri Mahavishnu, oh Mahalakshmi, kindly bestow me.
-    te: ''
+    te: 'విష్ణువక్షఃస్థలాలంకృత, అష్టైశ్వర్యప్రదాయినియైన శ్రీ మహాలక్ష్మికి వందనములు.'
   - type: verse
     id: v18
     no: '18'
@@ -320,7 +431,7 @@ items:
       Pleasing the inhabitants of all the planets when you descend as Lord Rama, you are the accomplisher of all tasks oh selfless personality!
       Lord Sri Krishna taught the Bhagavad Gita as a manual for all ascetics.
       All these are covered in the teachings of Sri Ramakrishna Paramahamsa, the spiritual master of Sri Vivekananda, who could envision the Goddess Sarada Devi; I offer my obeisances to him.
-    te: ''
+    te: 'రామకృష్ణ పరమహంస బోధనామృత వేదాంతసారమైన ఆదర్శములను దర్శిస్తూ, వివేకానంద గురువైన రామకృష్ణులకు, శారదామాతకు వందనములు.'
   - type: verse
     id: v19
     no: '19'
@@ -328,7 +439,7 @@ items:
       vande vindhya girivAsinIm vizvambharIm sAvitrIm zrI durgAm sarasvatIm zAmbhavIm.
       vizvajananIm vaiSNavIm, paramezvarIm, saccidAnanda brAhmIm hariNIm haindavIm ..
     en: Oh resident of the Vindhayachala Mountains, maintainer of the Universe, the combined form of Savitri, Durga, and Saraswati, mother of the Universe, teacher of Brahma Gnyana that good thoughts are the source of happiness; to you, I offer my obeisances.
-    te: ''
+    te: 'దుర్గా, లక్ష్మీ, సరస్వతీ సమైక్య స్వరూపిణియైన జగన్మాతకు నమస్కారములు.'
   - type: verse
     id: v20
     no: '20'
@@ -338,7 +449,7 @@ items:
       zAradAnAtha hari hara svarUpa tridaLapatram,
       samarpayAmi tat bilvam, sadAzivaprItyartham, nityam.."
     en: To she who resides on the leaf of the tree born from a bead of sweat of Parvathi, to the beautiful-hearted flower created by Goddess Lakshmi, to the bundle of three leaves created in the image of Lord Brahma and Lord Vishnu, and to please Lord Shiva - I offer my obeisances in the form of a bael leaf cluster.
-    te: ''
+    te: 'త్రిమూర్తి స్వరూపమైన బిల్వపత్రమును సదాశివుని ప్రీతికై సమర్పిస్తున్నాను.'
   - type: verse
     id: v21
     no: '21'
@@ -346,7 +457,7 @@ items:
       "vande vighnanAzaka, sarvasiddhi dAyaka zrI vighnezvara sahodarIm vizvezvarIm vizAlAkSIm pArvatI paramezvara priyaputrIm.
       sarvAbhISTa varapradAyinIm aSTaizvarya dAyinIm, zrI santoSi mAtaram . dehime, akhaNDa saubhAgyam prazAnta jIvanam ca prasIda. hevizvapriyA .."
     en: Oh sister of the Supreme Lord and the master of the Universe, the beloved of Lord Shiva, bestower of the eight great boons, oh Santoshi Mata, please protect me, and please bestow me with the boon of ‘Swargam’.
-    te: ''
+    te: 'అష్టైశ్వర్యప్రదాయిని, ప్రశాంత జీవితమునొసగే శ్రీ సంతోషీమాతకు ప్రణామాలు.'
   - type: verse
     id: v22
     no: '22'
@@ -354,13 +465,13 @@ items:
       oM. sarasijanAbham sarojahastam zrI zrIrAmam. mandasmitavadanam maGgaLezam zrIrAdhAkRSNam.
       oM namonArAyaNAya oM namazzivAya ceti. dhyAyAmi niratam, tam, zivam, hrIm zrIm viSNum mokSadam..
     en: Oh incarnation of the lotus-navel Lord, oh sweet-smiled master of Rukmini Devi, oh embodiment of love - Sri Radhakrishna, he who bestows liberation to those who chant the panchakshari mantram of Siva and the ashtakshari mantram of Goddess Shakti; to that Srimannarayana, I offer my obeisances.
-    te: ''
+    te: 'విష్ణు అష్టాక్షరీ, శివ పంచాక్షరీ, శక్తి-లక్ష్మీ బీజాక్షరములతో కూడి ముక్తిప్రదాతను సదా ధ్యానిస్తున్నాను.'
   - type: verse
     id: v23
     no: '23'
     hk: zatakoTi nArikeLa phalAntargata divya zvetakAnti tejasam zambhum . zatasahasrakoTi kSIrasAgara sadRza prakAzazobhitam zaGkaram.. ananta koTi tArAzazi tejo rAzinam sAmbam, tulasI bilvasahitam. tam ArAdhayAmi hariharasvarUpa sadAzivAtmaliGgam me viSNusAyujyadam..
     en: Oh lord who is shining like millions of white coconut kernels, with the effulgence of billions of milk oceans, brighter than trillions of stars and the moon, the combined form of Lord Shiva and Krishna, and which has the power to liberate - to such an Atmalingam, I offer my obeisances.
-    te: ''
+    te: 'అనంతకోటి చంద్ర-నక్షత్ర తేజోరాశియైన హరిహరాత్మక సదాశివలింగమును తులసీబిల్వములతో ఆరాధిస్తున్నాను.'
   - type: verse
     id: v24
     no: '24'
@@ -368,7 +479,7 @@ items:
       tejasvinIm tanmayIm, lakSmIm, hariNIm nArAyaNim vibhUtim, ramAm kSIrajAm,
       tejazrIm svaprakAza rUpiNIm, vande hiraNmayIm zriyAm, zivAm ca mokSadAm ..
     en: She who emerged from the milk ocean, with a shining effulgence, adores Lord Vishnu as her husband, and is the bestower of all opulence and liberation - I meditate upon you.
-    te: ''
+    te: 'క్షీరసాగర తనయ, మోక్షదాయక హిరణ్మయియైన శ్రీ మహాలక్ష్మికి ప్రణామములు.'
   - type: verse
     id: v25
     no: '25'
@@ -377,7 +488,7 @@ items:
       oM namo nArAyaNAya oM namazzivAyaca zrIrAma zrI rAdhAkRSNeti .
       dhyAyAmi zrI karam zambhum tatsAmbazivAtmaliGgam vizvezam viSNu sAyujyadam me ..
     en: Chanting the Vishnu Ashtakshari, Shiva Panchakshari, all the names of Lord Sri Rama and Radha Krishna, and all the auspicious names of Lord Shiva - I bow down before all of you. I meditate on the bestower of liberation, Lord Vishnu - may I remember him always!
-    te: ''
+    te: 'అష్టాక్షరీ, పంచాక్షరీ, రామ, రాధాకృష్ణ నామములతో సాంబశివాత్మలింగమును ధ్యానిస్తూ తరిస్తున్నాను.'
   - type: section
     id: s01
     hk: |-
@@ -579,7 +690,7 @@ items:
     no: '54'
     hk: mAtR vakSojAMsukakarSaNodyatakaraH kRSNaHsapuSNAtunaH..
     en: May the tiny cute palm that pulled Mother Yashoda for food, give protection to the entire universe. Hare Krishna!
-    te: ''
+    te: '"అమ్మా ఆకలేస్తోంది" అని తల్లిపైట కొంగు లాగడానికి ఎత్తిన శ్రీకృష్ణుని చిన్నారి చెయ్యి విశ్వమునకు అభయహస్తమై సదా రక్షించుగాక!'
   - type: verse
     id: v55
     no: '55'

@@ -47,6 +47,9 @@ def prose_html(text: str, entry_id: str, field: str, e: dict) -> str:
     """Paragraphs of prose; every inline ``$hk$`` run becomes a span that follows the script."""
     out, n = "", 0
     for para in paragraphs(text):
+        if para.startswith("## "):  # a heading inside a preface
+            out += f'<h3 class="pfh">{esc(para[3:])}</h3>'
+            continue
         out += "<p>"
         for kind, body in inline.split(para):
             if kind == "text":

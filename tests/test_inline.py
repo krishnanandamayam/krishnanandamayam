@@ -81,3 +81,8 @@ def test_verse_header_is_rendered_and_listed_in_contents():
 def test_header_only_verse_has_no_empty_lines_block():
     html = build.verse_html({"id": "v105", "no": "105", "title": "x", "hk": "", "en": "", "te": ""}, {"v105.title": ["శీర్షిక"]})
     assert 'class="lines' not in html and "శీర్షిక" in html
+
+
+def test_prose_heading_marker_renders_as_a_heading():
+    html = build.prose_html("## మనవి\n\nఓం శ్రీ", "pt01", "text", {})
+    assert '<h3 class="pfh">మనవి</h3>' in html and "<p>ఓం శ్రీ</p>" in html
