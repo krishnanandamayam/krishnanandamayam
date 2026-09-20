@@ -1,5 +1,7 @@
 """The Telugu preface and the Telugu meanings taken from the family's Telugu document."""
 
+import re
+
 from tools import store
 
 DOC = store.load()
@@ -13,7 +15,7 @@ def test_telugu_preface_has_prose_and_slokas():
 
 def test_the_authors_address_and_phone_are_not_published():
     text = " ".join(str(b.get("text") or "") for b in TE)
-    assert "9908231582" not in text and "సూపర్ మార్కెట్" not in text
+    assert not re.search(r"\d{10}", text) and "ఫోన్" not in text and "ఫ్లాట్" not in text
 
 
 def test_verses_1_to_25_have_a_telugu_meaning():
