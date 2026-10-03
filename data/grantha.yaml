@@ -627,23 +627,34 @@ items:
       zrI rukmiNI prANanAdhAya, zrI rAdhAkRSNa prabhave, maGgaLam jayamaGgaLam sarvamaGgaLam nitya zubhamaGgaLam ..
     en: Lord Sri Rama, Lord Siva, bestower of boons to devotees, he who is the beloved of Sri Rukmini, Sri Radha Krishna, all auspiciousness unto you in all its several forms!
     te: ''
+  - type: section
+    id: s02a
+    hk: zrI sarasvatIstutiH
+    en: ''
   - type: verse
     id: v43
     no: '43'
-    hk: zrI sarasvatIstutiH zrI sarasvatI SoDazAkSara svarNamAlA oM vAgdevIm varadAyinIm vidyA pradAyinIm vidyAm vraNAmi vANIm vINApANIJcajJAna sarasvatIm. zAradAMvi zAradAm vandevarademokSArthInamme rakSa bhAratI . bAsara vAsinI . bhaktavatsalA;
+    title: zrI sarasvatI SoDazAkSara svarNamAlA
+    hk: |-
+      oM vAgdevIm varadAyinIm vidyApradAyinIm vidyAm praNAmi vANIm vINApANIm ca jJAnasarasvatIm. 
+      zAradAm vizAradAm vande varade mokSArthinam me rakSa! bhAratI bAsara vAsinI bhaktavatsalA ..
     en: Sri Saraswati Devi, represented by sixteen syllables, goddess of learning, bestower, and personification of knowledge. She with a sweet voice, an expert in all fields, and she who takes up all of our burdens from her abode in Basara, who blesses all who pray to her - my obeisances!
     te: ''
   - type: verse
     id: v44
     no: '44'
-    hk: zrI zAradA caturvigazcAkSara saroja hAram . vAgdevIm vara dAyinIm vidyA pradAyinIm vArA hIm vidyAm viriJci priyAm, vANIm vINApANim cavimalAm, sarvaloka pUjitAm zrI jJAnasarasvatIm. zAradAm vizAradAm vanuthAMvande, varade vidyAjJAnamokSArthinam me.. rakSa bhAratI. bAsaravAsinI. zrI pradA, zrI zivAnu DA.. AzritavatsalA..
+    title: zrI zAradA caturvigazcAkSara saroja hAram
+    hk: vAgdevIm varadAyinIm vidyA pradAyinIm vArAhIm vidyAm viriJcipriyAm, vANIm vINApANIm ca vimalAm, sarvaloka pUjitAm zrI jJAnasarasvatIm. zAradAm vizAradAm vasudhAm vande varade vidyAjJAnamokSArthinam me rakSa! bhAratI bAsara vAsinI zrIpradA zrI zivAnujA AzritavatsalA ..
     en: Sri Saraswati Devi, who is embodied in the 24-syllable mantra whose 4 lines are reminiscent of a lotus garland and whose several epithets are like a fresh scent in the wind, the goddess of all education, I humbly request you to bless me with the eight great fortunes, and salvation through learning. Oh, companion of Maha Siva! You never fail to provide refuge to your devotees.
     te: ''
   - type: verse
     id: v45
     no: '45'
     title: zrI gaurIstotram (sarvamaGgaLAzrayam)
-    hk: 'oM vandeham vizvezvarIm praNA vAtmikAm, himabAlA annapUrNAJca zAmbhavIm. AdizaktIm jagajjananIm sumukhaSaNmukha. yormAtara mIzvarIm hrIm zrIm.. zrI gaurIm zauri nRhodarIm zarvANIm, zivAnIm mahAkALIm sarvamaGgaLAm . pAhimAm . varamezvarI. varedezubhapradA. vedamAtA. dehime viSNusAyujyam..'
+    hk: |-
+      oM vande'ham vizvezvarIm praNavAtmikAm, himabAlAm annapUrNAm ca zAmbhavIm. AdizaktIm jagajjananIm sumukhaSaNmukhayormAtaram IzvarIm hrIm zrIm.
+      zrI gaurIm zaurinsahodarIm zarvANIm, zivAnIm mahAkALIm sarvamaGgaLAm.. 
+      pAhimAm . paramezvarI. varedezubhapradA. vedamAtA. dehime viSNusAyujyam..
     en: To she who blesses all the worlds with prosperity, who represents the primordial sound of Om, the daughter of Himavant, the giver of nourishment, the better half of Sambhu, the source of all energy in the Universe, the mother of all worlds, the matriarch of Subrahmanya and Ganesh, she who is represented in the sacred seed syllables, sister of Sri Maha Vishnu, she who has taken various avatars including Sri Maha Kali, whose mere name causes good fortune, who always saves her devotees from all the evil in the world, I humbly request your blessing which shall grant me salvation.
     te: ''
   - type: verse
