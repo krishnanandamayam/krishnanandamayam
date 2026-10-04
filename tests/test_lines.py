@@ -66,9 +66,3 @@ def test_split_line_spans_point_at_the_source(hk):
             # a letter comes from itself; the danda closing a run-on line from that danda
             assert hk[a:b] == ch or (ch in " ." and hk[a:b].strip(" .|") == "")
 
-
-def test_lint_colon_after_a_list_label_is_not_a_visarga():
-    from tools.hk import lint
-
-    assert lint("gItAvaLi: rAma") != []
-    assert lint("zrIkRSNam vande\n3. japamekam, nArAyaNASTAkSari: harekRSNa") == []

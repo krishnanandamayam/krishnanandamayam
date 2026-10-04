@@ -27,6 +27,7 @@ ROOT = store.ROOT
 SITE = ROOT / "site"
 EDITOR = ROOT / "tools" / "editor"
 FLAGS = ROOT / "data" / "flags.toml"
+LINT_OK = ROOT / "data" / "lint-ok.toml"
 LOCK = threading.Lock()  # one writer / one Aksharamukha call at a time
 FIELDS = ("title", "hk", "en", "te", "text")
 
@@ -110,6 +111,16 @@ def flags() -> dict[str, str]:
         return {str(k): str(v) for k, v in tomllib.load(f).items()}
 
 
+def lint(entry_id: str, text: str) -> list[str]:
+    """HK.lint, minus the findings the author has looked at and accepted for this entry."""
+    found = HK.lint(text)
+    if not LINT_OK.exists():
+        return found
+    with LINT_OK.open("rb") as f:
+        accepted = tomllib.load(f).get(entry_id) or []
+    return [i for i in found if not any(i.startswith(a) for a in accepted)]
+
+
 def label_of(e) -> str:
     body = str(e.get("title") or e.get("hk") or e.get("text") or "")
     return re.sub(r"\s+", " ", body)[:60]
@@ -134,9 +145,9 @@ def api_entries():
 
 
 def _row(e, group, head, marked):
-    issues = HK.lint(str(e["hk"])) if e.get("hk") else []
+    issues = lint(e["id"], str(e["hk"])) if e.get("hk") else []
     if e.get("title"):
-        issues += HK.lint(str(e["title"]))
+        issues += lint(e["id"], str(e["title"]))
     if e["type"] == "verse" and not str(e.get("en") or "").strip():
         issues.append("no English translation")
     if e["id"] in marked:
@@ -187,7 +198,7 @@ def api_preview(body):
         "spans": spans,
         "saraLaTelugu": sarala_te,
         "zuddha": HK.to_zuddha(hk),
-        "issues": HK.lint(hk),
+        "issues": lint(str(body.get("id", "")), hk),
     }
 
 

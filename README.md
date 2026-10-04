@@ -84,6 +84,7 @@ nasal + consonant combination has a named test in `tests/`.
 |---|---|
 | `data/grantha.yaml` | the ground truth: prefaces, section titles, verses (`hk`, `en`, `te`) |
 | `data/flags.toml` | entries marked by hand to come back to (`v53 = "why"`); the editor lists them under "has issues" |
+| `data/lint-ok.toml` | findings looked at and accepted for one entry, so the editor stops reporting them there |
 | `data/ISSUES.md` | what the import found that needs a human decision |
 | `data/ZUDDHA_PASS.md` | every word the to_zuddha pass changed on import |
 | `data/source/` | the original Google Sheet export, for provenance |

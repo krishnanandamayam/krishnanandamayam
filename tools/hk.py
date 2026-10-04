@@ -244,10 +244,8 @@ def lint(hk: str) -> list[str]:
     bad = sorted({ch for ch in hk if ch in NON_HK_LETTERS})
     if bad:
         found.append("letters outside Harvard-Kyoto: " + " ".join(bad))
-    # in a numbered list ("3. japam: ...") a colon ends the item's label; it is not a visarga
-    body = "\n".join(ln for ln in hk.split("\n") if not re.match(r"\s*\d+\.\s", ln))
-    if re.search(r"[A-Za-z]:(?=[A-Za-z]|\s|$)", body) and re.search(r"[aAiIuUeo]:", body):
-        words = sorted(set(re.findall(r"[A-Za-z]+[aAiIuUeo]:(?!\s*\n)", body)))[:6]
+    if re.search(r"[A-Za-z]:(?=[A-Za-z]|\s|$)", hk) and re.search(r"[aAiIuUeo]:", hk):
+        words = sorted(set(re.findall(r"[A-Za-z]+[aAiIuUeo]:(?!\s*\n)", hk)))[:6]
         if words:
             found.append("':' after a vowel, possibly a visarga typed as colon (use H): " + ", ".join(words))
     for m in re.finditer(r"(?<![A-Za-z])([A-Za-z]{1,2}) ?\. ([a-z]{2,})", hk):

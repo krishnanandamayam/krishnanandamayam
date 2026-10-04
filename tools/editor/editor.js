@@ -223,7 +223,7 @@
     const mine = ++seq;
     try {
       const hk = $('#hk').value;
-      const data = await api('/api/preview', { hk, title: $('#title').value, script: pv.script, mode: pv.mode });
+      const data = await api('/api/preview', { id: current.id, hk, title: $('#title').value, script: pv.script, mode: pv.mode });
       if (mine !== seq) return;
       data.hk = hk;
       lastPreview = data;
