@@ -24,6 +24,10 @@ the user is working with the agent.
 - If it has stopped, restart it without being asked, and tell the user when you did.
 - Run it with `run_in_background` and the longest `timeout` (7200000 ms). When that limit
   stops it, restart it; the user does not have to.
-- Never leave `data/grantha.yaml` with conflict markers or invalid YAML while the server is
-  running: every editor request, including Save, fails until the file parses again.
+- If a merge or pull leaves `data/grantha.yaml` invalid, the grantha rule above still applies:
+  do not resolve it to get the server working. Stop a server you started (or warn the user if
+  they started it), ask about each conflict, and restart the server once the file parses.
+  Until then every editor request, including Save, fails.
+- Before a pull or merge, check whether `data/grantha.yaml` could conflict (for example
+  `git diff HEAD...origin/main -- data/grantha.yaml`) and tell the user first.
 - Do not stop a server the user started themselves.
