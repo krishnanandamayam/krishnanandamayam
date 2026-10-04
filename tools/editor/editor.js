@@ -73,6 +73,7 @@
     }
     $('#n-issues').textContent = `(${entries.filter((e) => e.issues).length})`;
     $('#n-dirty').textContent = `(${entries.filter((e) => e.uncommitted).length})`;
+    markDrafts();
   }
 
   function drawGit(git) {
@@ -98,6 +99,17 @@
   // ---- entry --------------------------------------------------------------------------------
   const values = () => Object.fromEntries(FIELDS.filter((k) => k in current.fields).map((k) => [k, $('#' + k).value.replace(/\r\n/g, '\n').replace(/^\n+|\n+$/g, '')]));
   const isDirty = () => !!current && FIELDS.some((k) => k in current.fields && values()[k] !== current.fields[k]);
+  // Unsaved edits to entries you have moved away from. Save (button or Ctrl+S) writes them all.
+  const drafts = new Map(); // id -> values
+  function pending() {
+    const all = new Map(drafts);
+    if (current) { if (isDirty()) all.set(current.id, values()); else all.delete(current.id); }
+    return all;
+  }
+  function markDrafts() {
+    const all = pending();
+    for (const a of $$('#list a[data-id]')) a.classList.toggle('draft', all.has(a.dataset.id));
+  }
   const isUncommitted = () => !!current && !!current.committed && FIELDS.some((k) => k in current.fields && (current.committed[k] ?? '') !== current.fields[k]);
 
   function drawBadge() {
@@ -105,7 +117,10 @@
     const state = isDirty() ? 'unsaved' : isUncommitted() ? 'uncommitted' : 'saved';
     b.className = 'badge ' + state;
     b.textContent = { unsaved: 'unsaved changes', uncommitted: 'saved · not committed', saved: current && current.committed ? 'matches last commit' : 'saved' }[state];
-    $('#save').disabled = !isDirty();
+    const n = pending().size;
+    $('#save').disabled = n === 0;
+    $('#save').textContent = n > 1 ? `Save all (${n})` : 'Save';
+    markDrafts();
     const canRevert = current && current.committed && FIELDS.some((k) => k in current.fields && (current.committed[k] ?? '') !== values()[k]);
     $('#revert').disabled = !canRevert;
   }
@@ -135,27 +150,35 @@
 
   async function open(id) {
     if (current && current.id === id) return;
-    if (isDirty() && !confirm('This entry has unsaved changes. Leave without saving?')) {
-      history.replaceState(null, '', '#' + current.id);
-      return;
-    }
-    try { fill(await api('/api/entry/' + encodeURIComponent(id))); }
-    catch (err) { alert(err.message); }
+    // keep unsaved edits as a draft instead of asking: they are saved together later
+    if (current) { if (isDirty()) drafts.set(current.id, values()); else drafts.delete(current.id); }
+    try {
+      fill(await api('/api/entry/' + encodeURIComponent(id)));
+      const d = drafts.get(id);
+      if (d) {
+        for (const k of FIELDS) if (k in current.fields && k in d) $('#' + k).value = d[k];
+        drafts.delete(id);
+        drawMarks();
+        drawBadge();
+        schedulePreview();
+        previewAllProse();
+      }
+    } catch (err) { alert(err.message); }
   }
 
   async function save() {
-    if (!isDirty()) return;
+    const all = pending();
+    if (!all.size) return;
     $('#save').disabled = true;
     $('#save').textContent = 'Saving…';
     try {
-      const data = await api('/api/entry/' + encodeURIComponent(current.id), values());
-      current = data;
-      for (const k of FIELDS) if (k in data.fields) $('#' + k).value = data.fields[k];
+      await api('/api/save-all', { entries: Object.fromEntries(all) });
+      if (all.has(current.id)) current.fields = { ...current.fields, ...all.get(current.id) };
+      drafts.clear();
       await refreshList();
       const here = $(`#list a[data-id="${CSS.escape(current.id)}"]`);
       if (here) here.setAttribute('aria-current', 'true');
     } catch (err) { alert('Not saved: ' + err.message); }
-    $('#save').textContent = 'Save';
     drawMarks();
     drawBadge();
   }
@@ -329,7 +352,7 @@
   });
   for (const id of ['search', 'f-issues', 'f-dirty']) $('#' + id).addEventListener('input', drawList);
   window.addEventListener('hashchange', () => open(decodeURIComponent(location.hash.slice(1))));
-  window.addEventListener('beforeunload', (e) => { if (isDirty()) { e.preventDefault(); e.returnValue = ''; } });
+  window.addEventListener('beforeunload', (e) => { if (pending().size) { e.preventDefault(); e.returnValue = ''; } });
 
   (async () => {
     await Promise.all([initScripts(), refreshList()]);

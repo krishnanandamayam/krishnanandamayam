@@ -197,26 +197,45 @@ def api_preview_prose(body):
     return {"paragraphs": paras, "issues": issues}
 
 
+def _apply(doc, entry_id: str, body) -> list[str]:
+    """Write the changed fields of one entry into the in-memory doc; return which changed."""
+    e = store.find(doc, entry_id)
+    changed = []
+    for k in FIELDS:
+        if k not in body or k not in fields_of(e):
+            continue
+        new = str(body[k]).replace("\r\n", "\n").strip("\n")
+        if str(e.get(k) or "") == new:
+            continue
+        if k == "title":
+            store.set_title(e, new)
+        else:
+            e[k] = store.text(new)
+        changed.append(k)
+    return changed
+
+
 def api_save(entry_id: str, body):
     with LOCK:
         doc = store.load()
-        e = store.find(doc, entry_id)
-        changed = []
-        for k in FIELDS:
-            if k not in body or k not in fields_of(e):
-                continue
-            new = str(body[k]).replace("\r\n", "\n").strip("\n")
-            if str(e.get(k) or "") == new:
-                continue
-            if k == "title":
-                store.set_title(e, new)
-            else:
-                e[k] = store.text(new)
-            changed.append(k)
+        changed = _apply(doc, entry_id, body)
         if changed:
             store.save(doc)
             build.build(quiet=True)
     return {"saved": changed, **api_entry(entry_id), "git": git_summary()}
+
+
+def api_save_all(body):
+    """Save many entries at once: {"entries": {id: {field: value}}}. One write, one rebuild.
+    Nothing is written if any id is unknown."""
+    items = body.get("entries") or {}
+    with LOCK:
+        doc = store.load()
+        saved = {eid: c for eid, vals in items.items() if (c := _apply(doc, eid, vals))}
+        if saved:
+            store.save(doc)
+            build.build(quiet=True)
+    return {"saved": saved, "git": git_summary()}
 
 
 def api_add_block(body):
@@ -250,7 +269,7 @@ class Handler(BaseHTTPRequestHandler):
     server_version = "krishnanandamayam"
 
     def log_message(self, fmt, *args):
-        if "/api/preview" not in (args[0] if args else ""):
+        if "/api/preview" not in str(args[0] if args else ""):
             super().log_message(fmt, *args)
 
     def _json(self, payload, status=HTTPStatus.OK):
@@ -314,6 +333,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json(api_preview(body))
             if path == "/api/preview-prose":
                 return self._json(api_preview_prose(body))
+            if path == "/api/save-all":
+                return self._json(api_save_all(body))
             if path.startswith("/api/entry/"):
                 return self._json(api_save(path.rsplit("/", 1)[1], body))
             if path == "/api/preface/te/add":
