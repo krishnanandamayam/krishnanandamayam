@@ -223,7 +223,7 @@
     const mine = ++seq;
     try {
       const hk = $('#hk').value;
-      const data = await api('/api/preview', { hk, title: $('#title').value, script: pv.script, mode: pv.mode });
+      const data = await api('/api/preview', { id: current.id, hk, title: $('#title').value, script: pv.script, mode: pv.mode });
       if (mine !== seq) return;
       data.hk = hk;
       lastPreview = data;
@@ -247,7 +247,7 @@
       if (font) tp.style.fontFamily = `"${font}", "Noto Serif", serif`;
       const notZuddha = data.zuddha !== $('#hk').value || data.titleZuddha !== $('#title').value;
       $('#zuddha-hint').hidden = !notZuddha;
-      $('#issues').replaceChildren(...data.issues.filter((i) => !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
+      $('#issues').replaceChildren(...[current.flag, ...data.issues].filter((i) => i && !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
       drawSource();
       syncSelection();
     } catch (err) { console.error(err); }

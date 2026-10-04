@@ -63,7 +63,19 @@ the rendered paragraph under the text box as you type.
 | before y r l v z S s h | anusvara: `saMzaya` | anusvara |
 | the pranava | `oM` ఓం | `oM` ఓం |
 
-The rules are `Z1`-`Z6` and `S1`-`S6` in [`tools/hk.py`](tools/hk.py); every rule and every
+### Keeping an anusvara in zuddha: braces
+
+A word, or part of one, written between braces is left exactly as typed in **both**
+conventions, and the braces are never shown:
+
+```
+gaGgA {gaMgA}            గఙ్గా గంగా   (zuddha)      గంగా గంగా   (saraLa)
+zrI{veMkaTa}ezvaram      only the braced part is protected
+```
+
+A pair of braces cannot span a line break.
+
+The rules are `Z1`-`Z7` and `S1`-`S7` in [`tools/hk.py`](tools/hk.py); every rule and every
 nasal + consonant combination has a named test in `tests/`.
 
 ## Layout
@@ -71,6 +83,8 @@ nasal + consonant combination has a named test in `tests/`.
 | | |
 |---|---|
 | `data/grantha.yaml` | the ground truth: prefaces, section titles, verses (`hk`, `en`, `te`) |
+| `data/flags.toml` | entries marked by hand to come back to (`v53 = "why"`); the editor lists them under "has issues" |
+| `data/lint-ok.toml` | findings looked at and accepted for one entry, so the editor stops reporting them there |
 | `data/ISSUES.md` | what the import found that needs a human decision |
 | `data/ZUDDHA_PASS.md` | every word the to_zuddha pass changed on import |
 | `data/source/` | the original Google Sheet export, for provenance |

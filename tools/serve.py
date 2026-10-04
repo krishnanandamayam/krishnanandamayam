@@ -14,6 +14,7 @@ import mimetypes
 import re
 import subprocess
 import threading
+import tomllib
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from io import StringIO
@@ -25,6 +26,8 @@ from tools import hk as HK
 ROOT = store.ROOT
 SITE = ROOT / "site"
 EDITOR = ROOT / "tools" / "editor"
+FLAGS = ROOT / "data" / "flags.toml"
+LINT_OK = ROOT / "data" / "lint-ok.toml"
 LOCK = threading.Lock()  # one writer / one Aksharamukha call at a time
 FIELDS = ("title", "hk", "en", "te", "text")
 
@@ -100,6 +103,24 @@ def fields_of(e) -> dict[str, str]:
     return out
 
 
+def flags() -> dict[str, str]:
+    """Entries marked by hand to come back to: id -> why. They count as "has issues"."""
+    if not FLAGS.exists():
+        return {}
+    with FLAGS.open("rb") as f:
+        return {str(k): str(v) for k, v in tomllib.load(f).items()}
+
+
+def lint(entry_id: str, text: str) -> list[str]:
+    """HK.lint, minus the findings the author has looked at and accepted for this entry."""
+    found = HK.lint(text)
+    if not LINT_OK.exists():
+        return found
+    with LINT_OK.open("rb") as f:
+        accepted = tomllib.load(f).get(entry_id) or []
+    return [i for i in found if not any(i.startswith(a) for a in accepted)]
+
+
 def label_of(e) -> str:
     body = str(e.get("title") or e.get("hk") or e.get("text") or "")
     return re.sub(r"\s+", " ", body)[:60]
@@ -108,26 +129,29 @@ def label_of(e) -> str:
 def api_entries():
     doc = store.load()
     head = committed_entries()
+    marked = flags()
     out = []
     group = "Preface (English)"
     for lang in ("en", "te"):
         group = "Preface (English)" if lang == "en" else "ముందుమాట (Telugu preface)"
         for b in doc["prefaces"][lang]["blocks"]:
-            out.append(_row(b, group, head))
+            out.append(_row(b, group, head, marked))
     group = "Opening verses"
     for it in doc["items"]:
         if it["type"] == "section":
             group = re.sub(r"\s+", " ", str(it["hk"]))
-        out.append(_row(it, group, head))
+        out.append(_row(it, group, head, marked))
     return {"entries": out, "git": git_summary()}
 
 
-def _row(e, group, head):
-    issues = HK.lint(str(e["hk"])) if e.get("hk") else []
+def _row(e, group, head, marked):
+    issues = lint(e["id"], str(e["hk"])) if e.get("hk") else []
     if e.get("title"):
-        issues += HK.lint(str(e["title"]))
+        issues += lint(e["id"], str(e["title"]))
     if e["type"] == "verse" and not str(e.get("en") or "").strip():
         issues.append("no English translation")
+    if e["id"] in marked:
+        issues.append(marked[e["id"]])
     current = fields_of(e)
     return {
         "id": e["id"],
@@ -151,6 +175,7 @@ def api_entry(entry_id: str):
         "fields": fields_of(e),
         "committed": head,
         "sourceTelugu": SOURCE_TE.get(entry_id, ""),
+        "flag": flags().get(entry_id, ""),
     }
 
 
@@ -173,7 +198,7 @@ def api_preview(body):
         "spans": spans,
         "saraLaTelugu": sarala_te,
         "zuddha": HK.to_zuddha(hk),
-        "issues": HK.lint(hk),
+        "issues": lint(str(body.get("id", "")), hk),
     }
 
 

@@ -1,0 +1,5 @@
+# Findings the author has looked at and accepted, per entry: id = [start of the finding's text].
+# The check still runs on every other entry. Nothing here is published.
+
+# the colons end the labels of a numbered list; they are not visargas
+v183 = ["':' after a vowel"]

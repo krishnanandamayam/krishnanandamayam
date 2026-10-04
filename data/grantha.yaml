@@ -665,46 +665,75 @@ items:
     id: v47
     no: '47'
     title: sarvam sarvezvaram
-    hk: 'oM teja zrI zam zrIvArimprema svarUpam, karuNAmayaJca bhaktavatsalam. tejorAzinam mohanavaMzI gAna priyam, (golokavAsinam Izvaram). vande zrI rAdhAkRSNam mama mokSadam..'
+    hk: 'oM teja zrIzam zrIvArim prema svarUpam, karuNAmayam ca bhaktavatsalam. tejorAzinam mohanavaMzI gAna priyam, (golokavAsinam Izvaram). vande zrI rAdhAkRSNam mama mokSadam..'
     en: Oh effulgent Lord, master of fortune, embodiment of love, merciful Lord, affectionate to his devotees, full of luminescence, expert flutist, resident of Goloka, obeisances to you Sri Radha Krishna, deliverer of salvation!
     te: ''
   - type: verse
     id: v48
     no: '48'
-    hk: vedam zrI kRSNam vedArtham zrIkRSNam vedAntam zrIkRSNam vedAntargata daivaJca zrIkRSNam . nAdam zrIkRSNam oGkAra nAdam zrI kRSNam veNunAdam zrI kRSNam pAJcajanya gItAnAdam zrI kRSNam. dhyAnam zrI kRSNam yAgam yogam zrI kRSNam vinodam zrIkRSNam bhavabhaya bheda chedanam zrI kRSNam. vandeham tam zrI kRSNam muktidam dhanyam zrI kRSNa dhyAnajIvanam prAptistathyam zrI kRSNaparamapadam..
+    hk: |-
+      vedam zrI kRSNam vedArtham zrIkRSNam 
+      vedAntam zrIkRSNam vedAntargata daivam ca zrIkRSNam . 
+      nAdam zrIkRSNam oM kAra nAdam zrI kRSNam 
+      veNunAdam zrI kRSNam pAJcajanya gItAnAdam zrI kRSNam. 
+      dhyAnam zrI kRSNam yAgayogam zrI kRSNam 
+      vinodam zrIkRSNam bhavabhaya bheda chedanam zrI kRSNam. 
+      vandeham tam zrI kRSNam muktidam 
+      dhanyam zrI kRSNa dhyAnajIvanam 
+      prAptiH tathyam zrI kRSNaparamapadam..
     en: The essence of the Vedas, their meaning, their goal, and their embodiment are all Sri Krishna. He is represented in the sound of Om, the melody of his flute, and the rumble of the Panchajanya conch shell. Meditation, sacrifice, and penance all lead to Sri Krishna. I offer obeisances to you Sri Krishna, destroyer of fear and bestower of liberation. He who meditates upon Sri Krishna is sure to get eternal salvation.
     te: ''
   - type: verse
     id: v49
     no: '49'
-    hk: 'pallavi : rAjazekhara rAjazekhara rAjazekhara pAhimAm rAjazekhara rAjazekhara rAjazekhara rakSamAm candrazekhara candrazekhara candrazekhara pAhimAm induzekhara indu zekhara induzekhara rakSamAm zazizekhara zazizekhara zazizekhara rakSamAm rAjazekhara rAjazekhara rAjazekhara pAhimAm rAjazekhara rAjazekhara rAjazekhara rakSamAm..'
+    hk: |-
+      pallavi : 
+      rAjazekhara rAjazekhara rAjazekhara pAhimAm 
+      rAjazekhara rAjazekhara rAjazekhara rakSamAm 
+      candrazekhara candrazekhara candrazekhara pAhimAm 
+      induzekhara induzekhara induzekhara rakSamAm 
+      zazizekhara zazizekhara zazizekhara rakSamAm 
+      rAjazekhara rAjazekhara rAjazekhara pAhimAm 
+      rAjazekhara rAjazekhara rAjazekhara rakSamAm..
     en: Oh, Eternal Emperor - protect me! Oh, Moon-holder, save me! Moonlike luminescent one, guide me!
     te: ''
   - type: verse
     id: v50
     no: '50'
     title: advaitAbhivAdamu
-    hk: 'zaraNam zrI satyanArAyaNam kAruNyadhAmam ramAkAntantri guNAtItam. Arta trAyavarAyaNam annavaravAsinam sadAzivammama kaivalyadam..'
+    hk: |-
+      zaraNam zrI satyanArAyaNam kAruNyadhAmam ramAkAntam triguNAtItam. 
+      ArtatrANa parAyaNam annavaravAsinam sadAzivam mama kaivalyadam..
     en: I seek refuge under Sri Satyanarayana, the embodiment of mercy, husband of Ramadevi, he who is above the three gunas - sattva (goodness/calmness/harmoniousness), rajas (passion/activity/movement), and tamas (ignorance/inertia/laziness), he who gives refuge to the distressed, resident of Annavaram, and the auspicious bestower of liberation.
     te: ''
   - type: verse
     id: v51
     no: '51'
-    hk: namosiMhAcalavAsinam, svayambhuvam varAhalakSmI nRhiMhasvAminam . zrI mahAviSNAtRtIyAvatAram zrIcandana lepita zivaliGgAkAram . ApadbAndhavam abhayadam ananta AdinArAyaNaJca karuNAsAndram. darzana mAtreNa anirvacanIyA nandapradam bhaktavazam memokSadam..
+    hk: |-
+      namo simhAcalavAsinam, svayambhuvam varAhalakSmI nRhiMhasvAminam . 
+      zrI mahAviSNoH tRtIyAvatAram zrIcandana lepita zivaliGgAkAram .
+      ApadbAndhavam abhayadam ananta AdinArAyaNam ca karuNAsAndram.
+      darzana mAtreNa anirvacanIyAnandapradam bhaktavazam memokSadam..
     en: Obeisances unto you, resident of Simhachalam, self-manifest, Varaha Laksmi Narasimha Swamy, the third incarnation of Maha Vishnu, covered with sandalwood paste as a Sivalingam. Refuge of the distressed, limitless, oh merciful one! One who gives immense happiness just by his darshanam, resident of his devotees’ hearts, bestower of the liberation of mine.
     te: ''
   - type: verse
     id: v52
     no: '52'
     title: vairAgyaphalam
-    hk: 'bhAgyam bhogam bhAram mohaGkSetram grAsaMvAsaMsiMhAsanam. vilAsam bhAmAkalApam satIsantAna sukhalAlasam. dehAbhimAnam bandhuprItiH bAdhAkaram, kIrti kAGkSaH bahujanmakArakam. bhavabandham muktiprati bandhakaJca kSudram hRdaya daurbalyam etat sarvam vyarthavyAsaGgam . zrI kRSNadhyAnam taruNopAyam. kurubhaktijJAna yogAbhyAsam: tathyam zAzvata vaikuNThavAsam..'
+    hk: |-
+      bhAgyam bhogam bhAram moham kSetram grAsam vAsam simhAsanam. 
+      vilAsam bhAmAkalApam satIsantAna sukhalAlasam. 
+      dehAbhimAnam bandhuprItiH bAdhAkaram, kIrti kAGkSaH bahujanmakArakam. 
+      bhavabandham muktiprati bandhakam ca kSudram hRdaya daurbalyam etat sarvam vyarthavyAsaGgam . 
+
+      zrI kRSNadhyAnam taruNopAyam. kurubhaktijJAna yogAbhyAsam. tathyam zAzvata vaikuNThavAsam..
     en: 'A reflection on the results of renunciation: Desire for wealth, luck, opulence, affection, a resting place, and even salvation is ultimately futile. Only remembering Sri Krishna is the ultimate escape from the 4 ashramas of one’s life. Engage in devotion and service to attain residence in Vaikuntha.'
     te: ''
   - type: verse
     id: v53
     no: '53'
     title: jaya maGgaLabharatavAkyam
-    hk: '(anni zubhamulu kalagAlani civaragA yI krindi vidhaGgA prArthiddAm)'
+    hk: '(anni zubhamulu kalagAlani civaragA yI {kriMdi} vidhamugA prArthiddAmu)'
     en: 'Victory and auspicious utterance of Bharat: Let us finally pray in this manner so that all auspiciousness may prevail.'
     te: ''
   - type: verse

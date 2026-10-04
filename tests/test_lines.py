@@ -65,3 +65,4 @@ def test_split_line_spans_point_at_the_source(hk):
         for ch, (a, b) in zip(line, src):
             # a letter comes from itself; the danda closing a run-on line from that danda
             assert hk[a:b] == ch or (ch in " ." and hk[a:b].strip(" .|") == "")
+

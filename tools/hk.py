@@ -56,13 +56,39 @@ RULES: dict[str, str] = {
     "Z4": "word-final M/m -> m, word break kept, whatever follows (rAmaM ca -> rAmam ca)",
     "Z5": "everything else is untouched",
     "Z6": "the pranava is always oM, never om",
+    "Z7": "text inside {braces} is never touched ({gaMgA} stays gaMgA)",
     "S1": "varga nasal + non-nasal stop of its own varga, after a vowel -> M (gaGgA -> gaMgA)",
     "S2": "nasal + nasal is never touched (amma, anna, janma)",
     "S3": "nasal + consonant of another varga, or + non-stop, is never touched (jJAna, tanmaya)",
     "S4": "word-final m/M -> M, whatever follows",
     "S5": "everything else is untouched",
     "S6": "the pranava is always oM",
+    "S7": "text inside {braces} is never touched",
 }
+
+
+# A word, or part of one, written between braces is kept exactly as typed in both conventions:
+# the author's way of asking for an anusvara where zuddha would write the class nasal. The
+# braces are not shown (see ``unbrace``).
+_BRACED = re.compile(r"\{[^{}\n]*\}")
+
+
+def _braced(hk: str) -> set[int]:
+    """Indexes of every character between a pair of braces."""
+    return {i for m in _BRACED.finditer(hk) for i in range(m.start() + 1, m.end() - 1)}
+
+
+def unbrace(hk: str) -> str:
+    """The text without the braces that protect a run from the conventions."""
+    return _BRACED.sub(lambda m: m.group(0)[1:-1], hk)
+
+
+def _neighbour(hk: str, i: int, step: int) -> str:
+    """The letter next to position i, looking past braces: sa{M}gIta is one word."""
+    i += step
+    while 0 <= i < len(hk) and hk[i] in "{}":
+        i += step
+    return hk[i] if 0 <= i < len(hk) else ""
 
 
 def _pranava_spans(hk: str) -> set[int]:
@@ -73,14 +99,15 @@ def _pranava_spans(hk: str) -> set[int]:
 def to_zuddha(hk: str) -> str:
     """The zuddha (శుద్ధ) convention: class nasals written out, word-final m kept as m."""
     pranava = _pranava_spans(hk)
+    braced = _braced(hk)
     out = list(hk)
     for i, ch in enumerate(hk):
-        if ch not in ("M", "m"):
+        if ch not in ("M", "m") or i in braced:  # Z7
             continue
         if i in pranava:  # Z6
             out[i] = "M"
             continue
-        nxt = hk[i + 1] if i + 1 < len(hk) else ""
+        nxt = _neighbour(hk, i, 1)
         if not _is_letter(nxt):  # Z4: word-final
             out[i] = "m"
         elif ch == "M":
@@ -95,21 +122,22 @@ def to_zuddha(hk: str) -> str:
 def to_saraLa(hk: str) -> str:
     """The saraLa (సరళ) convention: anusvara before a stop of the same varga, and word-finally."""
     pranava = _pranava_spans(hk)
+    braced = _braced(hk)
     out = list(hk)
     for i, ch in enumerate(hk):
-        if ch != "M" and ch not in NASALS:
+        if (ch != "M" and ch not in NASALS) or i in braced:  # S7
             continue
         if i in pranava:  # S6
             out[i] = "M"
             continue
-        nxt = hk[i + 1] if i + 1 < len(hk) else ""
+        nxt = _neighbour(hk, i, 1)
         if not _is_letter(nxt):  # S4: word-final m / M
             if ch in ("m", "M"):
                 out[i] = "M"
             continue
         if ch == "M":
             continue
-        prev = hk[i - 1] if i > 0 else ""
+        prev = _neighbour(hk, i, -1)
         if prev in VOWEL_LETTERS and NASAL_OF_STOP.get(nxt) == ch:  # S1
             out[i] = "M"
         # S2 / S3: every other cluster is left alone
@@ -128,7 +156,7 @@ DOUBLE_DANDA = "॥"
 _PUNCT = re.compile(
     r"""
       (?P<dd>\|\s?\||(?<!\d)\.(?:\s?\.)+)       # ||  | |  ..  . .  ...
-    | (?P<d>\||(?<!\d)\.(?=\s|$|["”’')\]]))     # |   .
+    | (?P<d>\||(?<!\d)\.(?=\s|$|["”’')\]}]))     # |   .
     """,
     re.VERBOSE,
 )
@@ -225,6 +253,8 @@ def lint(hk: str) -> list[str]:
             found.append(f"possible line-break residue inside a word: '{m.group(0)}'")
     if "\\" in hk:
         found.append("backslash in text")
+    if "{" in _BRACED.sub("", hk) or "}" in _BRACED.sub("", hk):
+        found.append("a { } pair is not closed, or spans a line break")
     if to_zuddha(hk) != hk:
         found.append("not in zuddha form (run normalize)")
     return found

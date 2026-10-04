@@ -139,6 +139,17 @@ CASES["Z6"] = [
     ("not-pranava-oMkAra", "oMkAra", "oGkAra"),
 ]
 
+# ---- Z7: braces keep a run as typed --------------------------------------------------
+CASES["Z7"] = [
+    ("class-nasal-kept-out", "{gaMgA}", "{gaMgA}"),
+    ("word-final-M", "{rAmaM} ca", "{rAmaM} ca"),
+    ("only-the-braced-word", "gaMgA {gaMgA} gaMgA", "gaGgA {gaMgA} gaGgA"),
+    ("part-of-a-word", "zrI{veMkaTa}ezvaraM", "zrI{veMkaTa}ezvaram"),
+    ("M-before-a-brace-is-inside-the-word", "sa{M}gIta saM{gIta}", "sa{M}gIta saG{gIta}"),
+    ("unclosed-brace-protects-nothing", "{gaMgA", "{gaGgA"),
+    ("brace-does-not-span-lines", "{gaMgA\ngaMgA}", "{gaGgA\ngaGgA}"),
+]
+
 ALL = [pytest.param(i, e, id=f"{rule}:{cid}") for rule, cs in CASES.items() for cid, i, e in cs]
 
 

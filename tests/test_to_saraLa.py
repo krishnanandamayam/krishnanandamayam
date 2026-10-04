@@ -152,6 +152,15 @@ CASES["S6"] = [
     ("oGkAra", "oGkAra", "oMkAra"),
 ]
 
+# ---- S7: braces keep a run as typed --------------------------------------------------
+CASES["S7"] = [
+    ("class-nasal-kept", "{gaGgA}", "{gaGgA}"),
+    ("word-final-m", "{rAmam} ca", "{rAmam} ca"),
+    ("only-the-braced-word", "gaGgA {gaGgA} gaGgA", "gaMgA {gaGgA} gaMgA"),
+    ("nasal-before-a-brace-is-inside-the-word", "saG{gIta} rAmam{}", "saM{gIta} rAmaM{}"),
+    ("unclosed-brace-protects-nothing", "{gaGgA", "{gaMgA"),
+]
+
 ALL = [pytest.param(i, e, id=f"{rule}:{cid}") for rule, cs in CASES.items() for cid, i, e in cs]
 
 

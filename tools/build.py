@@ -14,6 +14,7 @@ import re
 import sys
 
 from tools import inline, render, store
+from tools import hk as HK
 
 SITE = store.ROOT / "site"
 DEFAULT_MODE = "saraLa"
@@ -209,7 +210,7 @@ def build_html(doc, data) -> str:
             toc_label = f'<span class="indic" data-e="{sid}" data-inline>{esc(" ".join(e[sid]))}</span>'
             if sec.get("en"):
                 toc_label += f' <span class="toc-en">{esc(sec["en"])}</span>'
-            plain = sec.get("en") or sec["hk"].replace("\n", " ")
+            plain = sec.get("en") or HK.unbrace(sec["hk"]).replace("\n", " ")
         else:
             head = ""
             toc_label = '<span class="toc-en">Opening verses</span>'
