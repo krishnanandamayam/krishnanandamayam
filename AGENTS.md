@@ -12,3 +12,18 @@
   keep.
 - Changes to code, tests and styles do not need this; resolve those conflicts normally and
   run `uv run pytest`.
+
+## The edit server's state is the agent's to maintain
+
+The editor (`uv run python -m tools.serve`, http://localhost:8000/edit) must be running whenever
+the user is working with the agent.
+
+- Start it at the beginning of a session if it is not running, and check it (for example
+  `curl http://localhost:8000/edit`) after anything that could have stopped it or broken
+  the data it reads: a pull, merge or conflict, a code change, or a long gap.
+- If it has stopped, restart it without being asked, and tell the user when you did.
+- Run it with `run_in_background` and the longest `timeout` (7200000 ms). When that limit
+  stops it, restart it; the user does not have to.
+- Never leave `data/grantha.yaml` with conflict markers or invalid YAML while the server is
+  running: every editor request, including Save, fails until the file parses again.
+- Do not stop a server the user started themselves.
