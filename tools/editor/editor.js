@@ -254,8 +254,9 @@
   }
 
   // ---- selection sync: the rendition and the HK box point at each other ----------------------
-  // Select (or click) words in the rendition and the HK they were made from is picked out in
-  // the box; put the caret or a selection in the box and its words are picked out below.
+  // Double-click a word in the rendition and the HK it was made from is picked out in the box,
+  // with the caret after it, ready to edit; put the caret or a selection in the box and its
+  // words are picked out below.
   function setSync(range) {
     if (String(range) === String(sync)) return;
     sync = range;
@@ -267,41 +268,29 @@
       $('#hk-marks').scrollTop = ta.scrollTop;
     }
   }
-  function hasSelected(range, w) {
-    const t = w.firstChild;
-    const head = range.comparePoint(t, 0), tail = range.comparePoint(t, t.length);
-    if (head === tail && head !== 0) return false;   // the whole word is before or after it
-    const r = range.cloneRange();
-    if (head === 0) r.setStart(t, 0);
-    if (tail === 0) r.setEnd(t, t.length);
-    return r.toString() !== '';
-  }
   function syncSelection() {
     const ta = $('#hk');
-    const words = $$('#preview .w');
+    const focused = document.activeElement === ta;
     const fresh = previewHk === ta.value;
-    if (document.activeElement === ta) {
-      setSync(null);
-      const s = ta.selectionStart, e = ta.selectionEnd;
-      for (const w of words) {
-        const a = +w.dataset.a, b = +w.dataset.b;
-        w.classList.toggle('on', fresh && (s === e ? a <= s && s <= b : a < e && s < b));
-      }
-      return;
+    const s = ta.selectionStart, e = ta.selectionEnd;
+    // the picked-out HK stays only while the caret is where the double-click left it
+    if (sync && !(focused && s === e && s === sync[1])) setSync(null);
+    for (const w of $$('#preview .w')) {
+      const a = +w.dataset.a, b = +w.dataset.b;
+      w.classList.toggle('on', focused && fresh && (s === e ? a <= s && s <= b : a < e && s < b));
     }
-    for (const w of words) w.classList.remove('on');
-    const sel = getSelection();
-    const range = sel.rangeCount ? sel.getRangeAt(0) : null;
-    let picked = [];
-    if (fresh && range && $('#preview').contains(range.commonAncestorContainer)) {
-      if (range.collapsed) {
-        const at = range.startContainer;
-        const w = (at.nodeType === 1 ? at : at.parentElement).closest('.w');
-        if (w) picked = [w];
-      } else picked = words.filter((w) => hasSelected(range, w));
-    }
-    setSync(picked.length ? [Math.min(...picked.map((w) => +w.dataset.a)), Math.max(...picked.map((w) => +w.dataset.b))] : null);
   }
+  $('#preview').addEventListener('dblclick', (ev) => {
+    const w = ev.target.closest('.w');
+    const ta = $('#hk');
+    if (!w || previewHk !== ta.value) return;
+    const a = +w.dataset.a, b = +w.dataset.b;
+    getSelection().removeAllRanges();
+    ta.focus();
+    ta.setSelectionRange(b, b);
+    setSync([a, b]);
+    syncSelection();
+  });
   document.addEventListener('selectionchange', syncSelection);
   for (const ev of ['select', 'keyup', 'click', 'focus', 'blur']) $('#hk').addEventListener(ev, syncSelection);
 
