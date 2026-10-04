@@ -307,6 +307,11 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
+    def _data_error(self, err):
+        """grantha.yaml cannot be read (merge conflict, bad YAML): say so, so the editor can show it."""
+        kind = "conflict" if err.conflicts else "invalid"
+        self._json({"error": str(err), "data_error": {"kind": kind, "conflicts": err.conflicts}}, HTTPStatus.CONFLICT)
+
     def _file(self, base, rel):
         path = (base / rel).resolve()
         if base.resolve() not in path.parents and path != base.resolve():
@@ -337,6 +342,8 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"scripts": [{"id": s["id"], "label": s["label"], "font": s["font"]} for s in render.config()["script"]]})
         except KeyError as err:
             return self._json({"error": f"not found: {err}"}, HTTPStatus.NOT_FOUND)
+        except store.DataFileError as err:
+            return self._data_error(err)
         if path in ("/edit", "/edit/"):
             return self._file(EDITOR, "editor.html")
         if path.startswith("/edit/"):
@@ -368,6 +375,8 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"error": "unknown endpoint"}, HTTPStatus.NOT_FOUND)
         except KeyError as err:
             return self._json({"error": f"not found: {err}"}, HTTPStatus.NOT_FOUND)
+        except store.DataFileError as err:
+            return self._data_error(err)
         except (ValueError, json.JSONDecodeError) as err:
             return self._json({"error": str(err)}, HTTPStatus.BAD_REQUEST)
 
@@ -379,7 +388,10 @@ def main():
     args = ap.parse_args()
     global SOURCE_TE
     SOURCE_TE = source_telugu()
-    build.build()
+    try:
+        build.build()
+    except store.DataFileError as err:
+        print(f"warning: {err}; the editor will say so until it is resolved")
     httpd = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"reader  http://localhost:{args.port}/")
     print(f"editor  http://localhost:{args.port}/edit")

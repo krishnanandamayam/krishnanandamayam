@@ -49,3 +49,16 @@ def test_set_title_adds_the_key_before_hk_and_removes_it_when_empty(tmp_path):
     assert [ln for ln in difflib.ndiff(before, after) if ln[:1] in "+-"] == ["+     title: gaNeza stutiH"]
     store.set_title(verse, "")
     assert "title" not in verse
+
+
+def test_merge_conflict_is_reported_with_its_verse(tmp_path):
+    import pytest
+
+    copy = tmp_path / "grantha.yaml"
+    lines = store.GRANTHA.read_text(encoding="utf-8").split("\n")
+    i = next(n for n, ln in enumerate(lines) if ln.strip() == "id: v2")
+    lines[i + 2 : i + 3] = ["<<<<<<< HEAD", lines[i + 2], "=======", lines[i + 2] + " x", ">>>>>>> abc123"]
+    copy.write_text("\n".join(lines), encoding="utf-8")
+    with pytest.raises(store.DataFileError) as err:
+        store.load(copy)
+    assert err.value.conflicts == [{"line": i + 3, "id": "v2"}]

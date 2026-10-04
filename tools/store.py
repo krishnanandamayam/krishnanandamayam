@@ -6,9 +6,11 @@ other line of the file byte-for-byte as it was and `git diff` shows only what wa
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from ruamel.yaml import YAML
+from ruamel.yaml.error import YAMLError
 from ruamel.yaml.scalarstring import LiteralScalarString
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -29,9 +31,37 @@ def text(s: str):
     return LiteralScalarString(s) if "\n" in s else s
 
 
+class DataFileError(Exception):
+    """grantha.yaml cannot be read. `conflicts` lists unresolved git merge hunks, if that is why."""
+
+    def __init__(self, message: str, conflicts: list[dict] | None = None):
+        super().__init__(message)
+        self.conflicts = conflicts or []
+
+
+_MARKER = re.compile(r"^(<<<<<<< |=======$|>>>>>>> )", re.M)
+
+
+def conflicts_in(text: str) -> list[dict]:
+    """Unresolved merge hunks: the line each starts on and the verse (entry id) it sits in."""
+    lines = text.splitlines()
+    out = []
+    for i, ln in enumerate(lines):
+        if ln.startswith("<<<<<<< "):
+            entry = next((m.group(1) for j in range(i - 1, -1, -1) if (m := re.match(r"\s*(?:- )?id: (\S+)", lines[j]))), None)
+            out.append({"line": i + 1, "id": entry})
+    return out
+
+
 def load(path: Path = GRANTHA):
-    with path.open(encoding="utf-8") as f:
-        return _yaml().load(f)
+    text = path.read_text(encoding="utf-8")
+    if _MARKER.search(text):
+        hunks = conflicts_in(text)
+        raise DataFileError(f"{path.name} has {len(hunks)} unresolved merge conflict(s)", hunks)
+    try:
+        return _yaml().load(text)
+    except YAMLError as err:
+        raise DataFileError(f"{path.name} is not valid YAML: {err}") from err
 
 
 def save(doc, path: Path = GRANTHA) -> None:

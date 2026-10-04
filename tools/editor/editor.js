@@ -19,9 +19,28 @@
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
     });
     const data = await r.json();
-    if (!r.ok) throw new Error(data.error || r.statusText);
+    if (!r.ok) {
+      if (data.data_error) showDataError(data.data_error, data.error);
+      throw Object.assign(new Error(data.error || r.statusText), { shown: !!data.data_error });
+    }
+    hideDataError();
     return data;
   };
+
+  // grantha.yaml cannot be read (unresolved merge conflict, bad YAML): say what and where, in the page
+  function showDataError(d, message) {
+    const box = $('#data-error');
+    if (d.kind === 'conflict') {
+      const where = d.conflicts.map((c) => `line ${c.line}${c.id ? ` (${c.id})` : ''}`).join(', ');
+      $('#data-error-text').textContent = `data/grantha.yaml has an unresolved git merge conflict at ${where}. ` +
+        'Nothing can be loaded or saved until it is resolved. Your unsaved edits stay in this tab. ' +
+        'Go back to Claude and ask it to resolve the conflict; it will show each one and ask which side to keep.';
+    } else {
+      $('#data-error-text').textContent = `${message}. Nothing can be loaded or saved until it is fixed. Your unsaved edits stay in this tab.`;
+    }
+    box.hidden = false;
+  }
+  function hideDataError() { $('#data-error').hidden = true; }
 
   // ---- list ---------------------------------------------------------------------------------
   function visible(e) {
@@ -166,7 +185,7 @@
         schedulePreview();
         previewAllProse();
       }
-    } catch (err) { alert(err.message); }
+    } catch (err) { if (!err.shown) alert(err.message); }
   }
 
   async function save() {
@@ -181,7 +200,7 @@
       await refreshList();
       const here = $(`#list a[data-id="${CSS.escape(current.id)}"]`);
       if (here) here.setAttribute('aria-current', 'true');
-    } catch (err) { alert('Not saved: ' + err.message); }
+    } catch (err) { if (!err.shown) alert('Not saved: ' + err.message); }
     drawMarks();
     drawBadge();
   }
@@ -421,8 +440,10 @@
   window.addEventListener('hashchange', () => open(decodeURIComponent(location.hash.slice(1))));
   window.addEventListener('beforeunload', (e) => { if (pending().size) { e.preventDefault(); e.returnValue = ''; } });
 
+  $('#data-error-retry').addEventListener('click', () => location.reload());
+
   (async () => {
-    await Promise.all([initScripts(), refreshList()]);
+    try { await Promise.all([initScripts(), refreshList()]); } catch (err) { if (!err.shown) alert(err.message); return; }
     const first = decodeURIComponent(location.hash.slice(1)) || (entries.find((e) => e.type === 'verse') || entries[0]).id;
     if (location.hash.slice(1) === first) open(first); else location.hash = first;
   })();
