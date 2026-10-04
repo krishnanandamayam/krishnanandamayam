@@ -134,42 +134,71 @@ _PUNCT = re.compile(
 )
 
 
-def tokenize(line: str) -> list[tuple[str, str]]:
-    """Split one line into ("text", s) / ("danda", "") / ("ddanda", "") tokens."""
-    tokens: list[tuple[str, str]] = []
+def token_spans(line: str) -> list[tuple[str, int, int]]:
+    """Split one line into ("text" | "danda" | "ddanda", start, end) tokens."""
+    tokens: list[tuple[str, int, int]] = []
     pos = 0
     for m in _PUNCT.finditer(line):
         if m.start() > pos:
-            tokens.append(("text", line[pos : m.start()]))
-        tokens.append(("ddanda" if m.group("dd") else "danda", ""))
+            tokens.append(("text", pos, m.start()))
+        tokens.append(("ddanda" if m.group("dd") else "danda", m.start(), m.end()))
         pos = m.end()
     if pos < len(line):
-        tokens.append(("text", line[pos:]))
+        tokens.append(("text", pos, len(line)))
     return tokens
 
 
-def split_lines(hk: str) -> list[str]:
-    """The display lines of a verse.
+def tokenize(line: str) -> list[tuple[str, str]]:
+    """Split one line into ("text", s) / ("danda", "") / ("ddanda", "") tokens."""
+    return [(kind, line[a:b] if kind == "text" else "") for kind, a, b in token_spans(line)]
+
+
+Span = tuple[int, int]
+
+
+def split_line_spans(hk: str) -> list[tuple[str, list[Span]]]:
+    """The display lines of a verse, each with the (start, end) in ``hk`` of every character.
 
     The author's own line breaks are kept. A verse typed as one run-on paragraph is broken
-    after each danda / double danda instead.
+    after each danda / double danda instead; the danda written at the end of such a line
+    points back at the danda it was made from.
     """
-    hk = hk.strip()
-    lines = [ln.strip() for ln in hk.split("\n") if ln.strip()]
+
+    def trim(text: str, src: list[Span]) -> tuple[str, list[Span]]:
+        lead = len(text) - len(text.lstrip())
+        text = text.strip()
+        return text, src[lead : lead + len(text)]
+
+    lines: list[tuple[str, list[Span]]] = []
+    pos = 0
+    for raw in hk.split("\n"):
+        if raw.strip():
+            lines.append(trim(raw, [(pos + i, pos + i + 1) for i in range(len(raw))]))
+        pos += len(raw) + 1
     if len(lines) > 1:
         return lines
-    out: list[str] = []
-    cur = ""
-    for kind, text in tokenize(hk):
-        if kind == "text":
-            cur += text
-        else:
-            cur = cur.rstrip() + (" ." if kind == "danda" else " ..")
-            out.append(cur.strip())
-            cur = ""
-    if cur.strip():
-        out.append(cur.strip())
+    out: list[tuple[str, list[Span]]] = []
+    for body, origin in lines:
+        cur, src = "", []
+        for kind, a, b in token_spans(body):
+            if kind == "text":
+                cur += body[a:b]
+                src += origin[a:b]
+            else:
+                keep = len(cur.rstrip())
+                mark = " ." if kind == "danda" else " .."
+                cur = cur[:keep] + mark
+                src = src[:keep] + [(origin[a][0], origin[b - 1][1])] * len(mark)
+                out.append(trim(cur, src))
+                cur, src = "", []
+        if cur.strip():
+            out.append(trim(cur, src))
     return out
+
+
+def split_lines(hk: str) -> list[str]:
+    """The display lines of a verse (see ``split_line_spans``)."""
+    return [line for line, _ in split_line_spans(hk)]
 
 
 # --------------------------------------------------------------------------------------

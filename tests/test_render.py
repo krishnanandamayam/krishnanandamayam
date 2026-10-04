@@ -71,3 +71,25 @@ def test_clean_hk_leaves_no_latin_behind(script):
     sample = "zrI kRSNAya vAsudevAya haraye paramAtmane . praNata klezanAzAya govindAya namo namaH .."
     text = " ".join(render.render(sample, script, "zuddha"))
     assert not re.search(r"[A-Za-z]", text)
+
+
+def test_spans_point_at_the_hk_they_render():
+    hk = "  rAmam ca vande.\nkRSNam vande .. "
+    spans = render.render_spans(hk, "telugu", "saraLa")
+    assert [[t for t, _, _ in line] for line in spans] == [["రామం", "చ", "వందే", "।"], ["కృష్ణం", "వందే", "॥"]]
+    assert [[hk[a:b] for _, a, b in line] for line in spans] == [["rAmam", "ca", "vande", "."], ["kRSNam", "vande", ".."]]
+
+
+def test_spans_of_a_run_on_verse():
+    hk = "rAmam vande . kRSNam vande .."
+    spans = render.render_spans(hk, "telugu", "zuddha")
+    assert [[hk[a:b] for _, a, b in line] for line in spans] == [["rAmam", "vande", "."], ["kRSNam", "vande", ".."]]
+
+
+@pytest.mark.parametrize("script", ["telugu", "tamil", "roman"])
+@pytest.mark.parametrize("mode", render.MODES)
+def test_spans_read_as_the_rendition(script, mode):
+    verses = [e["hk"] for e in store.entries(store.load()) if e.get("type") == "verse" and e.get("hk")]
+    for hk in verses:
+        spans = render.render_spans(hk, script, mode)
+        assert [" ".join(t for t, _, _ in line) for line in spans] == [" ".join(line.split()) for line in render.render(hk, script, mode)]

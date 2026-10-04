@@ -1,12 +1,12 @@
 :root {
   --bg: #faf7f0; --panel: #fff; --ink: #231a12; --ink-2: #6e6153; --rule: #e3dac8;
-  --accent: #8a2318; --ok: #2f6b3a; --warn: #a15c00; --bad: #b3261e; --mark: #ffd9d4;
+  --accent: #8a2318; --ok: #2f6b3a; --warn: #a15c00; --bad: #b3261e; --mark: #ffd9d4; --sync: #ffe08a;
   --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
   color-scheme: light dark;
 }
 @media (prefers-color-scheme: dark) {
   :root { --bg: #15110c; --panel: #1e1811; --ink: #efe4cf; --ink-2: #a99a82; --rule: #372c1f;
-          --accent: #e39a5b; --ok: #7fc28b; --warn: #e0a553; --bad: #ff8a80; --mark: #5a221d; }
+          --accent: #e39a5b; --ok: #7fc28b; --warn: #e0a553; --bad: #ff8a80; --mark: #5a221d; --sync: #6b5410; }
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -70,7 +70,8 @@ textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
 .seg button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff8ea; }
 .preview { margin-top: .5rem; padding: .8rem 1rem; background: var(--panel); border: 1px solid var(--rule); border-radius: .5rem;
            font: 1.35rem/2 "Noto Serif Telugu", "Noto Serif", serif; min-height: 6rem; }
-.preview span, .source span.ln { display: block; }
+.preview > span, .source span.ln { display: block; }
+.preview .w.on, .hk-marks .sync { background: var(--sync); border-radius: 3px; }
 .preview.stale { opacity: .5; }
 
 .source { padding: .8rem 1rem; background: var(--panel); border: 1px dashed var(--rule); border-radius: .5rem;

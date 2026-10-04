@@ -2,7 +2,7 @@
 
 import pytest
 
-from tools.hk import split_lines, tokenize
+from tools.hk import split_line_spans, split_lines, tokenize
 
 T, D, DD = "text", "danda", "ddanda"
 
@@ -47,3 +47,21 @@ def test_verse_without_dandas_is_one_line():
 
 def test_blank_lines_are_dropped():
     assert split_lines("a\n\n b \n") == ["a", "b"]
+
+
+@pytest.mark.parametrize(
+    "hk",
+    [
+        "rAmam vande . kRSNam vande ..",
+        "  rAmam vande.kRSNam vande..  ",
+        "rAmam vande .\n\n  kRSNam vande ..\n",
+        "oM.. tejasvinam | 1. dhyAnam",
+        "",
+    ],
+)
+def test_split_line_spans_point_at_the_source(hk):
+    for line, src in split_line_spans(hk):
+        assert len(src) == len(line)
+        for ch, (a, b) in zip(line, src):
+            # a letter comes from itself; the danda closing a run-on line from that danda
+            assert hk[a:b] == ch or (ch in " ." and hk[a:b].strip(" .|") == "")

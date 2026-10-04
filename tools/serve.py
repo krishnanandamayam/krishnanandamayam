@@ -160,7 +160,7 @@ def api_preview(body):
     if script not in render.config()["by_id"]:
         raise KeyError(script)
     with LOCK:
-        shown = render.render(hk, script, body.get("mode") or "zuddha")
+        spans = render.render_spans(hk, script, body.get("mode") or "zuddha")
         sarala_te = render.render(hk, "telugu", "saraLa")
     title = str(body.get("title", ""))
     with LOCK:
@@ -169,7 +169,8 @@ def api_preview(body):
         "titleLine": title_shown,
         "titleZuddha": HK.to_zuddha(title),
         "titleIssues": [i for i in HK.lint(title) if not i.startswith("not in zuddha")],
-        "lines": shown,
+        "lines": [" ".join(t for t, _, _ in line) for line in spans],
+        "spans": spans,
         "saraLaTelugu": sarala_te,
         "zuddha": HK.to_zuddha(hk),
         "issues": HK.lint(hk),

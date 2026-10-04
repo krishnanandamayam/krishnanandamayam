@@ -11,6 +11,8 @@
   let current = null;     // the loaded entry { id, type, fields, committed, sourceTelugu }
   let pv = { script: 'telugu', mode: 'zuddha' };
   let lastPreview = null;
+  let previewHk = null;   // the HK text the rendition on screen was made from
+  let sync = null;        // [start, end) in the HK box picked out from the rendition
 
   const api = async (path, body) => {
     const r = await fetch(path, body === undefined ? {} : {
@@ -127,6 +129,7 @@
 
   function fill(entry) {
     current = entry;
+    sync = null;
     const f = entry.fields;
     for (const k of FIELDS) $('#' + k).value = f[k] ?? '';
     $('#hk-wrap').hidden = !('hk' in f);
@@ -188,12 +191,22 @@
     const box = $('#hk-marks');
     box.replaceChildren();
     const text = $('#hk').value;
-    let pos = 0;
-    for (const m of text.matchAll(NON_HK)) {
-      box.append(text.slice(pos, m.index), Object.assign(document.createElement('mark'), { textContent: m[0] }));
-      pos = m.index + 1;
-    }
-    box.append(text.slice(pos) + '\n');
+    const piece = (from, to) => {
+      const part = text.slice(from, to);
+      const out = [];
+      let pos = 0;
+      for (const m of part.matchAll(NON_HK)) {
+        out.push(part.slice(pos, m.index), Object.assign(document.createElement('mark'), { textContent: m[0] }));
+        pos = m.index + 1;
+      }
+      out.push(part.slice(pos));
+      return out;
+    };
+    if (sync) {
+      const picked = Object.assign(document.createElement('span'), { className: 'sync' });
+      picked.append(...piece(sync[0], sync[1]));
+      box.append(...piece(0, sync[0]), picked, ...piece(sync[1], text.length), '\n');
+    } else box.append(...piece(0, text.length), '\n');
     box.scrollTop = $('#hk').scrollTop;
   }
   $('#hk').addEventListener('scroll', () => { $('#hk-marks').scrollTop = $('#hk').scrollTop; });
@@ -209,12 +222,24 @@
   async function preview() {
     const mine = ++seq;
     try {
-      const data = await api('/api/preview', { hk: $('#hk').value, title: $('#title').value, script: pv.script, mode: pv.mode });
+      const hk = $('#hk').value;
+      const data = await api('/api/preview', { hk, title: $('#title').value, script: pv.script, mode: pv.mode });
       if (mine !== seq) return;
+      data.hk = hk;
       lastPreview = data;
       const box = $('#preview');
       box.classList.remove('stale');
-      box.replaceChildren(...data.lines.map((t) => Object.assign(document.createElement('span'), { textContent: t })));
+      previewHk = data.hk;
+      box.replaceChildren(...data.spans.map((words) => {
+        const line = document.createElement('span');
+        words.forEach(([t, a, b], i) => {
+          const w = Object.assign(document.createElement('span'), { className: 'w', textContent: t });
+          w.dataset.a = a;
+          w.dataset.b = b;
+          line.append(i ? ' ' : '', w);
+        });
+        return line;
+      }));
       const font = scriptFonts.get(pv.script);
       if (font) box.style.fontFamily = `"${font}", "Noto Serif", serif`;
       const tp = $('#title-preview');
@@ -224,8 +249,61 @@
       $('#zuddha-hint').hidden = !notZuddha;
       $('#issues').replaceChildren(...data.issues.filter((i) => !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
       drawSource();
+      syncSelection();
     } catch (err) { console.error(err); }
   }
+
+  // ---- selection sync: the rendition and the HK box point at each other ----------------------
+  // Select (or click) words in the rendition and the HK they were made from is picked out in
+  // the box; put the caret or a selection in the box and its words are picked out below.
+  function setSync(range) {
+    if (String(range) === String(sync)) return;
+    sync = range;
+    drawMarks();
+    const picked = $('#hk-marks .sync');
+    const ta = $('#hk');
+    if (picked && (picked.offsetTop < ta.scrollTop || picked.offsetTop + picked.offsetHeight > ta.scrollTop + ta.clientHeight)) {
+      ta.scrollTop = Math.max(0, picked.offsetTop - ta.clientHeight / 3);
+      $('#hk-marks').scrollTop = ta.scrollTop;
+    }
+  }
+  function hasSelected(range, w) {
+    const t = w.firstChild;
+    const head = range.comparePoint(t, 0), tail = range.comparePoint(t, t.length);
+    if (head === tail && head !== 0) return false;   // the whole word is before or after it
+    const r = range.cloneRange();
+    if (head === 0) r.setStart(t, 0);
+    if (tail === 0) r.setEnd(t, t.length);
+    return r.toString() !== '';
+  }
+  function syncSelection() {
+    const ta = $('#hk');
+    const words = $$('#preview .w');
+    const fresh = previewHk === ta.value;
+    if (document.activeElement === ta) {
+      setSync(null);
+      const s = ta.selectionStart, e = ta.selectionEnd;
+      for (const w of words) {
+        const a = +w.dataset.a, b = +w.dataset.b;
+        w.classList.toggle('on', fresh && (s === e ? a <= s && s <= b : a < e && s < b));
+      }
+      return;
+    }
+    for (const w of words) w.classList.remove('on');
+    const sel = getSelection();
+    const range = sel.rangeCount ? sel.getRangeAt(0) : null;
+    let picked = [];
+    if (fresh && range && $('#preview').contains(range.commonAncestorContainer)) {
+      if (range.collapsed) {
+        const at = range.startContainer;
+        const w = (at.nodeType === 1 ? at : at.parentElement).closest('.w');
+        if (w) picked = [w];
+      } else picked = words.filter((w) => hasSelected(range, w));
+    }
+    setSync(picked.length ? [Math.min(...picked.map((w) => +w.dataset.a)), Math.max(...picked.map((w) => +w.dataset.b))] : null);
+  }
+  document.addEventListener('selectionchange', syncSelection);
+  for (const ev of ['select', 'keyup', 'click', 'focus', 'blur']) $('#hk').addEventListener(ev, syncSelection);
 
   // ---- reference: the sheet's Telugu, with words that differ from the HK rendition marked ----
   const norm = (w) => w.replace(/[।॥|.,;:!?"'“”‘’()\[\]\-‌‍]/g, '');
@@ -292,7 +370,7 @@
     previewAllProse();
   });
 
-  $('#hk').addEventListener('input', () => { drawMarks(); drawBadge(); schedulePreview(); });
+  $('#hk').addEventListener('input', () => { sync = null; drawMarks(); drawBadge(); schedulePreview(); });
   $('#title').addEventListener('input', () => { drawBadge(); schedulePreview(); });
   // prose fields: show the paragraph with its inline $hk$ runs rendered
   const proseTimers = {};

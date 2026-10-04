@@ -3,6 +3,7 @@ exactly what the site will show."""
 
 from __future__ import annotations
 
+import re
 import tomllib
 import warnings
 from functools import lru_cache
@@ -90,6 +91,41 @@ def render_many(hk_texts: list[str], script_id: str, mode: str) -> list[list[str
                     s = s.rstrip() + " " + (danda if kind == "danda" else ddanda) + " "
             rendered.append(s.strip())
         out.append(rendered)
+    return out
+
+
+def render_spans(hk_text: str, script_id: str, mode: str) -> list[list[tuple[str, int, int]]]:
+    """The display lines of one HK text as (shown, start, end) pieces: a word or a danda, and
+    where in ``hk_text`` it was written. Joined with spaces, a line reads as ``render`` gives it.
+    The editor uses this to tie a selection in the rendition to the HK box."""
+    sc = script(script_id)
+    danda, ddanda = _dandas(sc)
+    conv = _convention(hk_text, sc[mode]["hk"])  # one character for one: offsets still hold
+    plan = []
+    fragments: list[str] = []
+    for line, src in HK.split_line_spans(conv):
+        toks = []
+        for kind, a, b in HK.token_spans(line):
+            toks.append((kind, a, b, len(fragments) if kind == "text" else None))
+            if kind == "text":
+                fragments.append(line[a:b])
+        plan.append((line, src, toks))
+    done = _transliterate(fragments, sc, mode)
+    out = []
+    for line, src, toks in plan:
+        pieces = []
+        for kind, a, b, idx in toks:
+            if kind != "text":
+                pieces.append((danda if kind == "danda" else ddanda, src[a][0], src[b - 1][1]))
+                continue
+            words = [(a + m.start(), a + m.end()) for m in re.finditer(r"\S+", line[a:b])]
+            shown = done[idx].split()
+            if not words or not shown:
+                continue
+            if len(shown) != len(words):  # the script joined or split words: tie the whole run
+                words, shown = [(words[0][0], words[-1][1])], [" ".join(shown)]
+            pieces += [(t, src[x][0], src[y - 1][1]) for t, (x, y) in zip(shown, words)]
+        out.append(pieces)
     return out
 
 
