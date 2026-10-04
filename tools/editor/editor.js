@@ -247,7 +247,7 @@
       if (font) tp.style.fontFamily = `"${font}", "Noto Serif", serif`;
       const notZuddha = data.zuddha !== $('#hk').value || data.titleZuddha !== $('#title').value;
       $('#zuddha-hint').hidden = !notZuddha;
-      $('#issues').replaceChildren(...data.issues.filter((i) => !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
+      $('#issues').replaceChildren(...[current.flag, ...data.issues].filter((i) => i && !i.startsWith('not in zuddha')).map((i) => Object.assign(document.createElement('li'), { textContent: i })));
       drawSource();
       syncSelection();
     } catch (err) { console.error(err); }

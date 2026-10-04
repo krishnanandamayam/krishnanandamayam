@@ -73,7 +73,7 @@ def render_many(hk_texts: list[str], script_id: str, mode: str) -> list[list[str
             for kind, frag in HK.tokenize(line):
                 if kind == "text":
                     toks.append(("text", len(fragments)))
-                    fragments.append(frag)
+                    fragments.append(HK.unbrace(frag))
                 else:
                     toks.append((kind, None))
             lines.append(toks)
@@ -108,7 +108,7 @@ def render_spans(hk_text: str, script_id: str, mode: str) -> list[list[tuple[str
         for kind, a, b in HK.token_spans(line):
             toks.append((kind, a, b, len(fragments) if kind == "text" else None))
             if kind == "text":
-                fragments.append(line[a:b])
+                fragments.append(HK.unbrace(line[a:b]))
         plan.append((line, src, toks))
     done = _transliterate(fragments, sc, mode)
     out = []

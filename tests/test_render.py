@@ -93,3 +93,12 @@ def test_spans_read_as_the_rendition(script, mode):
     for hk in verses:
         spans = render.render_spans(hk, script, mode)
         assert [" ".join(t for t, _, _ in line) for line in spans] == [" ".join(line.split()) for line in render.render(hk, script, mode)]
+
+
+def test_braces_keep_the_anusvara_in_zuddha_and_are_not_shown():
+    assert render.render("gaMgA {gaMgA}", "telugu", "zuddha") == ["గఙ్గా గంగా"]
+    assert render.render("gaGgA {gaMgA}", "telugu", "saraLa") == ["గంగా గంగా"]
+    hk = "zrI{veMkaTa}ezvaram vande ."
+    spans = render.render_spans(hk, "telugu", "zuddha")
+    assert [[hk[a:b] for _, a, b in line] for line in spans] == [["zrI{veMkaTa}ezvaram", "vande", "."]]
+    assert "{" not in spans[0][0][0]
