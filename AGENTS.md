@@ -43,6 +43,10 @@ the user is working with the agent.
   do not resolve it to get the server working. Leave the server running: the editor shows a
   banner naming the conflict (line and verse) and refuses to load or save until the file
   parses, so the user can see why and come back. Ask about each conflict, then reload.
+- Restart the server after every pull (and merge, rebase or reset to another commit) that
+  changes anything: Python code is loaded once at startup, so a running server keeps serving
+  the old code. Stop a server you started, start it again, and check it answers. If the user
+  started it, ask them to restart it.
 - Before a pull or merge, check whether `data/grantha.yaml` could conflict (for example
   `git diff HEAD...origin/main -- data/grantha.yaml`) and tell the user first.
 - Do not stop a server the user started themselves.
