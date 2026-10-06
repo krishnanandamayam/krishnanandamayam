@@ -224,7 +224,8 @@ def api_preview_prose(body):
 
 
 def _apply(doc, entry_id: str, body) -> list[str]:
-    """Write the changed fields of one entry into the in-memory doc; return which changed."""
+    """Write the changed fields of one entry into the in-memory doc; return which changed.
+    A meaning in the wrong language is refused (ValueError) before anything is written."""
     e = store.find(doc, entry_id)
     changed = []
     for k in FIELDS:
@@ -233,6 +234,8 @@ def _apply(doc, entry_id: str, body) -> list[str]:
         new = str(body[k]).replace("\r\n", "\n").strip("\n")
         if str(e.get(k) or "") == new:
             continue
+        if why := store.wrong_language(k, new):
+            raise ValueError(f"{e.get('no') or entry_id}: {why}")
         if k == "title":
             store.set_title(e, new)
         else:
@@ -253,7 +256,7 @@ def api_save(entry_id: str, body):
 
 def api_save_all(body):
     """Save many entries at once: {"entries": {id: {field: value}}}. One write, one rebuild.
-    Nothing is written if any id is unknown."""
+    Nothing is written if any id is unknown or any meaning is in the wrong language."""
     items = body.get("entries") or {}
     with LOCK:
         doc = store.load()

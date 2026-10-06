@@ -62,3 +62,58 @@ def test_merge_conflict_is_reported_with_its_verse(tmp_path):
     with pytest.raises(store.DataFileError) as err:
         store.load(copy)
     assert err.value.conflicts == [{"line": i + 3, "id": "v2"}]
+
+
+# ---- pre-save check: each meaning is in its own language ---------------------------------------
+TELUGU = "లోకములన్నిట వ్యాపించిన తండ్రి, ఈశ్వరుడు పాలకుడు."
+ENGLISH = "Oh all-pervading father, controller and maintainer of the universe."
+
+
+def test_meaning_in_its_own_language_is_accepted():
+    assert store.wrong_language("en", ENGLISH) is None
+    assert store.wrong_language("te", TELUGU) is None
+    assert store.wrong_language("en", "") is None and store.wrong_language("te", "") is None
+
+
+def test_telugu_in_the_english_meaning_is_refused():
+    assert store.wrong_language("en", TELUGU)
+    assert store.wrong_language("en", ENGLISH + " " + TELUGU)
+
+
+def test_english_in_the_telugu_meaning_is_refused():
+    assert store.wrong_language("te", ENGLISH)
+
+
+def test_inline_hk_runs_are_not_counted_as_english():
+    assert store.wrong_language("te", "శ్రీ $zrIkRSNa paramAtma bhagavAn$ కి నమస్కారం") is None
+    assert store.wrong_language("en", "You ($jIvAtma$) are part of my soul ($paramAtma$).") is None
+
+
+def test_other_fields_are_not_checked():
+    assert store.wrong_language("hk", "rAmam vande") is None
+    assert store.wrong_language("text", TELUGU) is None
+
+
+def test_every_meaning_in_the_ground_truth_passes():
+    bad = [
+        (e["id"], k)
+        for e in store.entries(store.load())
+        for k in ("en", "te")
+        if k in e and store.wrong_language(k, str(e.get(k) or ""))
+    ]
+    assert not bad
+
+
+def test_saving_a_meaning_in_the_wrong_box_is_refused_and_changes_nothing():
+    import pytest
+
+    from tools import serve
+
+    doc = store.load()
+    before = str(store.find(doc, "v2").get("en") or "")
+    with pytest.raises(ValueError, match="English meaning has Telugu"):
+        serve._apply(doc, "v2", {"en": TELUGU})
+    with pytest.raises(ValueError, match="Telugu meaning is not in Telugu"):
+        serve._apply(doc, "v2", {"te": ENGLISH})
+    assert str(store.find(doc, "v2").get("en") or "") == before
+    assert serve._apply(doc, "v2", {"te": TELUGU}) in (["te"], [])

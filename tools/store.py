@@ -96,3 +96,23 @@ def set_title(verse, title: str) -> None:
     else:
         keys = list(verse.keys())
         verse.insert(keys.index("hk") if "hk" in keys else len(keys), "title", title)
+
+
+_INLINE_HK = re.compile(r"(?<!\\)\$[^$\n]+?(?<!\\)\$")
+_TELUGU = re.compile(r"[\u0c00-\u0c7f]")
+_LATIN = re.compile(r"[A-Za-z]")
+
+
+def wrong_language(field: str, value: str) -> str | None:
+    """Why this text cannot be saved in this meaning field, or None when it can.
+
+    `en` is the English meaning and `te` the Telugu one; a meaning pasted into the other box
+    is refused. Inline ``$hk$`` runs are Harvard-Kyoto in either field and are not counted.
+    """
+    body = _INLINE_HK.sub("", value or "")
+    telugu, latin = len(_TELUGU.findall(body)), len(_LATIN.findall(body))
+    if field == "en" and telugu:
+        return "the English meaning has Telugu text in it"
+    if field == "te" and latin > telugu:
+        return "the Telugu meaning is not in Telugu"
+    return None
