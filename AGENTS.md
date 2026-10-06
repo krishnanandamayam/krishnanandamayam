@@ -54,3 +54,15 @@ A commit message must tell a reader who has not seen the diff what changed and w
   check.
 - Describe the change that was made. Do not claim more than the diff shows, and say so when
   something in it looks unintended.
+
+## Commits to `data/grantha.yaml` name the verses
+
+A commit message for a change to `data/grantha.yaml` lists the verse numbers it touches, so the
+history can be read without opening the diff.
+
+- Use the verse numbers (`no`), as ranges where they are consecutive: `v10-v25`. Give sections
+  and prefaces by their id (`s01`, a preface block id).
+- Say which field changed in each (`hk`, `en`, `te`, `title`) and whether it was filled in,
+  rewritten or emptied.
+- Work the list out from the diff itself (compare the old and new file), not from memory of
+  the session.
