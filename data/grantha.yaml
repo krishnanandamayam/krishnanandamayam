@@ -577,13 +577,22 @@ items:
   - type: verse
     id: v36
     no: '36'
-    hk: ''
-    en: లోకములన్నిట వ్యాపించిన తండ్రి, ఈశ్వరుడు పాలకుడు, రక్షకుడు, ముక్కంటి, శాంతి కారకుడు, భరించే వాడైన సర్వేశ్వరునికిపెప్పుడూ నమస్కారం.
-    te: ''
+    title: zrI “zivapaJcakam”
+    hk: |-
+      vizvamayam, vizvajanakam, vizvezam vizvanAtham.
+      vizvezvaram, virUpAkSam vizvazAnti karam . 
+      vizvarUpam zrI vizvambharam . 
+      vande, sadAzivam, sAmbam, zambhum, Izvaram, zaGkaram..
+    en: ''
+    te: 'లోకములన్నిట వ్యాపించిన తండ్రి, ఈశ్వరుడు పాలకుడు, రక్షకుడు, ముక్కంటి, శాంతి కారకుడు, భరించే వాడైన సర్వేశ్వరునికిపెప్పుడూ నమస్కారం.'
   - type: verse
     id: v37
     no: '37'
-    hk: himagirivAsinam, prathama gaNAdhipam . zAnta svarUpam, namo vedassarvAntargatam . viSNuvallabham pArvatI prANanAtham, mokSakaram. vande sadAzivam pArvatIprANanAtham, sAmbam, zambhum, Izvaram zaGkaram..
+    hk: |-
+      himagirivAsinam, prathama gaNAdhipam . 
+      zAnta svarUpam, namo vedassarvAntargatam . 
+      viSNuvallabham pArvatI prANanAtham, mokSakaram. 
+      vande sadAzivam pArvatIprANanAtham, sAmbam, zambhum, Izvaram zaGkaram..
     en: A resident of the Himalayas, foremost among the Devatas, peaceful personality, he who is present in the essence of the Vedas, master of Lord Vishnu, husband of Sri Parvati, bestower of liberation, obeisances to you oh Sadasiva, Shambhu, master - oh Sankara!
     te: ''
   - type: verse
@@ -1294,7 +1303,7 @@ items:
     hk: |-
       oM sarvAntaryAmi zrIhari iti vidmahe, sarvadhara sarvAdhAra sarvavararu zrImannArAyaNAya dhImahi .
       tanno devAdi deva mokSaprada zrIdhara zrIkRSNaH pracodayAt..
-    en: Om, We know the Inner Controller, Sri Hari; We meditate on the Supreme Sustainer, the Ultimate Support, the Most Excellent One, Sri Narayana; May Sri Krishna, the Lord of Lords, the bestower of liberation, Who is Sri Dhara (Bearer of Prosperity), Always inspire and guide us.
+    en: ''
     te: ''
   - type: verse
     id: v130
