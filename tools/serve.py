@@ -225,13 +225,18 @@ def api_preview_prose(body):
 
 def _apply(doc, entry_id: str, body) -> list[str]:
     """Write the changed fields of one entry into the in-memory doc; return which changed.
-    A meaning in the wrong language is refused (ValueError) before anything is written."""
+    In hk, | and || are first rewritten as . and .., and a verse is broken into one line per
+    danda. A meaning in the wrong language is refused (ValueError) before anything is written."""
     e = store.find(doc, entry_id)
     changed = []
     for k in FIELDS:
         if k not in body or k not in fields_of(e):
             continue
         new = str(body[k]).replace("\r\n", "\n").strip("\n")
+        if k == "hk":
+            new = HK.dot_dandas(new)  # dandas are written . and .., never | and ||
+            if e.get("type") == "verse":
+                new = HK.break_lines(new)  # one line of the verse per line of text
         if str(e.get(k) or "") == new:
             continue
         if why := store.wrong_language(k, new):

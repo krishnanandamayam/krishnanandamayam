@@ -117,3 +117,14 @@ def test_saving_a_meaning_in_the_wrong_box_is_refused_and_changes_nothing():
         serve._apply(doc, "v2", {"te": ENGLISH})
     assert str(store.find(doc, "v2").get("en") or "") == before
     assert serve._apply(doc, "v2", {"te": TELUGU}) in (["te"], [])
+
+
+def test_saving_a_verse_breaks_its_hk_into_lines():
+    from tools import serve
+
+    doc = store.load()
+    assert "hk" in serve._apply(doc, "v2", {"hk": "rAmam vande . kRSNam vande .."})
+    assert str(store.find(doc, "v2")["hk"]) == "rAmam vande .\nkRSNam vande .."
+    assert serve._apply(doc, "v2", {"hk": "rAmam vande . kRSNam vande .."}) == []
+    assert serve._apply(doc, "v2", {"hk": "rAmam vande | kRSNam vande ||"}) == []
+    assert str(store.find(doc, "v2")["hk"]) == "rAmam vande .\nkRSNam vande .."

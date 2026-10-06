@@ -229,6 +229,40 @@ def split_lines(hk: str) -> list[str]:
     return [line for line, _ in split_line_spans(hk)]
 
 
+_BAR_DANDAS = re.compile(r"\|\s?\|")
+
+
+def dot_dandas(hk: str) -> str:
+    """The text with its dandas written one way: "|" becomes ".", "||" (or "| |") becomes ".."."""
+    return _BAR_DANDAS.sub("..", hk).replace("|", ".")
+
+
+_CLOSERS = "\"”’')]}"
+
+
+def break_lines(hk: str) -> str:
+    """The verse with every line on a line of its own: a line ends at its danda or double danda.
+
+    Only white space changes. A line break is put after each danda that has text after it on
+    the same line (after the quote or bracket that closes there; one standing
+    apart at the very end stays with its line), and the spaces at
+    the ends of lines are dropped. Line breaks already there are kept.
+    """
+    out: list[str] = []
+    for raw in hk.split("\n"):
+        start = 0
+        for kind, _, b in token_spans(raw):
+            if kind == "text":
+                continue
+            while b < len(raw) and raw[b] in _CLOSERS:
+                b += 1
+            if raw[b:].strip(_CLOSERS + " \t"):
+                out.append(raw[start:b].strip())
+                start = b
+        out.append(raw[start:].strip())
+    return "\n".join(out)
+
+
 # --------------------------------------------------------------------------------------
 # Lint
 # --------------------------------------------------------------------------------------

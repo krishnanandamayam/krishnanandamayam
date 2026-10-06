@@ -201,7 +201,23 @@
     $('#save').textContent = 'Saving…';
     try {
       await api('/api/save-all', { entries: Object.fromEntries(all) });
-      if (all.has(current.id)) current.fields = { ...current.fields, ...all.get(current.id) };
+      if (all.has(current.id)) {
+        const typed = all.get(current.id);
+        current = await api('/api/entry/' + encodeURIComponent(current.id));
+        // the server writes dandas as . and .. and breaks a verse into one line per danda: show the
+        // text as it was stored
+        const box = $('#hk'), stored = current.fields.hk;
+        if ('hk' in typed && stored !== typed.hk && values().hk === typed.hk) {
+          const letters = box.value.slice(0, box.selectionStart).replace(/\s/g, '').length;
+          let at = 0;
+          for (let n = 0; n < letters && at < stored.length; at++) if (/\S/.test(stored[at])) n++;
+          box.value = stored;
+          box.setSelectionRange(at, at);
+          sync = null;
+          lastPreview = null;
+          preview();
+        }
+      }
       drafts.clear();
       await refreshList();
       const here = $(`#list a[data-id="${CSS.escape(current.id)}"]`);
