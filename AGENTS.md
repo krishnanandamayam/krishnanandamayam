@@ -34,3 +34,11 @@ the user is working with the agent.
 - Before a pull or merge, check whether `data/grantha.yaml` could conflict (for example
   `git diff HEAD...origin/main -- data/grantha.yaml`) and tell the user first.
 - Do not stop a server the user started themselves.
+
+## Commits are atomic
+
+Commit each change on its own: one logical change per commit, with a message that says what
+and why. Do not bundle unrelated changes (a code fix, a rule in this file, the author's edits
+to `data/grantha.yaml`) into one commit, and stage files by name rather than with `git add -A`
+so that someone else's uncommitted work is not swept in. When one file holds two independent
+changes, commit the first before making the second.
