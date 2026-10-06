@@ -13,6 +13,18 @@
 - Changes to code, tests and styles do not need this; resolve those conflicts normally and
   run `uv run pytest`.
 
+## The agent does not suggest verse edits
+
+What a verse, header or meaning should say is the human user's decision alone.
+
+- Do not propose changes to the content of `data/grantha.yaml` (`hk`, `title`, `en`, `te`,
+  preface text): no corrections, rewordings, word splits, restorations of earlier text, or
+  offers to "fix" or "put back" something.
+- Reporting facts is fine and expected: what a check or the lint found, which field is empty,
+  what a pull changed, what conflicts. State the fact and stop there; do not add what the text
+  ought to be.
+- Make a content change only when the user states the change themselves.
+
 ## The edit server's state is the agent's to maintain
 
 The editor (`uv run python -m tools.serve`, http://localhost:8000/edit) must be running whenever
