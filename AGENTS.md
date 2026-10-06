@@ -42,3 +42,15 @@ and why. Do not bundle unrelated changes (a code fix, a rule in this file, the a
 to `data/grantha.yaml`) into one commit, and stage files by name rather than with `git add -A`
 so that someone else's uncommitted work is not swept in. When one file holds two independent
 changes, commit the first before making the second.
+
+## Commit messages say what changed and why
+
+A commit message must tell a reader who has not seen the diff what changed and why.
+
+- First line: a short summary of the change itself, naming what was touched (`Telugu meanings:
+  fill empty entries, rewrite 16`), not a generic label such as "update" or "edit text".
+- Body, when the change is more than a line or two: what changed and where (files, verse or
+  entry ids, counts), the reason, and anything surprising or unfinished that a reviewer should
+  check.
+- Describe the change that was made. Do not claim more than the diff shows, and say so when
+  something in it looks unintended.
