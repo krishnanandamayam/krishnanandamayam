@@ -15,9 +15,15 @@
   let sync = null;        // [start, end) in the HK box picked out from the rendition
 
   const api = async (path, body) => {
-    const r = await fetch(path, body === undefined ? {} : {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
-    });
+    let r;
+    try {
+      r = await fetch(path, body === undefined ? {} : {
+        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body),
+      });
+    } catch (err) {
+      throw new Error('The edit server is not running, so nothing could be reached. Your unsaved edits are still in this tab: ' +
+        'do not reload. Start the server again (uv run python -m tools.serve, or ask Claude), then save.');
+    }
     const data = await r.json();
     if (!r.ok) {
       if (data.data_error) showDataError(data.data_error, data.error);
