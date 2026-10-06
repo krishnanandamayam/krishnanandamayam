@@ -293,7 +293,7 @@ items:
     hk: |-
       tejomayam yajJadAna tapaH karmAntargata rAjitam zrI rAmam.
       sarvezvaram sarvArtha sAdhanArthamarcita macyutam zAzvatam.
-      dayAnidhim kaivalyada svayam prakAza mUrtim zubhakaram zivam viSNum.
+      dayAnidhim kaivalyada svayamprakAzamUrtim zubhakaram zivam viSNum.
       yogezvara zrI rAdhAkRSNam, tam sadA namAmi zrI lakSmI nArAyaNa daivatam..
     en: The effulgent Lord Sri Ram, who is present in all sacrifices, austerities, and prescribed duties, the supreme embodiment who is worshipped for every objective, the infallible one, the eternal, one who delivers due to ceaseless mercy, one who appears on his own, the all auspicious Lord Shiva, Lord Vishnu, master of mystic Yoga Sri Radha Krishna, the embodiment of all Sri Lakshmi Narayana; to you I offer my humble obligation again and again.
     te: 'తేజస్సుతో నిండి, యజ్ఞము, దానము, తపస్సు వంటి అన్ని కర్మలయందుండు శ్రీరాముడు, సర్వేశ్వరుడు, అన్ని ప్రయోజనములకై ఆరాధించబడే అనంతుడు, శాశ్వతంగా వుండేవాడు, దయతో మోక్షమిచ్చే స్వయంప్రకాశకుడు, శుభకరుడైన శివ-విష్ణు స్వరూపుడు, విశ్వప్రేమికులైన రాధాకృష్ణులందరి స్వరూపమైన శ్రీ లక్ష్మీనారాయణునికి సదా నమస్కారములు.'
@@ -302,7 +302,7 @@ items:
     no: '2'
     hk: |-
       zrI vighnezvaram sarva vighnaharam kumAragurum ca sumukham phAlacandram.
-      smarAmi prathamam surAgra pUjitam gaurIzakumAram siddhArtha gaNezam..
+      smarAmi prathamam surAgrapUjitam gaurIzakumAram siddhArtha gaNezam..
     en: I first remember Lord Vighneswara, who destroys all impediments and obstacles, the spiritual master of Lord Kartikeya, the pleasant-faced one with the crescent moon on his forehead, he who is worshipped first among the demigods, the son of mother Parvati, one who fulfills all desires.
     te: 'అన్ని విఘ్నములను నశింపచేసే, కుమారస్వామికి గురువు, చంద్రుని వంటి ముఖము గల, దేవతలందరి కంటే ముందుగా పూజింపవలసిన పార్వతీతనయుడైన గణేశుని తలచుకుంటున్నాను.'
   - type: verse
@@ -319,8 +319,10 @@ items:
     id: v4
     no: '4'
     hk: |-
-      pazyAmi paramezvaram vizvezam virUpAkSam memokSadam. phAlAkSam pazupatim satyam zivam sundaram..
-      zambhum vizvambharam sAmbam Izvaram zAntam mahezvaram. vizvam sarvam vizvezvaram zivamayam, sadAvandeham tam vizvanAtham..
+      pazyAmi paramezvaram vizvezam virUpAkSam memokSadam. 
+      phAlAkSam pazupatim satyam zivam sundaram..
+      zambhum vizvambharam sAmbam Izvaram zAntam mahezvaram. 
+      vizvam sarvam vizvezvaram zivamayam, sadAvandeham tam vizvanAtham..
     en: I behold the Supreme Lord, the Ruler of the cosmos, the uniquely-eyed Virupaksha, the grantor of my liberation, the one with the third eye, the Lord of all beings, who is Truth, Auspiciousness, and Beauty. I look upon Shambhu, the sustainer of the cosmos, Samba (accompanied by the Divine Mother Amba), the Supreme Ruler Ishwara, the embodiment of peace, the great Maheshwara. The entire universe is pervaded by the Lord of the Universe and is filled with Shiva; unto that Vishwanatha (Lord of the Cosmos), I bow down forever.
     te: |-
       విశ్వమును పాలించే ఈశ్వరుడు, సుందరనేత్రుడు, ముఖమున మూడోకన్నుగల, జీవులందరకు సుఖశాంతులొసగే బాధ్యతాయుత దైవం బాధతో “శంభో” అని ఆక్రోశిస్తే చాలు,ఆదుకునే, అన్నిలోకాలను భరించి, ఐశ్వర్యమునిచ్చే శాంతి స్వరూపుడు, సముడు, శుభుడు, విశ్వమంతా వ్యాపించివున్న మహేశ్వరుని మనోనేత్రంతో దర్శిస్తూ ఎల్లపుడూ
@@ -334,7 +336,15 @@ items:
   - type: verse
     id: v6
     no: '6'
-    hk: rAmam zrIrAmam lokAn ramayantItirAmaH iti sArthaka nAmatAraka rAmam | kaikeyI nandanam kausalyAsutam, vaidehI vallabha dazaratha rAmam . vizvAmitra priyam vaziSTha viziSTa ziSyam ca satyavAkpAlana zobhita eka patnI vratAdi sakala guNAbhirAmam. paramezvara pUjita nadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam. zaraNA gata rakSaka, bhakta janapoSaka jagadabhirAmam zrI rAmam. jJAna vAziSThArtham ca yoga vAziSTham vizva tejasam zrIrAmam. kAruNyadhAmam kaivalyadam kaLyANa zrI kodaNDarAmam. tam namAmi nirantaram mamArAdhya rAmam manobhirAmam ca hanumatsevita rAmam param jyotiH parandhAmaH zrI zrIrAmam..
+    hk: |-
+      rAmam zrIrAmam lokAn ramayantItirAmaH iti sArthaka nAmatAraka rAmam .
+       kaikeyI nandanam kausalyAsutam, vaidehI vallabha dazaratha rAmam . 
+      vizvAmitra priyam vaziSTha viziSTa ziSyam ca satyavAkpAlana zobhita eka patnI vratAdi sakala guNAbhirAmam. 
+      paramezvara pUjita nadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam. 
+      zaraNA gata rakSaka, bhakta janapoSaka jagadabhirAmam zrI rAmam. 
+      jJAna vAziSThArtham ca yoga vAziSTham vizva tejasam zrIrAmam. 
+      kAruNyadhAmam kaivalyadam kaLyANa zrI kodaNDarAmam. 
+      tam namAmi nirantaram mamArAdhya rAmam manobhirAmam ca hanumatsevita rAmam param jyotiH parandhAmaH zrI zrIrAmam..
     en: I bow to Sri Rama, whose name is truly meaningful as He delights all the worlds, the liberating Taraka Rama; the joy of Kaikeyi, the son of Kausalya, the beloved consort of Vaidehi, and the dear son of Dasharatha. He is dear to Sage Vishwamitra, the distinguished disciple of Sage Vashistha, adorned with the virtue of keeping His truthful word, and enchanting with supreme qualities such as the vow of having only one wife. He is worshiped by the Supreme Lord Shiva and shines through the adoration of Sadashiva; He is the Sachidananda Parabrahma and the Supreme Lord of all. He is the savior of those who surrender to Him, the protector and nurturer of His devotees, and the delight of the entire universe; the true inner essence of Jnana Vashistha, the embodiment of Yoga Vashistha, and the cosmic radiance itself. He is the abode of compassion, the bestower of liberation, and the auspicious Kodanda Rama. I bow incessantly to that Sri Rama-my worshipful Lord, the charmer of my mind, the One served devotedly by Hanuman, the Supreme Light, and the Ultimate Abode.
     te: |-
       అన్నిలోకాలను సంతోషపెట్టే (తనపేరుకు అర్థం నిరూపించే టట్టుగా) కైకేయీ, కౌసల్యాదశరథుల ముద్దు బిడ్డ సీతభర్త విశ్వామిత్రునికి ప్రియమైన, వశిష్టునికి ప్రత్యేకమైన శిష్యుడు ఏకపత్నీవ్రతం, తండ్రి ఆజ్ఞను తలదాల్చేటటువంటి సత్యవాక్పాలనవంటి అనేక గొప్పగుణవ ంతుడు, శివునిపూజిస్తూ, ఎప్పుడూ
@@ -343,14 +353,16 @@ items:
   - type: verse
     id: v7
     no: '7'
+    title: mantram
     hk: |-
-      mantram
-      hariharaputrAya vidmahe zabaragirivAsAyadhImahi. tanno maNikaNThaH pracodayAt..
-      viSNupAdodbhavAyai ca vidmahe zivazaGkara zirasthira nivAsinyaica dhImahi. tanno loka pAvanI gaGgA bhavAnIH pracodayAt..
+      a) hariharaputrAya vidmahe zabaragirivAsAyadhImahi. tanno maNikaNThaH pracodayAt..
+      A) viSNupAdodbhavAyai ca vidmahe zivazaGkara zirasthira nivAsinyaica dhImahi. tanno loka pAvanI gaGgA bhavAnIH pracodayAt..
     en: |-
-      Son of Lord Siva and Kesava, residing on the top of Sabarigiri, renowned as Manikantha; to that Ayyappa I offer my obeisances.
-      Sprouted from the lotus feet of Sri Mahavishnu, residing on the head of Lord Siva, one who purifies the three worlds - to that Ganga Mata, I offer my obeisances.
-    te: 'శివకేశవుల కుమారుడై శబరగిరి మీదని వసించే మణికంఠుని పేరుతో ప్రశస్తికల అయ్యప్పస్వామికి వందనం. శ్రీ మహావిష్ణువు పాదములందు పుట్టి, శివుని శిరస్సునవుండే, అన్నిలోకాలను పవిత్రం చేసేగంగాదేవీ! వందనం.'
+      a. Son of Lord Siva and Kesava, residing on the top of Sabarigiri, renowned as Manikantha; to that Ayyappa I offer my obeisances.
+      b. Sprouted from the lotus feet of Sri Mahavishnu, residing on the head of Lord Siva, one who purifies the three worlds - to that Ganga Mata, I offer my obeisances.
+    te: |-
+      అ) శివకేశవుల కుమారుడై శబరగిరి మీదని వసించే మణికంఠుని పేరుతో ప్రశస్తికల అయ్యప్పస్వామికి వందనం. 
+      ఆ) శ్రీ మహావిష్ణువు పాదములందు పుట్టి, శివుని శిరస్సునవుండే, అన్నిలోకాలను పవిత్రం చేసేగంగాదేవీ! వందనం.
   - type: verse
     id: v8
     no: '8'
@@ -368,7 +380,7 @@ items:
   - type: verse
     id: v10
     no: '10'
-    hk: aho! bhagavadanugraham advitIyam adbhutam, ayAcitam anirvacanIyam UhAtItam, karuNApUritam ca vizvarUpam adRzavizAlam Anandamayam
+    hk: aho! bhagavadanugraham advitIyam adbhutam, ayAcitam anirvacanIyam UhAtItam, karuNApUritam ca vizvarUpam adRzavizAlam Anandamayam..
     en: |-
       The mercy of the Supreme Lord has no parallel, is ultimate, does not need to be asked, cannot be described, is unimaginable to the human mind, and gives happiness greater than the entire world.
       (If we live with a proper mindset, the Lord helps and protects; he protects those who take refuge)
@@ -376,7 +388,11 @@ items:
   - type: verse
     id: v11
     no: '11'
-    hk: duSTazikSaNam, ziSTarakSaNam, zrI kRSNAvatAraramya gamyam. vRSabha, zakaTa, kaMsa, naraka, zizupAlAdyasura saMharaNam. lIlAmAnuSa vigraham, bAlA lIlAvinodinam manoharam. yogavidyA vidhAtAram nRtyagAna rasarAgamayam, bhaje ..
+    hk: |-
+      duSTazikSaNam, ziSTarakSaNam, zrI kRSNAvatAraramya gamyam. 
+      vRSabha, zakaTa, kaMsa, naraka, zizupAlAdyasura saMharaNam. 
+      lIlAmAnuSa vigraham, bAlA lIlAvinodinam manoharam. 
+      yogavidyA vidhAtAram nRtyagAna rasarAgamayam, bhaje ..
     en: I always remember the personal forms of their Lordships Ganapati, Lord Siva, Lord Brahma, Lord Vishnu, Ayyappa, Subrahmanya/Kumara Swamy, Sai of Shiridi, and Puttaparthi.
     te: 'గణపతి, శివుడు, బ్రహ్మ, విష్ణువు, అయ్యప్ప, సుబ్రహ్మణ్యం కుమార స్వామి షిర్డి, పుటపర్తిలలో వుండే సాయినాధులు వీరందరి స్వరూప దైవాన్ని ఎపుడూస్మరిస్తూంటాను.'
   - type: verse
@@ -598,7 +614,10 @@ items:
   - type: verse
     id: v38
     no: '38'
-    hk: 'zvetam himAlayaH zvetam, zirasthitazcandra nandiH zvetammAmAGkita vizvamAtaH divyam. zvetamanantam phAlAkSammama kaivalyadam. vande, sadAzivam, sAmbara, zambhum Izvaram, zaGkaram..'
+    hk: |-
+      zvetam himAlayaH zvetam, zirasthitazcandra nandiH zvetam mAmAGkita vizvamAtaH divyam. 
+      zvetamanantam phAlAkSammama kaivalyadam. 
+      vande, sadAzivam, sAmbara, zambhum Izvaram, zaGkaram..
     en: A resident of Kailasa, brilliant white-hued one, he who holds the moon on his hair bun, on whose side is the mother of the Universe, luminous with a bright universal glow, he with the third eye, bestower of liberation - oh Lord Siva! My obeisances to you.
     te: ''
   - type: verse
