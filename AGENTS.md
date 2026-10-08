@@ -34,11 +34,12 @@ the user is working with the agent.
   `curl http://localhost:8000/edit`) after anything that could have stopped it or broken
   the data it reads: a pull, merge or conflict, a code change, or a long gap.
 - If it has stopped, restart it without being asked, and tell the user when you did.
-- Run it with `run_in_background` and the longest `timeout` (7200000 ms). That cap is a limit
-  of the agent's tooling and cannot be raised, so the server stops 2 hours after it was
-  started. Restart it whenever the user asks or whenever you notice it has stopped, but do not
-  promise it stays up: a server the user runs in their own terminal has no such limit, so
-  suggest that when they will be editing for long.
+- Run it with `run_in_background`. On Windows the agent's tooling stops a background command
+  after the longest `timeout` it accepts (7200000 ms), so there the server stops 2 hours after
+  it was started: pass that timeout, restart it whenever the user asks or whenever you notice it
+  has stopped, and do not promise it stays up. On other systems (macOS, Linux) there is no such
+  cap. A server the user runs in their own terminal has no cap either, so suggest that when
+  they will be editing for long.
 - If a merge or pull leaves `data/grantha.yaml` invalid, the grantha rule above still applies:
   do not resolve it to get the server working. Leave the server running: the editor shows a
   banner naming the conflict (line and verse) and refuses to load or save until the file
