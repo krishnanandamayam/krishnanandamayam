@@ -502,8 +502,7 @@ items:
     id: v22
     no: '22'
     hk: |-
-      oM..
-      sarasijanAbham sarojahastam zrI zrIrAmam, mandasmitavadanam maGgaLezam zrIrAdhAkRSNam.
+      oM.. sarasijanAbham sarojahastam zrI zrIrAmam, mandasmitavadanam maGgaLezam zrIrAdhAkRSNam.
       oM namonArAyaNAya oM namazzivAya ceti dhyAyAmi niratam, tam, zivam, hrIm zrIm viSNum mokSadam..
     en: 'I always meditate on Shiva, Shakti and Lakshmi, and on Sri Mannarayana who grants liberation, with the eight-syllable mantra of Vishnu and the five-syllable mantra of Shiva: on Vishnu, in whose navel is the lotus stalk and flower, on Sri Rama of soft, lotus-like hands, on smiling-faced Krishna, the husband of Rukmini, and on Sri Radha and Krishna, the embodiment of love.'
     te: 'నాభినుండి తామరతాడు, పూవుకల విష్ణువు అవతారం, కమలము వంటి మృదువైన చేతులు గల శ్రీరాముడు, చిరునవ్వుముఖంతో, రుక్మిణీ పతి, ప్రేమ స్వరూపుడైన శ్రీరాధాకృష్ణులు, అష్టాక్షరీ, శివపంచాక్షరీ మంత్రములతో ఎపుడూ శివుని, శక్తిని లక్ష్మిని మోక్షమిచ్చే శ్రీ మన్నారాయణుని, ధ్యానిస్తుంటాను.'
@@ -512,7 +511,7 @@ items:
     no: '23'
     hk: |-
       zatakoTi nArikeLa phalAntargata divya zvetakAnti tejasam zambhum .
-      zatasahasrakoTi kSIrasAgara sadRza prakAzazobhitam zaGkaram..
+      zatasahasrakoTi kSIrasAgara sadRza prakAzazobhitam zaGkaram.
       ananta koTi tArAzazi tejo rAzinam sAmbam, tulasI bilvasahitam.
       tam ArAdhayAmi hariharasvarUpa sadAzivAtmaliGgam me viSNusAyujyadam..
     en: I always meditate on the Atmalinga of Shiva, the one form in which Shiva and Vishnu are united (which gives liberation and the world of Vishnu), like the pure white light inside a hundred crore coconuts, like the brilliance of a hundred thousand crore oceans of milk, a mass of light of endless crores of stars and moons.
@@ -521,7 +520,7 @@ items:
     id: v24
     no: '24'
     hk: |-
-      tejasvinIm tanmayIm, lakSmIm, hariNIm nArAyaNim vibhUtim, ramAm kSIrajAm,
+      tejasvinIm tanmayIm, lakSmIm, hariNIm nArAyaNIm vibhUtIm, ramAm kSIrajAm.
       tejazrIm svaprakAza rUpiNIm, vande hiraNmayIm zriyAm, zivAm ca mokSadAm ..
     en: I always meditate on the Atmalinga of Shiva, the one form in which Shiva and Vishnu are united (which gives liberation and the world of Vishnu), like the pure white light inside a hundred crore coconuts, like the brilliance of a hundred thousand crore oceans of milk, a mass of light of endless crores of stars and moons.
     te: 'నూరుకోట్ల కొబ్బరి కాయల లోన వుండే పవిత్రమైన తెల్లని కాంతి వలె, నూరు వేలకోట్ల పాలసముద్రపు వెలుగులా, అంతులేని కోట్లనక్షత్ర, చంద్రుల కాంతి సమూహం, శివవిష్ణువులు కల్సిన ఏకైక రూపమైన శివుని ఆత్మలింగాన్ని (మోక్షాన్నిచ్చే, విష్ణులోకాన్నిచ్చే) ఎపుడూ ధ్యానిస్తుంటాను. '
@@ -538,7 +537,7 @@ items:
     id: s01
     hk: |-
       zrI zrIvanalaharI hAram
-      sarva saGkaTahAra zrI rAdhAkRSNASTapadi
+      sarva saGkaTahAra zrI rAdhAkRSNASTapadI
     en: 'Sri Sri Vanavihari Haram (The Garland of the Divine Forest Wanderer) - The Sri Radha-Krishna Ashtapadi that dispels all afflictions and difficulties.'
   - type: verse
     id: v26
@@ -546,14 +545,15 @@ items:
     hk: |-
       mugdhamanoharamUrtim, muraLInAda lInam.
       vizvarUpadhAraNam, vizvamohana vigraham.
-      sadAhasita vadanam, veNugopAla zrIkRSNam rAdhAmAdhavam, namAmi nityam, viSNusAyujyadam.
+      sadAhasita vadanam, veNugopAla zrIkRSNam.
+      rAdhAmAdhavam, namAmi nityam, viSNusAyujyadam..
     en: "I constantly bow to Sri Venugopala Krishna: the charming form that merges into the sound of the flute, who holds all the worlds within himself, whose figure enchants the fourteen worlds, whose face never loses its smile, who is always together with Radha Devi, and who grants liberation in the form of a permanent abode in Vishnu's world at the end of life."
     te: 'ముచ్చట గొలిపే రూపం వేణు ధ్వనిలో కలిసివుంటూ, అన్నిలోకాలనుతనలో నిలుపుకునే, చతుర్దశ భువనాలను మైమరపించే ఆకృతి, చిరునవ్వు చెక్కు చెదరని మొగము, రాధాదేవితో ఎల్లవుడూ కలసివుంటూ, విష్ణులోకంలో జన్మాంతమున శాశ్వతనివాసమనే మోక్షమును ప్రసాదించే, శ్రీ వేణుగోపాల కృష్ణునికి, నిత్యమూ నమస్కరిస్తున్నాను.'
   - type: verse
     id: v27
     no: '27'
     hk: |-
-      zaraNAgatavatsalam zyamantaka grahItAram; zvetavAhana sArathim.
+      zaraNAgatavatsalam zyamantaka grahItAram, zvetavAhana sArathim.
       sarva maGgaLakaram, uddAlakAkrUrakucelAdibhaktavaradam.
       satyasvarUpam, pArijAtApahAriNam, satsaGkalpa siddhidam, namAmi.
       sAmavedapriyam, sAndIpanI ziSyam, zrI balarAmAnujam, zrI kRSNam..
@@ -563,7 +563,7 @@ items:
     id: v28
     no: '28'
     hk: |-
-      karmAcaraNabodhitam vidhitakarmAcaraNa Adarza puruSam.
+      karmAcaraNabodhakam, vidhitakarmAcaraNa Adarza puruSam.
       sadAzivapUjitam, tapasvinam, tapassva rUpam, tapamAtreNa prasannam.
       tapAntam, tapAntargatam, tapaH prayojanam ca, paramArtham, zrI harim.
       tApatrayaharam, tattvAcAryam, praNamAmi, tam, tANDava zrI kRSNam..
@@ -583,17 +583,17 @@ items:
     id: v30
     no: '30'
     hk: |-
-      naLinInAtham, navInItacoram nIlatejam, nIrajAkSam yazodAnanda, devakIvasudeva sutam, gopAlam, gokSIrapriyam .
+      naLinInAtham, navInItacoram nIlatejam, nIrajAkSam.
+      yazodAnanda, devakIvasudeva sutam, gopAlam, gokSIrapriyam .
       gopIvastrApahara, kALIyamardana, govardhanoddhArakam .
-      kurukSetre, arjunamArgadarzinam.
-      zrI kRSNam, vandeham jagadgurum..
+      kurukSetre, arjunamArgadarzinam zrI kRSNam, vandeham jagadgurum..
     en: "Salutations to Sri Krishna, the teacher of the world: the husband of Lakshmi (Rukmini), the butter thief, shining in a blue hue, with beautiful lotus-like eyes, the son of Yashoda and Nanda and of Devaki and Vasudeva, who tended cows and happily drank cow's milk; who took away the clothes of the gopikas (a small joke by the child Gopala to show them their irresponsible behaviour: after performing a forty-day vow of worship to Katyayani Devi and without completing the closing rite, they left their clothes on the bank shamelessly and bathed in the Yamuna ghat, a place where people pass); who danced on the head of the wicked serpent Kaliya, humbled his pride, drove him out of the lake spoiled by the flames of his poison and, after purifying it, made its clean water available for everyone to drink; who lifted Mount Govardhana like an umbrella and protected the cowherds from Indra's rain of stones; who, at Kurukshetra, taught the doctrine of karma, divinity and Vedanta as the Bhagavad Gita to Arjuna, who had fallen into delusion, saying he would not fight, kill his kinsmen and win a kingdom, and made him turn to his duty."
     te: 'లక్ష్మి (రుక్మిణి) భర్త, వెన్న దొంగ నీలవర్ణంతో ప్రకాశించేవాడు, పద్మం (తామర పువ్వు) వంటి అందమైన కన్నులుగలవాడు, యశోదానందులకు, దేవకీవసుదేవులకు పుత్రుడు, గోవులను కాచి, ఆవుపాలను ప్రీతిగా త్రాగేవాడు, గోపికల వస్త్రములను ఎత్తుకు పోయిన వాడు (కాత్యాయనీదేవికి 40 రోజులు దీక్షతో పూజచేసి, ఉద్యాపనచేయకుండా, సిగ్గు లేకుండా బట్టలు గట్టుపై వదిలేసి, నలుగురుసంచరించే ప్రదేశంలోని యమునానది ఘాట్ లో స్నానం చేస్తున్న బాధ్యతారహిత ప్రవర్తనను వారికే తెలియ చెప్పాలని బాలగోపాలుడుచేసిన చిన్న చమత్కారం) కాళియుడనే దుష్ట సర్పమును త్రొక్కితల పై నర్తించి, గర్వభంగము చేసి, వాని విషజ్వాలలవల్ల చెడిపోయిన సరస్సు (నుంచి పారద్రోలి), శుద్ధిచేసిన తదుపరి శుభ్రమైన ఆ నీటి మడుగునీళ్ళు అందరికీ త్రాగుటకు అందచేసిన వాడు గోవర్ధన గిరి పర్వతమును గొడుగులా పైకెత్తి ఇంద్రుని శిలావర్షం నుంచి గోపాలురను రక్షించిన, కురుక్షేత్రంలో యుద్ధం చేసి, బంధువులను సంహరించి, రాజ్యము సంపాదించనని మోహంలో పడిన అర్జునునికి కర్మసిద్ధాంతము, దైవత్వం వేదాంతం భగవద్గీతగా బోధించి, కర్తవ్యోన్ముఖుని చేసినలోక గురువు శ్రీ కృష్ణునికి నమస్కారము.'
   - type: verse
     id: v31
     no: '31'
     hk: |-
-      kRRra strIpUtana prANaharam, harivaMzAcAradharma prakAram.
+      krUrastrI pUtana prANaharam, harivaMzAcAradharma prakAram.
       mAyAmohita, gopastrIsaha bRndAvanarAsa keLIvirAjinam.
       aSTadevI vallabham, vipra, gopa, gopikA gogaNarakSakam .
       vande, zrIharam, iLA patim, zrI kRSNam mamaviSNu sAyujyadam ..
@@ -613,8 +613,8 @@ items:
     id: v33
     no: '33'
     hk: |-
-      sarvam zrI kRSNam, sarve sarvadA zrI kRSNam, sarve zaMzrIkRSNam, sarva sarvezam zrI kRSNam sRSTi ssarvam natyam, zrI kRSNamayam, herAdhAkRSNa .
-      tvamevamamazaraNam ..
+      sarvam zrIkRSNam, sarve sarvadA zrIkRSNam, sarvezam zrIkRSNam, sarva sarvezam zrI kRSNam.
+      sRSTissarvam satyam zrI kRSNamayam, he rAdhAkRSNa tvameva mama zaraNam ..
     en: Everything is Sri Krishna and everywhere is Sri Krishna; Sri Krishna is the lord of all and the lord of all lords. It is true that the whole creation is filled with Sri Krishna. O Radha and Krishna! You alone are my refuge.
     te: 'అంతా శ్రీ కృష్ణుడే అంతటా శ్రీ కృష్ణుడే, అందరకూ ప్రభువు శ్రీ కృష్ణుడే అందరి ప్రభువులకూ ప్రభువు శ్రీ కృష్ణుడే మొత్తం సృష్టి అంతా శ్రీ కృష్ణునితో నిండివున్నదన్నది నిజం. ఓ రాధా కృష్ణులారా ! మీరే నాకు దిక్కు.'
   - type: verse
@@ -622,8 +622,10 @@ items:
     no: '34'
     title: sASTAGgam
     hk: |-
-      ArtatrAya parAyaNam, nArAyaNam; vaikuNThAdhipam, paramAtmAnam, zrI harim zaGkha cakrazAraGga sarojahastam, viSNum vaijayantI zobhita zrI kaNTham .
-      dazAvatAra dharam dazadizAdIpti karam, dayALum, puruSottamam : zivam, vizvezam vizvagurum zrIrAmam, namAmi tatsarvezam, zrI kRSNam me mokSadam ..
+      ArtatrANa parAyaNam, nArAyaNam, vaikuNThAdhipam, paramAtmAnam, zrI harim.
+      zaGkha cakrazAraGga sarojahastam, viSNum vaijayantI zobhita zrI kaNTham .
+      dazAvatAra dharam dazadizAdIpti karam, dayALum, puruSottamam .
+      zivam, vizvezam vizvagurum zrIrAmam, namAmi tatsarvezam, zrI kRSNam me mokSadam ..
     en: 'Salutations to Sri Krishna, who gives me liberation: Sri Mannarayana who comes to the aid of those who cry out, the ruler of Vaikuntha, the Supreme Self, Sri Maha Vishnu, who holds the conch, discus, mace and lotus in his hands, who lights up the ten directions, the compassionate one who took the ten incarnations and helped the afflicted, the best among men, the lord of the universe who looks on all equally and grants wealth as Shiva, the teacher of all the worlds as Sri Rama, worshipped in many such forms, and the ruler of all the worlds.'
     te: 'ఆక్రోశించిన వారిని ఆదుకునే, శ్రీ మన్నారాయణుడు, వైకుంఠానికి పాలకుడు, పరమాత్ముడు, శ్రీ మహావిష్ణువు, శంఖం, చక్రం, గద తామరపూవుచేతుల ధరించిన, పదిదిక్కులను ప్రకాశింపచేసే, దశావతారాలు ధరించి బాధితులను ఆదుకున్న దయామయుడు, పురుషులలో శ్రేష్ఠుడు, అందరినీ సమానంగా చూస్తూ, ఐశ్వర్యముల నిచ్చే విశ్వానికి ప్రభువైన శివుడు, లోకాలన్నిటికి గురువైన శ్రీరాముడు ఇలా అనేక రూపాలలో ఆరాధింపబడే, అన్నిలోకాలకు పరిపాలకుడైన నాకు మోక్షమిచ్చే శ్రీ కృష్ణునికి ప్రణామము.'
   - type: verse
@@ -631,9 +633,10 @@ items:
     no: '35'
     title: AtmArpaNam
     hk: |-
-      pAhimAm, pAhimAm, pApanAzaka pAhimAm, rakSamAm, rakSamAm, zrI rAdhAkRSNa rakSamAm .
-      nAstitvam vinA mamagatiH varade.
-      zaraNAgata vatsala dehime, abhayam aparAdhakSamam, ante viSNu sAyujyam, zAzvata zrI hari caraNasAnnidhyam.
+      pAhimAm, pAhimAm, pApanAzaka pAhimAm.
+      rakSamAm, rakSamAm, zrI rAdhAkRSNa rakSamAm .
+      nAsti tvam vinA mamagatiH varada! zaraNAgata vatsala.
+      dehime, abhayam aparAdhakSamam, ante viSNu sAyujyam, zAzvata zrI hari caraNasAnnidhyam..
     en: Rescue me, rescue me, destroyer of sins! Protect me, protect me, O God Radha-Krishna! I have no refuge but you. Protector of those who take refuge, remove my fear and forgive all my faults. When this life is over, grant me liberation! Bless me to remain forever at the feet of Sri Maha Vishnu!
     te: 'ఆదుకో నన్నాదుకో, పాపాలు నశింపచేసేవాడా! నన్ను కాపాడు, కాపాడు ఓ రాధా కృష్ణ దైవమా! నువ్వుతప్ప నాకేవేరే దిక్కులేదు ఆశ్రయించినవార్ని కాపాడేవాడా నాకు భయంపోగొట్టు, అన్ని తప్పులను క్షమించు ఈ జీవితంపూర్తయ్యాక ముక్తి ఇయ్యు! శాశ్వతంగా శ్రీ మహావిష్ణువు పాదముల దగ్గర వుండేలా అనుగ్రహించు!'
   - type: section
