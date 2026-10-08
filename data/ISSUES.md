@@ -51,6 +51,7 @@ editor (`uv run python -m tools.serve`, then http://localhost:8000/edit).
 
 ## Findings in the HK text
 
+- 4 (`v4`): meanings of parts 1 and 2 are merged into one.
 - 76 (`v76`): possible line-break residue inside a word: 'vi. zva'
 - 76 (`v76`): possible line-break residue inside a word: 've . dansarv'
 - 94 (`v94`): `gItAvaLi:` was left as it is. The sheet's own Telugu has a danda there (గీతావళి|), so this colon may be a danda rather than a visarga.
