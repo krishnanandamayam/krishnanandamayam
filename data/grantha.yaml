@@ -302,38 +302,52 @@ items:
     no: '2'
     hk: |-
       zrI vighnezvaram sarva vighnaharam kumAragurum ca sumukham phAlacandram.
-      smarAmi prathamam surAgrapUjitam gaurIzakumAram siddhArtha gaNezam..
+      smarAmi prathamam surAgrapUjitam gaurIza kumAram siddhArtha gaNezam..
     en: 'I remember Ganesha, the son of Parvati: the destroyer of all obstacles, the elder brother of Kumaraswami, the one with a moon-like face, who is to be worshipped before all the gods.'
     te: 'అన్ని విఘ్నములను నశింపచేసే, కుమారస్వామికి గురువు, చంద్రుని వంటి ముఖము గల, దేవతలందరి కంటే ముందుగా పూజింపవలసిన పార్వతీతనయుడైన గణేశుని తలచుకుంటున్నాను.'
   - type: verse
     id: v3
     no: '3'
     hk: |-
-      praNAmi jagadvIram, vizvaH zreyakArakam, viSNum jiSNum, muktidam advitIyam acyutam, jagannAtha vallabham..
-      dhyAyAmi devakIsutam aniruddham Adi daivatam.
+      1. praNAmi jagadvIram, vizvaH zreyakArakam, viSNum jiSNum, muktidam advitIyam acyutam, jagannAtha vallabham..
+      2. dhyAyAmi devakIsutam aniruddham Adi daivatam.
       deva devezvaram zrI harim, AdimadhyAntarasthitam sthiram..
-    en: Salutations to Sri Vishnu, the cause of the good of all worlds, the incomparable God who grants liberation, the protector and ruler of the worlds. I pray to Sri Hari, the son of Devaki, who has no opposite, the first God, the God of all gods, who remains unchanging before creation, in the middle and at the end.
+    en: |-
+      1. Salutations to Sri Vishnu, the cause of the good of all worlds, the incomparable God who grants liberation, the protector and ruler of the worlds. 
+      2. I pray to Sri Hari, the son of Devaki, who has no opposite, the first God, the God of all gods, who remains unchanging before creation, in the middle and at the end.
     te: |-
-      సర్వలోకాల మంచికి కారకుడు, శ్రీ విష్ణువు, మోక్షమునిచ్చే సాటి లేనిదైవం, రక్షకుడైనలోక
-      పాలకునికి నమస్కారం దేవకీ కుమారుడు, వ్యతిరేకము లేనివాడు, మొదటి దైవం, దేవుళ్ళందరకూదేవుడు, సృష్టిముందు మధ్యలో చివరకూడా నిశ్చలంగా వుండే శ్రీహరిని ప్రార్థిస్తున్నాను.
+      1. సర్వలోకాల మంచికి కారకుడు, శ్రీ విష్ణువు, మోక్షమునిచ్చే సాటి లేనిదైవం, రక్షకుడైనలోక
+      పాలకునికి నమస్కారం.
+      2. దేవకీ కుమారుడు, వ్యతిరేకము లేనివాడు, మొదటి దైవం, దేవుళ్ళందరకూదేవుడు, సృష్టిముందు మధ్యలో చివరకూడా నిశ్చలంగా వుండే శ్రీహరిని ప్రార్థిస్తున్నాను.
   - type: verse
     id: v4
     no: '4'
     hk: |-
-      pazyAmi paramezvaram vizvezam virUpAkSam memokSadam.
+      1. pazyAmi paramezvaram vizvezam virUpAkSam memokSadam.
       phAlAkSam pazupatim satyam zivam sundaram..
-      zambhum vizvambharam sAmbam Izvaram zAntam mahezvaram.
+
+      2. zambhum vizvambharam sAmbam Izvaram zAntam mahezvaram.
       vizvam sarvam vizvezvaram zivamayam, sadAvandeham tam vizvanAtham..
     en: 'I always bow, seeing with the eye of the mind Maheshwara, the ruler of the universe: Ishwara of beautiful eyes, with a third eye on his forehead, the responsible God who gives happiness and peace to all beings, who rescues one who merely cries out in pain, "Shambho!", who bears all the worlds and grants prosperity, the embodiment of peace, impartial and auspicious, pervading the whole universe.'
     te: |-
-      విశ్వమును పాలించే ఈశ్వరుడు, సుందరనేత్రుడు, ముఖమున మూడోకన్నుగల, జీవులందరకు సుఖశాంతులొసగే బాధ్యతాయుత దైవం బాధతో “శంభో” అని ఆక్రోశిస్తే చాలు,ఆదుకునే, అన్నిలోకాలను భరించి, ఐశ్వర్యమునిచ్చే శాంతి స్వరూపుడు, సముడు, శుభుడు, విశ్వమంతా వ్యాపించివున్న మహేశ్వరుని మనోనేత్రంతో దర్శిస్తూ ఎల్లపుడూ
-      నమస్కరిస్తుంటాను.
+      విశ్వమును పాలించే ఈశ్వరుడు, సుందరనేత్రుడు, ముఖమున మూడోకన్నుగల, జీవులందరకు సుఖశాంతులొసగే బాధ్యతాయుత దైవం బాధతో “శంభో” అని ఆక్రోశిస్తే చాలు,ఆదుకునే, అన్నిలోకాలను భరించి, ఐశ్వర్యమునిచ్చే శాంతి స్వరూపుడు, సముడు, శుభుడు, విశ్వమంతా వ్యాపించివున్న మహేశ్వరుని మనోనేత్రంతో దర్శిస్తూ ఎల్లపుడూ నమస్కరిస్తుంటాను.
   - type: verse
     id: v5
     no: '5'
-    hk: namAminanda kizoram, zrI kRSNam lokarakSakam, gItAcAryam satya priyam ca, nadAzrI zivadhyAna yoginam, zrIzam zrIkaram zreyam zaurim, rukmiNI prANavallabham, ramyam zrIrAdhAmAdhavam, rAsalIlA vinodinam..
-    en: Obeisances to the Lord, Sri Krishna, the child of Nanda who protects the worlds, who taught the Bhagavad Gita, who loves the truth, who is always in penance to Shiva, who bestows all auspiciousness, the husband of Rukmini, the embodiment of a love that never leaves Radha, the Lord of playful, amorous pranks.
-    te: 'నందునిబిడ్డ లోకములను రక్షించే శ్రీ కృష్ణునికి, భగవద్గీతను బోధించి, నిజమునిష్టపడే, ఎపుడూ శివుని తపస్సులో వుండే, అన్ని శుభాల్ని ఇచ్చే రుక్మిణీ భర్త, రాధాదేవితో ఎపుడూ వీడని ప్రేమ స్వరూపి, శృంగారచిలిపి చేష్టల భగవానునికి నమస్కారము.'
+    hk: |-
+      rAmam zrIrAmam lokAn ramayantItirAmaH iti sArthaka nAmatAraka rAmam .
+      kaikeyI nandanam kausalyAsutam, vaidehI vallabha dazaratha rAmam .
+      vizvAmitra priyam vaziSTha viziSTa ziSyam ca satyavAkpAlana zobhita eka patnI vratAdi sakala guNAbhirAmam.
+      paramezvara pUjita sadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam .
+      zaraNA gata rakSaka, bhakta janapoSaka jagadabhirAmam zrI rAmam.
+      jJAna vAziSThArtham ca yoga vAziSTham vizva tejasam zrIrAmam.
+      kAruNyadhAmam kaivalyadam kaLyANa zrI kodaNDarAmam.
+      tam namAmi nirantaram mamArAdhya rAmam manobhirAmam ca hanumatsevita rAmam paraJjyotiH parandhAmaH zrI zrIrAmam..
+    en: "Obeisances always to Sri Rama: he who delights all the worlds (proving the meaning of his name), the beloved child of Kaikeyi, Kausalya and Dasharatha, the husband of Sita, dear to Vishwamitra, the special disciple of Vasishtha; a man of many great virtues such as faithfulness to one wife and truthfulness in carrying out his father's command; who worships Shiva and is himself always worshipped by Ishwara; the protector of those who take refuge in him, who graciously grants liberation and sees that all his devotees' wishes are fulfilled; the embodiment of the sacred, liberating teaching, the Yoga Vasishtha, the essence of the science of Jnana Vasishtha; the lord of all worlds, the auspicious one, the bearer of the bow, my chosen deity, who is always served by Hanuman."
+    te: |-
+      అన్నిలోకాలను సంతోషపెట్టే (తనపేరుకు అర్థం నిరూపించే టట్టుగా) కైకేయీ, కౌసల్యాదశరథుల ముద్దు బిడ్డ సీతభర్త విశ్వామిత్రునికి ప్రియమైన, వశిష్టునికి ప్రత్యేకమైన శిష్యుడు ఏకపత్నీవ్రతం, తండ్రి ఆజ్ఞను తలదాల్చేటటువంటి సత్యవాక్పాలనవంటి అనేక గొప్పగుణవ ంతుడు, శివునిపూజిస్తూ, ఎప్పుడూ
+      ఈశ్వరని చేత ఆరాధింప బడేవాడు, ఆశ్రయించినవానికిరక్షకుడై, దయతో మోక్షమిచ్చే భక్తులస్సు అన్నీ అమరేటట్టు చూసేవాడు, “జ్ఞానవాశిష్ఠ” మనే విజ్ఞాన వేదానికి అర్థమైన యోగవాశిష్ఠ మనే ముక్తి ప్రదమైన పవిత్రప్రబోధాత్మక వాఙ్మయస్వరూపుడు,
+      సర్వలోకాలకు అధిపతి, శుభకారకుడు, ధనుర్ధారి, నా ఇష్టదైవము, ఎపుడూ హనుమంతునిచే, సేవింపబడే, శ్రీ రాముని కెపుడూ నమస్కారము.
   - type: verse
     id: v6
     no: '6'
@@ -341,7 +355,7 @@ items:
       rAmam zrIrAmam lokAn ramayantItirAmaH iti sArthaka nAmatAraka rAmam .
       kaikeyI nandanam kausalyAsutam, vaidehI vallabha dazaratha rAmam .
       vizvAmitra priyam vaziSTha viziSTa ziSyam ca satyavAkpAlana zobhita eka patnI vratAdi sakala guNAbhirAmam.
-      paramezvara pUjita nadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam.
+      paramezvara pUjita sadAzivArcanA rAjita saccidAnanda brahmam sarvezvaram zrI rAmam.
       zaraNA gata rakSaka, bhakta janapoSaka jagadabhirAmam zrI rAmam.
       jJAna vAziSThArtham ca yoga vAziSTham vizva tejasam zrIrAmam.
       kAruNyadhAmam kaivalyadam kaLyANa zrI kodaNDarAmam.
@@ -356,16 +370,16 @@ items:
     no: '7'
     title: mantram
     hk: |-
-      a) hariharaputrAya vidmahe zabaragirivAsAyadhImahi.
+      1) hariharaputrAya vidmahe zabaragirivAsAyadhImahi.
       tanno maNikaNThaH pracodayAt..
-      A) viSNupAdodbhavAyai ca vidmahe zivazaGkara zirasthira nivAsinyaica dhImahi.
+      2) viSNupAdodbhavAyai ca vidmahe zivazaGkara zirasthira nivAsinyaica dhImahi.
       tanno loka pAvanI gaGgA bhavAnIH pracodayAt..
     en: |-
-      a) Salutations to Ayyappa Swami, famed by the name Manikanta, who dwells on Sabarigiri and is the son of Shiva and Keshava.
-      b) Salutations, O Ganga Devi, born at the feet of Sri Maha Vishnu, who dwell on Shiva's head and purify all the worlds.
+      1) Salutations to Ayyappa Swami, famed by the name Manikanta, who dwells on Sabarigiri and is the son of Shiva and Keshava.
+      2) Salutations, O Ganga Devi, born at the feet of Sri Maha Vishnu, who dwell on Shiva's head and purify all the worlds.
     te: |-
-      అ) శివకేశవుల కుమారుడై శబరగిరి మీదని వసించే మణికంఠుని పేరుతో ప్రశస్తికల అయ్యప్పస్వామికి వందనం. 
-      ఆ) శ్రీ మహావిష్ణువు పాదములందు పుట్టి, శివుని శిరస్సునవుండే, అన్నిలోకాలను పవిత్రం చేసేగంగాదేవీ! వందనం.
+      1) శివకేశవుల కుమారుడై శబరగిరి మీదని వసించే మణికంఠుని పేరుతో ప్రశస్తికల అయ్యప్పస్వామికి వందనం. 
+      2) శ్రీ మహావిష్ణువు పాదములందు పుట్టి, శివుని శిరస్సునవుండే, అన్నిలోకాలను పవిత్రం చేసేగంగాదేవీ! వందనం.
   - type: verse
     id: v8
     no: '8'
@@ -393,18 +407,16 @@ items:
     id: v11
     no: '11'
     hk: |-
-      duSTazikSaNam, ziSTarakSaNam, zrI kRSNAvatAraramya gamyam.
-      vRSabha, zakaTa, kaMsa, naraka, zizupAlAdyasura saMharaNam.
-      lIlAmAnuSa vigraham, bAlA lIlAvinodinam manoharam.
-      yogavidyA vidhAtAram nRtyagAna rasarAgamayam, bhaje ..
+      gaNezam gaurIzam vANIzam ramezam, zabarigirivAsinam ca aruNAcalezam .
+      zrI SirDI kSetrezam puTTapartivAsinam tatsarvezam smarAmi sadA zrI sAyIzam ..
     en: 'I always remember the God who is the form of all of these: Ganapati, Shiva, Brahma, Vishnu, Ayyappa, Subrahmanya Kumara Swami, and the Sai Nathas who dwell in Shirdi and Puttaparthi.'
     te: 'గణపతి, శివుడు, బ్రహ్మ, విష్ణువు, అయ్యప్ప, సుబ్రహ్మణ్యం కుమార స్వామి షిర్డి, పుటపర్తిలలో వుండే సాయినాధులు వీరందరి స్వరూప దైవాన్ని ఎపుడూస్మరిస్తూంటాను.'
   - type: verse
     id: v12
     no: '12'
     hk: |-
-      "zrI hanumantam AJjaneyam dhanyam, sadA zrIrAma nAma dhyAna daivatam.
-      zAkinI DhAkinyAdi duSTasUdanam, vande, bhava bhayaroga zokaharam harim .."
+      zrI hanumantam AJjaneyam dhanyam, sadA zrIrAma nAma dhyAna daivatam.
+      zAkinI DhAkinyAdi duSTasUdanam, vande, bhava bhayaroga zokaharam harim ..
     en: Obeisances always to Anjaneya Swami, the son of Anjani, who is ever engaged in chanting the name of Rama, destroys all ghosts, spirits and demons, removes fear, illness and sufferings from worldly life, and protects.
     te: 'అంజనీకుమారుడు, ఎపుడూ రామనామస్మరణ చేస్తూ అన్ని భూతప్రేతపిశాచాలను సంహరించి, సంసారంలోని భయము, అనారోగ్యం, బాధలను తొలగించి, రక్షించే ఆంజనేయ స్వామికి ఎపుడూ నమస్కారం.'
   - type: verse
