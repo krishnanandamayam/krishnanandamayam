@@ -208,11 +208,17 @@ def split_line_spans(hk: str) -> list[tuple[str, list[Span]]]:
     out: list[tuple[str, list[Span]]] = []
     for body, origin in lines:
         cur, src = "", []
+        opening = True
         for kind, a, b in token_spans(body):
             if kind == "text":
                 cur += body[a:b]
                 src += origin[a:b]
+            elif opening and not out and _opens_with_pranava(cur):  # "oM .." stays with its line
+                cur += body[a:b]
+                src += origin[a:b]
+                opening = False
             else:
+                opening = False
                 keep = len(cur.rstrip())
                 mark = " ." if kind == "danda" else " .."
                 cur = cur[:keep] + mark
@@ -239,20 +245,32 @@ def dot_dandas(hk: str) -> str:
 
 _CLOSERS = "\"”’')]}"
 
+_PRANAVA_ONLY = re.compile(r"[\"“‘'(\[{]*o[Mm]", re.ASCII)
+
+
+def _opens_with_pranava(text: str) -> bool:
+    """True when the text so far is just the pranava: the danda after it stays on its line."""
+    return bool(_PRANAVA_ONLY.fullmatch(text.strip()))
+
 
 def break_lines(hk: str) -> str:
     """The verse with every line on a line of its own: a line ends at its danda or double danda.
 
     Only white space changes. A line break is put after each danda that has text after it on
-    the same line (after the quote or bracket that closes there; one standing
-    apart at the very end stays with its line), and the spaces at
-    the ends of lines are dropped. Line breaks already there are kept.
+    the same line (after the quote or bracket that closes there; one standing apart at the
+    very end stays with its line), and spaces at the ends of lines are dropped. Line breaks
+    already there are kept. The danda after an "oM" that opens the verse gets no break:
+    "oM .. rAmam vande .." keeps "oM .." on the first line.
     """
     out: list[str] = []
+    first = True  # the first line of the verse: "oM .." there is not a line of its own
     for raw in hk.split("\n"):
         start = 0
-        for kind, _, b in token_spans(raw):
+        for kind, a, b in token_spans(raw):
             if kind == "text":
+                continue
+            if first and start == 0 and _opens_with_pranava(raw[:a]):
+                first = False
                 continue
             while b < len(raw) and raw[b] in _CLOSERS:
                 b += 1
@@ -260,6 +278,7 @@ def break_lines(hk: str) -> str:
                 out.append(raw[start:b].strip())
                 start = b
         out.append(raw[start:].strip())
+        first = first and not raw.strip()
     return "\n".join(out)
 
 

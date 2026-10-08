@@ -84,6 +84,10 @@ BREAKS = [
     ('"rAmam vande." kRSNam vande ..', '"rAmam vande."\nkRSNam vande ..'),  # the closing quote stays
     ('"rAmam vande . kRSNam vande .. "', '"rAmam vande .\nkRSNam vande .. "'),
     ("a .\n\nb ..", "a .\n\nb .."),
+    ("oM .. rAmam vande . kRSNam vande ..", "oM .. rAmam vande .\nkRSNam vande .."),  # a leading oM keeps its danda
+    ("oM. rAmam vande ..", "oM. rAmam vande .."),
+    ("rAmam vande . oM .. kRSNam ..", "rAmam vande .\noM ..\nkRSNam .."),  # only at the start of the verse
+    ("oMkAra . rAmam ..", "oMkAra .\nrAmam .."),  # a word that merely begins with oM
 ]
 
 
@@ -122,3 +126,8 @@ def test_every_verse_is_stored_with_dot_dandas_and_one_line_per_danda():
         if e.get("type") == "verse":
             hk = str(e.get("hk") or "")
             assert HK.break_lines(HK.dot_dandas(hk)) == hk, e["id"]
+
+
+def test_a_run_on_verse_opening_with_om_keeps_the_danda_on_its_line():
+    assert split_lines("oM .. rAmam vande . kRSNam vande ..") == ["oM .. rAmam vande .", "kRSNam vande .."]
+    assert split_lines("rAmam vande . oM .. kRSNam ..") == ["rAmam vande .", "oM ..", "kRSNam .."]
