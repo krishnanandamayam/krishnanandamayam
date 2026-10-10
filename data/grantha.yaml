@@ -870,8 +870,8 @@ items:
     id: v55
     no: '55'
     hk: |-
-      oM.. zrImaGgaLagirIzam, yAdagirinAthamantarvedyadhi nAtham, yoganRsiMham, sadAsarvarogamnam.
-      vandeham, bhaktavaradam, zivam, mahAyogapradam, tam, nAra siMham advitIyadaivatam mokSadam ..
+      oM.. zrImaGgaLagirIzam, yAdagirinAtham antarvedyadhi nAtham, yoganRsiMham, sadAsarvarogamnam.
+      vandeham, bhaktavaradam, zivam, mahAyogapradam, tam nArasiMham advitIyadaivatam mokSadam ..
     en: 'I always bow to Sri Narasimha Swami, the incomparable God who dwells in many holy places: Mangalagiri near Vijayawada, Yadagirigutta near Warangal, Yoga Narasimha in Mysore, Antarvedi near Narasapuram, who grants good yogas, who as Shiva sees all alike, and who at the end of this life gives the eternal empire of liberation.'
     te: 'విజయవాడ, సమీపంలోని మజ్జళగిరి వరంగల్లు దగ్గరి యాదగిరిగుట్ట, మైసూరలలోని యోగనృసింహ నరసాపురం సమీపంలోని అంతర్వేది - ఇలా అనేకపుణ్యక్షేత్రాల్లో వెలసి, మంచి యోగములనిచ్చి, శివునిగా సమదర్శియై యీజన్మాంతమున శాశ్వతమోక్ష సామ్రాజ్యాన్నిచ్చే సాటిలేని దైవం శ్రీ నృసింహస్వామికేపుడూ నమస్కరిస్తున్నాను.'
   - type: verse
@@ -879,19 +879,6 @@ items:
     no: '56'
     hk: |-
       oM - vande viSNum sadAzivam, varadam, tatsarvezam, zrIrAmam zrI kRSNam, mokSadam..
-      (varAliccikaruNiJce zrI mahAviSNuvuku, samabhAvanto cUstU sarva zubhAlanu prasAdiJce sAmbana dAzivuniki, sarvezvaruDaina zrI rAmuniki, mokSapradAta zrI kRSNa vara brahmaku vandanamu.
-      nanu brovagarAvA.
-      karuNAmayazrIrAmA........
-      tElisItEliyaka ne cesina kAryamulu duSTamEnta yogAnirAmA....
-      bhavabandhamunaDuma kuDiEDamala iDumalinni yArAmA...
-      karmaphalita manubhaviJcaka tIradEva rikainani pEdavi virutulindarilalo zrI rAmA....
-      nanuvyadhalanuJci vidhividhitamu nuJci tappimpagala vibhulEvvaru nIvugAka rAmA ....
-      dehabAdha, jADyapubAdha, vyayame vyadhagA rAmA nI bhakti pEnnidhidariceraga nIyadu dayadalacumA rAmA....
-      kAruNyadhAmuDavu kalalo yIbAdhala kaDatercaga dayacUpavayAjayarAmA....
-      jaya jaya rAmA....
-      bhavAnIzaGkara priyuDavu bhakti bhAvana varamunu rayamuganIyavE rAmA....
-      rAmA...
-      parandhAmA, puruSottama paramezvara zrI rAmA
     en: Salutations to Sri Maha Vishnu who grants boons and shows mercy; to Samba Sadashiva, who looks on all alike and grants all auspiciousness; to Sri Rama, the Lord of all; and to Sri Krishna Parabrahma, the giver of liberation. Will you not come to protect me, compassionate Sri Rama? Knowingly or unknowingly, how wicked are the deeds I have done, O Rama who delights in yoga! Amid the bonds of worldly life, the troubles on the right and left, O Rama! Everyone must experience the fruit of karma, people say with a shrug, O Sri Rama! Who but you, O Rama, can free me from sufferings and from the course of fate? Bodily pain, the pain of sluggishness, expense itself a pain, O Rama! Do not let me stay on the shore of the treasure of devotion to you; have mercy, Rama! You are an abode of compassion; be kind enough to end these sufferings of mine in my dreams, Jaya Rama! Jaya Jaya Rama! Beloved of Bhavani and Shankara, quickly grant me the boon of a devotional attitude, O Rama! Rama, the Supreme Abode, Purushottama, Parameshwara, Sri Rama!
     te: 'వరాలిచ్చికరుణించే శ్రీ మహావిష్ణువుకు, సమభావంతో చూస్తూ సర్వ శుభాలను ప్రసాదించే సాంబసదాశివునికి, సర్వేశ్వరుడైన శ్రీ రామునికి, మోక్షప్రదాత శ్రీ కృష్ణ పరబ్రహ్మకు వందనము. ననుబ్రోవగరావా! కరుణామయ శ్రీరామా... తెలిసీతెలియక, నే చేసిన కార్యముల దుష్టమొంత యోగానిరామ... భవబంధమునడుమ కుడిఎడమల ఇడుములన్ని యారామా... కర్మఫలిత మనుభవించక తీరదెవరికైనని పెదవి విరుతులిందరిలో శ్రీ రామా... ననువ్యధలనుంచి విధివిధితము నుంచి తప్పింపగల విభులెవ్వరు నీవుగాక రామా... దేహబాధ, జాడ్యపుబాధ, వ్యయమే వ్యధగా - రామా నీ భక్తిపెన్నిధిదరిచేరగ నీయదు దయదలచుమా రామా... కారుణ్యధాముడవు కలలో యీబాధల కడతేర్చగ దయచూపవయాజయరామా... జయ జయ రామా... భవానీశంకర ప్రియుడవు భక్తి భావన వరమును రయముగనీయవె రామా... రామా.. పరంధామా, పురుషోత్తమ పరమేశ్వర శ్రీ రామా...'
   - type: verse
@@ -914,59 +901,69 @@ items:
       vizvam vizvezam vizvavyAptam vizvasRjitam zAntidam .
       vizvezvaram vizvanAtham vizvapatim vizvagurum .
       vizvarUpam virUpAkSam vizvambharam vizvavaradam.
-      vande vizvamohanam vaMzI kRSNam viSNusAyujyadamme..
+      vande vizvamohanam vaMzI kRSNam viSNusAyujyadam me..
     en: He who is the universe Himself, the Lord of the cosmos, all-pervading, the creator of the universe, and the giver of peace! The Supreme Lord of the universe, the Master of the cosmos, the protector of the universe, and the Universal Guru! The cosmic-formed, the the one with supreme vision, the sustainer of the universe, and the bestower of cosmic boons! I bow unto that enchanting flute-bearing Lord Krishna, the enchanter of the universe, who grants unto me the eternal communion and liberation in Lord Vishnu.
     te: 'ఈ సమస్త విశ్వము తానైనవాడు, విశ్వమునకు ఈశ్వరుడు, సకల జగత్తునందు వ్యాపించియున్నవాడు, విశ్వమును సృష్టించినవాడు, శాంతిని ప్రసాదించువాడు! విశ్వేశ్వరుడు, సమస్త విశ్వమునకు నాథుడు, విశ్వపతి, లోకాలన్నింటికీ ఆదిగురువు! విశ్వరూపుడు, విలక్షణమైన నేత్రములు గల విరూపాక్షుడు (శివస్వరూపుడు), విశ్వమును భరించి పోషించువాడు, సమస్త లోకములకు వరములనొసగువాడు! సకల జగత్తును మోహింపజేయు వంశీకృష్ణుడు మరియు నాకు శాశ్వతమైన విష్ణుసాయుజ్యమును (మోక్షమును) ప్రసాదించే ఆ పరమాత్మునికి నేను ప్రణామములు సమర్పిస్తున్నాను.'
   - type: verse
     id: v59
     no: '59'
     hk: |-
-      oM. rAdhAgopAlaMrAgamohanaMrAsalIlArAji taMrAgamayam vairAgyapradam yogezvaram Izva rArcitam paramazivabhaktAgresaram zrIzam zaraNam mamavaradam zrI kRSNaMvande mokSadam..
+      oM.. rAdhAgopAlam rAgamohanam rAsalIlArAjitam .
+      rAgamayam vairAgyapradam yogezvaram .
+      IzvarArcitam paramazivabhaktAgresaram .
+      zrIzam zaraNam mamavaradam zrI kRSNam vande mokSadam..
     en: 'I bow to Sri Krishna, who gives liberation, taking refuge in him who protects me: the ruler of all of us together with Radha and the cows, the embodiment of love who reigns in the Rasa Lila that enchants with the music of the flute, the Lord of yoga who bestows dispassion, worshipped by Shiva, the foremost among the devotees of Parama Shiva, the husband of Lakshmi.'
     te: 'రాధను, గోవుల సహితంగా మనందరినీ పాలించేవాడు, వేణుగానంతో ముగ్ధులను చేయు రాసలీలతో రాజిల్లే ప్రేమ మూర్తి, వైరాగ్యమునొసగెడి యోగే శ్వరుడు, శివునిచే పూజింపబడే, పరమశివుని భక్తులలో మొదటివాడు, లక్ష్మీపతి,నన్ను రక్షించే వానిని శరణువేడుకుంటూ, మోక్షమిచ్చే శ్రీకృష్ణునికి నమస్కరిస్తున్నాను.'
   - type: verse
     id: v60
     no: '60'
     hk: |-
-      nirmala hRdayam sumanoharam sarojasadRza saugandhim pUjya gaGgA godAvarItoya tulyapavitram vaiSNavam zaGkara priyam zrIzrInivAsam.
-      Anandamayam zrIkaram sadAzrI bhagavannAmagAnayAga puNyakArakam.
+      nirmala hRdayam sumanoharam sarojasadRza saugandhim .
+      pUjya gaGgA godAvarItoya tulyapavitram vaiSNavam zaGkara priyam zrIzrInivAsam.
+      Anandamayam zrIkaram sadAzrI bhagavannAma gAnayAga puNyakArakam.
       taddhAraNa dhanyamanujam yoga vidyArdhinam zrI kRSNa bhaktam namAmyaham ..
     en: A pure heart delights the mind. It is like the fragrance of a lotus. It is as sacred as the revered water of the Ganga and Godavari. It is the very basis for worshipping Vishnu, dear to Shiva, the dwelling of Lakshmi Devi, full of joy, the giver of wealth, and by always performing the sacrifice of singing God's name it brings merit. I always bow to the devotee of Sri Krishna who has such a pure mind, who is blessed, a yogi and a seeker.
     te: 'నిర్మలమైన హృదయము మనస్సును ఆహ్లాదపరస్తుంది. తామరపూవుసువాస నవంటిది. పూజ్యమైన గంగా, గోదావరీ తీర్థము (నీరు) వలె పవిత్రమైనది. అదే విష్ణువు నారాధించే ఆధారము శివునికి ఇష్టము, లక్ష్మీదేవి నివాసము, సంతోషం తోనిండివుంటుంది. ఐశ్వర్యము నిచ్చేది,ఎపుడూ దేవుని నామగానం అనే యజ్ఞము చేస్తూ పుణ్యము కలిగించేది, అటువంటి పవిత్రమైన మనస్సుకల్గిన మానవుడు,ధన్యుడు, యోగిసాధ కుడు అయిన శ్రీ కృష్ణ భక్తునికి ఎపుడూ నమస్కరిస్తూంటాను.'
   - type: verse
     id: v61
     no: '61'
+    title: zrI kRSNahAsam
     hk: |-
-      vizAla vizvam viSNu mayam sadAzivam rAsalIlA lAsyarAganilayam .
+      vizAla vizvam viSNu mayam sadAzivam rAsalIlAlAsya rAganilayam .
       vizvezasRjitam virATsvarUpam maGgaLArAmam sarvam zrI kRSNahAsam..
     en: "This endless universe is filled with Vishnu and always in balance. It is full of various arts containing the nine rasas, dance, song, games and music. Brahma's creation is part of Sri Krishna's cosmic form; all living beings rejoice, experiencing all auspiciousness: the whole universe is a scattering of Sri Krishna's smiles."
     te: 'యీ అనంతమైన జగత్తు విష్ణువుతో నిండి ఎపుడూ సమతుల్యం. నవరసాలు కూడిన వివిధ కళలతో, నృత్యం, గానం ఆటపాటలతో నిండివుంటుంది. బ్రహ్మసృష్టి శ్రీ కృష్ణ విశ్వరూపంలో అంతర్భాగం, అన్ని శుభములు అనుభవిస్తూ జీవకోటి ఆనందిస్తుంటారు: మొత్తం అంతటా శ్రీ కృష్ణుని చిరునవ్వుల చిందులే.'
   - type: verse
     id: v62
     no: '62'
-    hk: 'paGkham laGghanti vArI zaJca zambhuJjayanti naraikavijayaH daitya deha zalkam bhavati (viSNu) zaGkham pAJcajanyam citram zrI kRSNa cidvilAsam (sadA) dayAmayam..'
+    hk: |-
+      plavaGgaH laGghanti vArIzam ca zambhum jayanti naraika vijayaH.
+      daitya deha zalkam bhavati (viSNu) zaGkham pAJcajanyam.
+      citram zrI kRSNa cidvilAsam (sadA) dayAmayam..
     en: A monkey leapt over the endless ocean with ease. Arjuna, a mere man, defeated Mahadeva. The conch called Panchajanya, a part of a demon's body, shines in the hand of Vishnu. Ah! How wonderful is the sport of Sri Krishna! Is it not always full of compassion!
     te: 'ఒక కోతి అంతులేని సముద్రాన్ని అవలీలగా గెంతేసింది. కేవలం మనుష్యుడైన అర్జునుడు మహాదేవుణ్ణి జయించాడు. ఒక రాక్షసుని శరీరంలోని భాగమైన పాంచజన్యం అనేపేరుగల శంఖం, విష్ణుమూర్తి చేతిలో చేరి ప్రకాశిస్తూంది. ఆహా! శ్రీ కృష్ణ చిదిల్వానం ఎంతచిత్రం! ఎప్పుడూ దయతోనిండి వుంటుంది కదా!'
   - type: verse
     id: v63
     no: '63'
-    hk: uDupi nAtham upendrAnujam udyAnavihAriNam hiraNmayIzaMhira Nyagarbham bhaktavazyaMsadAzivam vAsudevaMvande zrI kRSNamme mokSadam..
+    hk: |-
+      uDupI nAtham upendrAnujam udyAnavihAriNam hiraNmayIzam .
+      hiraNyagarbham bhaktavazyam sadAzivam vAsudevam vande zrI kRSNam me mokSadam..
     en: 'Salutations always to Sri Krishna, who gives me liberation: the child Gopala of the Udupi shrine, the younger brother of Indra, who roams in Brindavan, the husband of Sri Lakshmi Devi, the God of gods, who is won over only through devotion, who protects all equally, the son of Vasudeva.'
     te: 'ఉడుపి తీర్థంలోని బాల గోపాలుడు, ఇంద్రునికి తమ్ముడు, బృందా వనములోవిహరించేవాడు, శ్రీ లక్ష్మీ దేవి భర్త, దేవాది దేవుడు, భక్తితో మాత్రమే, వశమయ్యేవాడు, అందరనీ సమానంగా కాచి రక్షించేవాడు, వసుదేవుని తనయుడు, నాకు మోక్షమిచ్చే శ్రీకృష్ణునికి ఎప్పుడూ వందనములు.'
   - type: verse
     id: v64
     no: '64'
     hk: |-
-      vande gaurI zaGkara kumAram tArakavAram devasenAniJca SaSThIzam.
-      narvadaMzrI vallIzam (viSNuputrIzam) ripughnumme sarvarogaghnam zrI subrahmaNyasvAminam..
+      vande gaurI zaGkara kumAram tArakaharam devasenAninam ca SaSThIzam.
+      sarvadaM zrI vallIzam (viSNuputrIzam) ripughnum me sarvarogaghnam zrI subrahmaNyasvAminam..
     en: Salutations to Sri Subrahmanya Swami, the son of Parvati and Parameshwara, the slayer of Tarakasura, the commander of the army of the gods, the husband of Shashthi Devi and of Sri Valli, the daughter of Sri Maha Vishnu, who destroys my enemies and all diseases.
     te: 'పార్వతీపరమేశ్వరుల కుమారుడు, తారకాసురుని సంహరించిన వాడు, దేవతల సేనానాయకుడు, షష్ఠీ దేవికి, శ్రీ మహావిష్ణువు కూతురైన శ్రీ వల్లికి భర్త, నా శత్రువులను, సమస్తరోగములను నశింపజేసే, శ్రీసుబ్రహ్మణ్య స్వామికి నమోవాకములు'
   - type: verse
     id: v65
     no: '65'
     hk: |-
-      dagdham tIti sarvaduggAni dahantItimugdha mohinI vyAmoha tRSNam.
-      siddhyam tIti zAzvata zrI viSNu sAyujyam pathamekam zrI kRSNapada dhyAnam ..
+      dagdhantIti sarvaduHkhAni dahantItimugdha mohinI vyAmoha tRSNam.
+      siddhyantIti zAzvata zrI viSNu sAyujyam pathamekam zrI kRSNapada dhyAnam ..
     en: It burns away all sufferings, reduces to ashes the habit of behaving improperly out of excessive desire on seeing a beautiful woman, and grants the eternal union with Vishnu. The one very easy method that provides all of this is meditating on Sri Krishna with devotion.
     te: 'అన్ని బాధల్నీ కాల్చిపారేస్తుంది, అందమైన అతివ కంటబడగానే విపరీతమైన కోరికతో అనుచితంగా ప్రవర్తించే తీరును, నుసిచేస్తుంది, శాశ్వతమైన విష్ణు సాయుజ్యాన్ని ప్రసాదిస్తుంది. వీటన్నిటినీ సమకూర్చే చాలా సులభమైన ఒకే ఒక పద్ధతి శ్రీ కృష్ణుని భక్తితో ధ్యానించడమే॥'
   - type: verse
@@ -974,8 +971,8 @@ items:
     no: '66'
     hk: |-
       sarvadhAriyaina cakradhAriyaina velpANiyaina kodaNDapANi yainan .
-      sarvamamarci mukti niccugA bhagavadbhaktuniki sadvartanukin ..
-    en: A perfect, skillful, compassionate, and righteous path. By completely surrendering oneself, one can attain the supreme devotion to Bhagavan.
+      sarvamamarci mukti niccugA bhagavadbhaktuniki sadvartanukun ..
+    en: 'Whether he bears the whole universe, wields the chakra, holds the vel spear, or carries the Kodanda bow, he provides all things and grants liberation to the virtuous devotee of God.'
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
   - type: verse
     id: v67
