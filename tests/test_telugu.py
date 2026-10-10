@@ -27,4 +27,4 @@ def test_verses_1_to_25_have_a_telugu_meaning():
 def test_the_meaning_of_the_matrikrishna_sloka_is_on_the_sloka_that_has_it():
     v = store.find(DOC, "v54")
     assert "vakSoj" in str(v["hk"])
-    assert "అమ్మా ఆకలేస్తోంది" in str(v["te"])
+    assert "యశోద" in str(v["te"])  # a word of the meaning itself, not of a phrase the author may reword
