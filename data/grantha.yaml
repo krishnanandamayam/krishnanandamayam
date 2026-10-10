@@ -770,8 +770,8 @@ items:
       subrahmaNyam subrahmaNyam devasenApatim subrahmaNyam .
       subrahmaNyam subrahmaNyam zrI svAminAtham subrahmaNyam .
       subrahmaNyam subrahmaNyam zaravaNa zaravaNa subrahmaNyam .
-      subrahmaNyam subrahmaNyam bhavam zaraNam subrahmaNyam .
-      subrahmaNyam subrahmaNyam mama zaraNam bhavam subrahmaNyam .
+      subrahmaNyam subrahmaNyam bhava zaraNam subrahmaNyam .
+      subrahmaNyam subrahmaNyam mama zaraNam bhava subrahmaNyam .
       subrahmaNyam subrahmaNyam bhavabhaya rogazokaharam subrahmaNyam .
       subrahmaNyam subrahmaNyam mamArAdhya daivam subrahmaNyam .
       subrahmaNyam subrahmaNyam varadam me abhayadam subrahmaNyam..
@@ -787,36 +787,35 @@ items:
     title: sarvam sarvezvaram
     hk: |-
       oM teja zrIzam zrIvArim prema svarUpam, karuNAmayam ca bhaktavatsalam.
-      tejorAzinam mohanavaMzI gAna priyam, (golokavAsinam Izvaram).
-      vande zrI rAdhAkRSNam mama mokSadam..
+      tejorAzinam mohanavaMzI gAna priyam, (golokavAsinam Izvaram) vande zrI rAdhAkRSNam mama mokSadam..
     en: 'Prostration to Sri Radha-Krishna, the divine couple: the mass of radiance, Sri Kantapati (husband of Lakshmi), the embodiment of love, compassionate, cherishing devotees, full of light, fond of the music of the flute, and to the Supreme Abode who gives me liberation.'
     te: 'కాంతిపుంజమైన శ్రీ కాంతాపతి, ప్రేమమూర్తి దయామయుడు భక్తులను ఆదరించే, జ్యోతిర్మయుడు, మురళీ గానం ఇష్టపడే, శ్రీరాధాకృష్ణ దైవతమునకు, నాకు మోక్షమిచ్చే పరంధామునికి సాష్టాంగ ప్రమాణం.'
   - type: verse
     id: v48
     no: '48'
     hk: |-
-      vedam zrI kRSNam vedArtham zrIkRSNam
+      vedam zrI kRSNam vedArtham zrIkRSNam.
       vedAntam zrIkRSNam vedAntargata daivam ca zrIkRSNam .
-      nAdam zrIkRSNam oM kAra nAdam zrI kRSNam
+      nAdam zrIkRSNam oM kAra nAdam zrI kRSNam.
       veNunAdam zrI kRSNam pAJcajanya gItAnAdam zrI kRSNam.
-      dhyAnam zrI kRSNam yAgayogam zrI kRSNam
+      dhyAnam zrI kRSNam yAgayogam zrI kRSNam.
       vinodam zrIkRSNam bhavabhaya bheda chedanam zrI kRSNam.
-      vandeham tam zrI kRSNam muktidam
-      dhanyam zrI kRSNa dhyAnajIvanam
+      vandeham tam zrI kRSNam muktidam.
+      dhanyam zrI kRSNa dhyAnajIvanam.
       prAptiH tathyam zrI kRSNaparamapadam..
     en: "The Veda, Vedanta, the meaning of the Veda, the God hidden within the Vedas, the sound of Om, the sound of the Panchajanya conch, the song of the Bhagavad Gita, and with entertainments, remembering the Lord's plays, the remembrance of Hari's name that cuts away the pains of worldly life such as fear and grief: to spend life in any way remembering Sri Krishna, the Lord, in devotion through yogic meditation is great good fortune. That being is blessed and will certainly attain eternal liberation."
     te: 'వేదం వేదాంతం, వేదానికి అర్థం, వేదములందు లోనదాగియున్న దైవం, ఓంకారనాదం, పాంచ జన్యశంఖా రావo, భగవద్గీతా గానం, వినోదములతో, భగవల్లీలలస్మరణతో సంసారంలో భయం, శోకంవగైరా వ్యధలను నరికిపారవేసే హరినామస్మరణం ఏదోరకంగా శ్రీకృష్ణుని, భగవంతునితలుచు కుంటూ భక్తి భావంతో యోగధ్యా నంద్వారా జీవితం గడపటం మహోదృష్టం. ఆ జీవి ధన్యుడు తప్పకుండా శాశ్వతంగా మోక్షం లభిస్తుంది.'
   - type: verse
     id: v49
     no: '49'
+    title: pallavI
     hk: |-
-      pallavi:
-      rAjazekhara rAjazekhara rAjazekhara pAhimAm
-      rAjazekhara rAjazekhara rAjazekhara rakSamAm
-      candrazekhara candrazekhara candrazekhara pAhimAm
-      induzekhara induzekhara induzekhara rakSamAm
-      zazizekhara zazizekhara zazizekhara rakSamAm
-      rAjazekhara rAjazekhara rAjazekhara pAhimAm
+      rAjazekhara rAjazekhara rAjazekhara pAhimAm.
+      rAjazekhara rAjazekhara rAjazekhara rakSamAm.
+      candrazekhara candrazekhara candrazekhara pAhimAm.
+      induzekhara induzekhara induzekhara rakSamAm.
+      zazizekhara zazizekhara zazizekhara rakSamAm.
+      rAjazekhara rAjazekhara rAjazekhara pAhimAm.
       rAjazekhara rAjazekhara rAjazekhara rakSamAm..
     en: A hymn to Sri Samba Sadashiva with his various names, and a prayer to forgive faults and protect.
     te: 'శ్రీ సాంబసదా శివుని వివిధ నామాలతో స్తోత్రం చేసి, తప్పులను క్షమించి కాచి రక్షించమని ప్రార్థన.'
