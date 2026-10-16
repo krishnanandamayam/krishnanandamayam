@@ -981,7 +981,6 @@ items:
       2. sAdhyamainadi rAmasmaraNamu, mokSa gamyamainadi rAma zaraNyamu..
       3. rAmanAmamu ramyamainadi, ramyamainadi rAma nAmamu, dhanyamainadi nAdu jIvanamu, labhyamai tArakarAmamu ..
       4. abhayamai, mukti pradamai, zrI rAdhAkRSNa caraNa zaraNyamai ..
-    en: ''
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
   - type: verse
     id: v70
@@ -1140,6 +1139,12 @@ items:
       nizcala bhaktacittamandu nizcayambuganuNDEllEDalan..
     en: The Discus-Bearer never wanders in restlessness, nor in the fickle, nor in those whose eyes roam after pleasures, nor in those of unsteady minds. Though present everywhere, he certainly dwells in every land in the steady mind of the devotee.
     te: 'ఈ గీతిక తెలుగులోనే ఉన్నది'
+  - type: verse
+    id: v88
+    no: '88'
+    hk: ''
+    en: ''
+    te: ''
   - type: verse
     id: v89
     no: '89'
