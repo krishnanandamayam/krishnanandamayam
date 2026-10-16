@@ -95,8 +95,8 @@ prefaces:
       - type: sloka
         id: pe13
         hk: |-
-          anAghrAtaM puSpaM kisalayamalUnaM kararuhai.
-          ranAviddhaM ratnaM madhu navamanAsvAditarasam..
+          anAghrAtam puSpam kisalayamalUnam kararuhai.
+          ranAviddham ratnam madhu navamanAsvAditarasam..
       - type: sloka
         id: pe14
         hk: |-
@@ -257,6 +257,9 @@ prefaces:
           ముక్తాయింపుగా 22, 23 శ్లోకములు: మొదటిది శ్రీ విష్ణు అష్టాక్షరీ, శ్రీ శివ పంచాక్షరీ, తారకరామ, శక్తి, లక్ష్మీ బీజాక్షరములతో కూడినది. నాల్గు పాదములు నాల్గు దిక్కుల సూచనగా పాదమునకు 16 అక్షరములతో ఎటు తిరిగినా షోడశకళా ప్రపూర్ణుడైన పురుషోత్తముడే దిక్కని ప్రబోధిస్తున్నట్లు ప్రభవించినది. రెండవది సర్వశ్రేష్ఠమైన శివవిష్ణువుల సంయుక్త రూపమైన సదా శివాత్మలింగమును తులసీ మారేడుదళములతో సహా ఆరాధించటం విష్ణుసాయుజ్యం ఇచ్చేదిగా నిరూపితమైనది. చివరగా అన్ని భేషజాలను విడిచి "నీ పాదాల నాశ్రయించిన నన్ను కాచి రక్షించి మోక్షం ఇమ్మని యాచించటం" ఆత్మార్ఫణం - ఆనందో బ్రహ్మ.
 
           తేది: 21-01-2007, వ్యయ సం॥ర ప్రథమ మాఘ ఆదివారంనాడు శ్రీ భద్రాద్రి శ్రీరామచంద్రస్వామికి దర్శన, అర్చనా పూర్వకముగా ఈ శ్లోకముల మూలప్రతిని సమర్పించడమైనది.
+      - type: prose
+        id: pt16
+        text: ''
 items:
   - type: verse
     id: v1
@@ -1325,7 +1328,7 @@ items:
     title: zrIkRSNa sAyujya sAdhanam
     hk: ''
     en: The spiritual practice leading to union with Sri Krishna.
-    te: ''
+    te: 'శ్రీకృష్ణునితో ఐక్యమయ్యే మార్గం'
   - type: verse
     id: v105a
     no: 105a
@@ -1390,7 +1393,8 @@ items:
     hk: ''
     en: |-
       Concluding prayer upon meditation
-    te: |
+    te: |-
+      ధ్యానము సమాప్తమైన పిదప భక్తితో సమర్పించే ప్రణామం
   - type: verse
     id: v109-1
     no: 109 (1)
@@ -1449,7 +1453,7 @@ items:
       he mArgadarsaka puruSottama zrIkRSNa .
       namonamaH.
     en: Be it Lord Vishnu (Hari), Lord Shiva (Hara), Lord Brahma, or even Lord Indra (the king of gods) - to appease their angered consorts, they undoubtedly fall at their feet! O Purushottama Sri Krishna, the supreme guide and exemplar, salutations unto You again and again!
-    te: 'శ్రీమహావిష్ణువైనా, పరమశివుడైనా, బ్రహ్మదేవుడైనా, చివరికి దేవేంద్రుడైనా సరే - కోపగించుకున్న తమ ప్రియసతులను (భార్యలను) ప్రసన్నం చేసుకోవడానికి వారి పాదాలపై పడవలసిందే; ఇందులో ఎటువంటి సందేహమూ లేదు! అటువంటి సందర్భాలలో కూడా అందరికీ ఆదర్శప్రాయముగా సరైన మార్గాన్ని చూపించే ఓ మార్గదర్శక పురుషోత్తమా, శ్రీకృష్ణా! నీకు ఇవే మా పదే పదే నమస్కారములు!'
+    te: 'శ్రీమహావిష్ణువు అయినా, పరమశివుడైనా, బ్రహ్మదేవుడైనా, చివరికి దేవేంద్రుడైనా సరే - కోపగించుకున్న తమ ప్రియసతులను (భార్యలను) ప్రసన్నం చేసుకోవడానికి వారి పాదాలపై పడవలసిందే; ఇందులో ఎటువంటి సందేహమూ లేదు! అటువంటి సందర్భాలలో కూడా అందరికీ ఆదర్శప్రాయముగా సరైన మార్గాన్ని చూపించే ఓ మార్గదర్శక పురుషోత్తమా, శ్రీకృష్ణా! నీకు ఇవే మా పదే పదే నమస్కారములు!'
   - type: verse
     id: v114
     no: '114'
@@ -1533,15 +1537,15 @@ items:
       oM ramA ramyA zivA hemA ca vidmahe, rAdhA kRSNa rAgarAgiNyai ca dhImahi .
       tanno ramAramaNa caraNa vilIna mArgadarzinIH pracodayAt..
     en: Om, We know Rama, the Beautiful, Shiva, the Golden One; We meditate on Radha, Krishna's passionate beloved; May she who reveals the path of merging into the lotus feet Of the Divine Lover (Rama's Beloved) Always inspire and guide us.
-    te: 'రమ (లక్ష్మీస్వరూపిణి), రమ్య (అత్యంత మనోహరురాలు), శివ (పరమ మంగళదాయకురాలు), హేమ (బంగారు కాంతితో శోభిల్లునది) అయిన ఆ జగన్మాతను మేము తెలుసుకొనుచున్నాము; శ్రీ రాధాకృష్ణుల దివ్య ప్రేమ రాగ-రాగిణీ స్వరూపిణియైన ఆ దేవిని మేము నిశ్చలముగా ధ్యానించుచున్నాము. రమారమణుడైన ఆ శ్రీకృష్ణుని (శ్రీమహావిష్ణువు) చరణారవిందములలో లీనమై మోక్షమును పొందే పరమపావన మార్గాన్ని చూపే ఆ దివ్యమాత మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'రమ (లక్ష్మీ స్వరూపిణి), రమ్య (అత్యంత మనోహరురాలు), శివ (పరమ మంగళదాయకురాలు), హేమ (బంగారు కాంతితో శోభిల్లునది) అయిన ఆ జగన్మాతను మేము తెలుసు కొనుచున్నాము; శ్రీ రాధాకృష్ణుల దివ్య ప్రేమ రాగ-రాగిణీ స్వరూపిణియైన ఆ దేవిని మేము నిశ్చలముగా ధ్యానించు చున్నాము. రమారమణుడైన ఆ శ్రీకృష్ణుని (శ్రీమహావిష్ణువు) చరణారవిందములలో లీనమై మోక్షమును పొందే పరమపావన మార్గాన్ని చూపే ఆ దివ్యమాత మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v122
     no: '122'
     hk: |-
       oM candra vadanAya vidmahe, candrasahodaryaica dhImahi .
-      tanno zarazcandrakoTi prabhAsa, zrIkRSNa priyAH zyAmalAH pracodayAt ..
+      tanno zarazcandrakoTi prabhAsa, zrIkRSNa priyAH zyAmalAH pracodayAt..
     en: Om, We know the one with a moon-like face; We meditate on the sibling of the moon; May the beloved of Sri Krishna, the dark-complexioned one, Inspire us with the radiance of millions of autumn moons.
-    te: 'చంద్రుని వంటి మనోహరమైన ముఖవర్చస్సు గల దేవిగా మేము నిన్ను తెలుసుకొనుచున్నాము; క్షీరసాగర మథనమున జన్మించిన చంద్రునికి సోదరియైన ఆ జగన్మాతను మేము నిశ్చలముగా ధ్యానించుచున్నాము. కోటి శరత్కాల చంద్రుల దివ్యకాంతితో ప్రకాశించునది, శ్రీకృష్ణునికి అత్యంత ప్రియమైనది, శ్యామలా వర్ణ శోభితయైన ఆ దేవి మమ్ములను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'చంద్రుని వంటి మనోహరమైన ముఖవర్చస్సు గల దేవిగా మేము నిన్ను తెలుసుకొను చున్నాము; క్షీరసాగర మథనమున జన్మించిన చంద్రునికి సోదరియైన ఆ జగన్మాతను మేము నిశ్చలముగా ధ్యానించు చున్నాము. కోటి శరత్కాల చంద్రుల దివ్యకాంతితో ప్రకాశించునది, శ్రీకృష్ణునికి అత్యంత ప్రియమైనది, శ్యామలా వర్ణ శోభితయైన ఆ దేవి మమ్ములను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v123
     no: '123'
@@ -1555,9 +1559,9 @@ items:
     no: '124'
     hk: |-
       oM sarvamaGgaLAya vidmahe, sarvazubhaparampara kAriNI ca dhImahi.
-      tanno sarvasarveza zrIkRSNa sahavAsinIH pracodayAt ..
+      tanno sarvasarveza zrIkRSNa sahavAsinIH pracodayAt..
     en: Om, We know the One who embodies all auspiciousness; We meditate on the supreme creator of all that is blessed; May she who resides alongside Sri Krishna, The mistress of all lords and masters, Always inspire and guide us.
-    te: 'సకల మంగళ స్వరూపిణియైన ఆ జగన్మాతను మేము తెలుసుకొనుచున్నాము; సమస్త శుభాలను నిరంతర ధారగా అనుగ్రహించే ఆ కరుణామయిని మేము నిశ్చలముగా ధ్యానించుచున్నాము. సర్వమునకు సర్వేశ్వరుడైన శ్రీకృష్ణ పరమాత్మునితో శాశ్వతంగా కలిసి నివసించే ఆ దివ్యశక్తి మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'సకల మంగళ స్వరూపిణియైన ఆ జగన్మాతను మేము తెలుసుకొను చున్నాము; సమస్త శుభాలను నిరంతర ధారగా అనుగ్రహించే ఆ కరుణామయిని మేము నిశ్చలముగా ధ్యానించు చున్నాము. సర్వమునకు సర్వేశ్వరుడైన శ్రీకృష్ణ పరమాత్మునితో శాశ్వతంగా కలిసి నివసించే ఆ దివ్యశక్తి మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v125
     no: '125'
@@ -1565,7 +1569,7 @@ items:
       oM akhilaloka jananIca vidmahe, nikhilaloka zokavinAzinyaica dhImahi.
       tanno akhilANDezvarI apurupA suzlokA kRSNAH pracodayAt..
     en: Om, We know the One who embodies all auspiciousness; We meditate on the supreme creator of all that is blessed; May she who resides alongside Sri Krishna, The mistress of all lords and masters, Always inspire and guide us.
-    te: 'సమస్త లోకాలకూ తల్లియైన ఆ జగన్మాతను మేము తెలుసుకొనుచున్నాము; సకల లోకాల దుఃఖములను, శోకములను సమూలంగా నశింపజేసే ఆ కరుణామయిని మేము నిశ్చలముగా ధ్యానించుచున్నాము. అఖిలాండకోటి బ్రహ్మాండములను పాలించే అఖిలాండేశ్వరి, అపురూప సౌందర్యవతి, ఉత్తమమైన కీర్తి శ్లోకములతో స్తుతింపబడునది, శ్రీకృష్ణునితో అభేదమైన ఆ కృష్ణ/కృష్ణప్రియ మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'సమస్త లోకాలకూ తల్లియైన ఆ జగన్మాతను మేము తెలుసుకొను చున్నాము; సకల లోకాల దుఃఖములను, శోకములను సమూలంగా నశింపజేసే ఆ కరుణామయిని మేము నిశ్చలముగా ధ్యానించు చున్నాము. అఖిలాండకోటి బ్రహ్మాండములను పాలించే అఖిలాండేశ్వరి, అపురూప సౌందర్యవతి, ఉత్తమమైన కీర్తి శ్లోకములతో స్తుతింపబడునది, శ్రీకృష్ణునితో అభేదమైన ఆ కృష్ణ/కృష్ణప్రియ మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v126
     no: '126'
@@ -1573,7 +1577,7 @@ items:
       oM vidyAnAmna virAjitAya vidmahe vizvezvari vimalAdevyaica dhImahi.
       tanno vaiSNavI, kRSNaveNI, vANI, nArAyaNIH pracodayAt..
     en: Om, We know the one who is resplendent among all knowledge; We meditate on the immaculate Universal Goddess; May the Vaishnavi (Divine Feminine Principle), The companion of Krishna, The sacred voice of Narayana, Always inspire and guide us.
-    te: 'విద్య అనే దివ్య నామముతో శోభిల్లు జగన్మాతగా నిన్ను మేము తెలుసుకొనుచున్నాము; సమస్త విశ్వమును పాలించు విశ్వేశ్వరి, పరమ పవిత్రమైన విమలాదేవిగా నిన్ను మేము నిశ్చలముగా ధ్యానించుచున్నాము. వైష్ణవీ శక్తి, కృష్ణవేణీ నదీ స్వరూపిణి, జ్ఞానప్రదాతయైన వాణీ (సరస్వతి), నారాయణుని అంశయైన నారాయణీ దేవిగా కొలువబడు ఆ దివ్యమాత మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'విద్య అనే దివ్య నామముతో శోభిల్లు జగన్మాతగా నిన్ను మేము తెలుసుకొను చున్నాము; సమస్త విశ్వమును పాలించు విశ్వేశ్వరి, పరమ పవిత్రమైన విమలాదేవిగా నిన్ను మేము నిశ్చలముగా ధ్యానించు చున్నాము. వైష్ణవీ శక్తి, కృష్ణవేణీ నదీ స్వరూపిణి, జ్ఞానప్రదాతయైన వాణీ (సరస్వతి), నారాయణుని అంశయైన నారాయణీ దేవిగా కొలువబడు ఆ దివ్యమాత మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v127
     no: '127'
@@ -1581,7 +1585,7 @@ items:
       oM aSTavidhalakSmIH zca vidmahe, aSTaizvaryadAyinI zrI mahAlakSmI ca dhImahi .
       tanno aSTakaSTAdi sarvasaGkaTahAriNI zrIkRSNa ramaNIH pracodayAt..
     en: Om, We know Lakshmi who appears in 8 avataras; We meditate on Sri Mahalakshmi, the bestower of eight types of prosperity; May she who removes all obstacles and difficulties, The beloved of Sri Krishna, Always inspire and guide us.
-    te: 'అష్టలక్ష్ముల సమైక్య స్వరూపిణియైన ఆ జగన్మాతను మేము తెలుసుకొనుచున్నాము; సకల అష్టైశ్వర్యములను ప్రసాదించే శ్రీ మహాలక్ష్మీదేవిని మేము నిశ్చలముగా ధ్యానించుచున్నాము. సమస్త అష్టకష్టాలను మరియు సకల సంకటములను తొలగించి రక్షించే శ్రీకృష్ణుని ప్రియసఖి (రమణి) అయిన ఆ దేవి మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'అష్టలక్ష్ముల సమైక్య స్వరూపిణియైన ఆ జగన్మాతను మేము తెలుసుకొను చున్నాము; సకల అష్టైశ్వర్యములను ప్రసాదించే శ్రీమహాలక్ష్మీ దేవిని మేము నిశ్చలముగా ధ్యానించు చున్నాము. సమస్త అష్టకష్టాలను మరియు సకల సంకటములను తొలగించి రక్షించే శ్రీకృష్ణుని ప్రియసఖి (రమణి) అయిన ఆ దేవి మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v128
     no: '128'
@@ -1589,7 +1593,7 @@ items:
       oM gAyatri sAvitrI sarasvatI rupi sandhyA devyai ca vidmahe, mayA upAsitAdityAntargata tejazrI ca dhImahi .
       tanno zrIkRSNa hAsaharSitA zAntA mokSalakSmIH pracodayAta..
     en: Om, We know the form of Gayatri, Savitri, and Saraswati; We meditate on the Sandhya Goddess, whose radiant essence Is contained within the inner light of the Sun; May the serene Moksha Lakshmi, who delights in Krishna's smile, Always inspire and guide us.
-    te: 'గాయత్రి, సావిత్రి, సరస్వతీ రూపములలో ప్రకాశించు త్రిసంధ్యా దేవిగా నిన్ను మేము తెలుసుకొనుచున్నాము; సూర్యమండలము అంతర్భాగమున తేజోరూపమున కొలువై ఉండి, నాచేత ఉపాసించబడు దివ్యమైన తేజఃశ్రీగా నిన్ను మేము నిశ్చలముగా ధ్యానించుచున్నాము. శ్రీకృష్ణుని మందహాసముచే ఆనందించునది, ప్రశాంత స్వరూపిణి, పరమ కైవల్యమును ప్రసాదించే మోక్షలక్ష్మీ దేవి మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'గాయత్రి, సావిత్రి, సరస్వతీ రూపములలో ప్రకాశించు త్రిసంధ్యా దేవిగా నిన్ను మేము తెలుసుకొను చున్నాము; సూర్యమండలము అంతర్భాగమున తేజోరూపమున కొలువై ఉండి, నాచేత ఉపాసించబడు దివ్యమైన తేజఃశ్రీగా నిన్ను మేము నిశ్చలముగా ధ్యానించు చున్నాము. శ్రీకృష్ణుని మందహాసముచే ఆనందించునది, ప్రశాంత స్వరూపిణి, పరమ కైవల్యమును ప్రసాదించే మోక్షలక్ష్మీ దేవి మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: section
     id: s03
     hk: namovAkam
@@ -1601,17 +1605,14 @@ items:
       oM sarvAntaryAmi zrIhari iti vidmahe, sarvadhara sarvAdhAra sarvavarada zrImannArAyaNAya dhImahi .
       tanno devAdi deva mokSaprada zrIdhara zrIkRSNaH pracodayAt..
     en: 'Om, we know (comprehend) Lord Hari who dwells within all beings as the indwelling soul (Sarvantaryami), and we meditate upon Sriman Narayana - the sustainer of all, the supreme foundation of everything, and the bestower of all boons. May that Lord of the gods (Devadi Deva), the bestower of liberation (Moksha), Sridhara, Lord Sri Krishna, inspire and illuminate our intellect!'
-    te: 'సకల జీవుల యందు నివసించే సర్వాంతర్యామియైన శ్రీహరిగా నిన్ను మేము తెలుసుకొనుచున్నాము; సమస్త విశ్వమును ధరించువాడు, సకలాధారుడు, సర్వ వరములను ప్రసాదించు శ్రీమన్నారాయణునిగా నిన్ను మేము నిశ్చలముగా ధ్యానించుచున్నాము. దేవాది దేవుడు, శాశ్వతమైన మోక్షమును అనుగ్రహించువాడు, శ్రీదేవిని వక్షఃస్థలమున ధరించిన శ్రీధరుడైన శ్రీకృష్ణ పరమాత్ముడు మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
+    te: 'సకల జీవుల యందు నివసించే సర్వాంతర్యామియైన శ్రీహరిగా నిన్ను మేము తెలుసుకొను చున్నాము; సమస్త విశ్వమును ధరించువాడు, సకలాధారుడు, సర్వ వరములను ప్రసాదించు శ్రీమన్నారాయణునిగా నిన్ను మేము నిశ్చలముగా ధ్యానించు చున్నాము. దేవాది దేవుడు, శాశ్వతమైన మోక్షమును అనుగ్రహించువాడు, శ్రీదేవిని వక్షఃస్థలమున ధరించిన శ్రీధరుడైన శ్రీకృష్ణ పరమాత్ముడు మన బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
   - type: verse
     id: v130
     no: '130'
     hk: |-
-      oM namo kRSNa namokRSNa zrIkRSNa kRSNa hare hare ..
-      ..
+      oM namo kRSNa namokRSNa zrIkRSNa kRSNa hare hare..
       zrIkRSNa prasAdam..
-      ..
       sarvam zrIkRSNArpaNamastu ..
-      ..
       hariH oM tatsat..
     en: Om, Salutations to Krishna; Salutations again to Krishna; Sri Krishna, Krishna, Hari, Hari Sri Krishna's Grace May everything be offered to Sri Krishna Hari Om, That is the Truth.
     te: |-
