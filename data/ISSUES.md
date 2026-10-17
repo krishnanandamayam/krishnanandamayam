@@ -17,7 +17,7 @@ removed or reworded below; entries to come back to are in `data/flags.toml`.
 
 - The Telugu preface (ముందుమాట) and the Telugu meanings of verses 1-25 and 54 came from it.
   Telugu meanings have since been added for more verses: 168 of the 190 verses now have one.
-  The 22 without: v105, v109, v113, v120-0, v121-v130, u1, u2, v135A, u3, v151-v153, v183.
+  The 22 without: v105, v109, v113, v120-0, v121-v130, u1, v135, v135A, u3, v151-v153, v183.
   Its Telugu-script slokas in the preface were converted to HK (please check them).
 - The author's postal address and phone number in the doc's opening note were **left out** on
   purpose: the site is public.
