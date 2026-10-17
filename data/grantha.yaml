@@ -2152,11 +2152,9 @@ items:
       zrI kRSNasAyujyasiddhikarasaptapadi
     en: ''
   - type: verse
-    id: v160
-    no: '160'
+    id: v160-0
+    no: 160 (0)
     hk: |-
-      a) zrIzrI kRSNacaitanyam
-      zrI kRSNasAyujyasiddhi
       zrI kRSNasAyijyaprAptiki eDaDugulu
       a - zrI kRSNasAyujyasAdhanAsaGkalpam
       A - zrI kRSNa bhaginizrIdurgAmAtApAdAkrAntam
@@ -2166,8 +2164,13 @@ items:
       U - zrI kRSNa AtmAnusandhAnam
       R - zrI kRSNAnugrahaprAptidvArA
       zrI kRSNasAyujyasiddhi:
-
-      a) zrI kRSNasAyujvasiddhikarasaptapadi
+    en: ''
+    te: ''
+  - type: verse
+    id: v160-1
+    no: 160 (1)
+    title: a) zrI kRSNasAyujvasiddhikarasaptapadi
+    hk: |-
       zrI kRSNasAyujyasAdhanAsaGkalpam mamopAttaduritakSayadvArA, sarvezazrIkRSNa prItyartham
       oM heramba, himajA, himAMzuzekharaziva,
       hiraNyagarbhahiriNmayIzanArAyaNapariveSTita,
@@ -2175,8 +2178,43 @@ items:
       zrI kRSNammukhyam pUjayAmi
       zrI kRSNasAyujyArtham, zrI kRSNAnugrahAnusAram
       zrI kRSNAnujjayA.
+    en: |-
+      After the evil in me has been driven out so that I may reach the footstool of Sri Krishna, and I have been uplifted, my practice for the love of Sri Krishna, addressed to Sri Krishna the lord of all, is this: I worship Lord Sri Krishna chiefly as Sri Krishna Panchayatana (surrounded by the five deities above), with Ganesha, Uma the daughter of Himavan, Shiva who bears the moon on his head, Brahma, and Lakshmi-Narayana seated around him. This is only in accordance with Sri Krishna's gracious command.
 
-      A) zrI kRSNabhagini yogamAya zrI durgAmAtApAdAkrAntam
+      I take refuge at the feet of Mother Durga, Krishna Yogamaya, who appeared as Sri Krishna's sister; she protects me so that I do not fall under the influence of maya. Mother! Mother of the world! Beloved queen of the Lord of the world! Unique beauty of the world (Jagatsundari)! Kashi Vishalakshi (Goddess of wide eyes)! Protector of the worlds, giver of boons, Lakshmi, Parvati, Sarasvati, shining in the cosmic form of Vishnu's wife, younger sister of the Kannayya I worship! Yogamaya Durga Devi! Sarasvati! Gauri! Sandhya Lakshmi! The goddess of twilight, who dwells within the Sri Krishna Gayatri I recite at sandhya (the goddess who uproots all my afflictions, the Mother who fulfils my wishes)! Salutations! A thousand and many salutations to you.
+
+      This should be sung like a bhajan kirtana; its meaning is easy to grasp.
+
+      Salutations first to the dear little God, whom Sri Krishna loves: the cause of auspiciousness, who gets intended works done without hindrance, handsome like the moon, Ganesha of the single tusk.
+
+      Lakshmi Shakti, Durga, Gayatri Devi, Sarasvati who holds the sciences, Gauri who gives all auspiciousness, Narayana's wife, who always brings happiness, the sister of Sri Krishna, Mother of the world! Salutations.
+
+      A mass of a thousand rays, the Sun, praised by many names; he alone is the cause of good health for all of us, the lord of the nine planets, the teacher of Anjaneya; the orb of the Sun is the abode of the Trimurti at the three times of day, and the dwelling of Gayatri Devi. In the daily rite called Sandhyavandana the Trimurti are worshipped as Gayatri Devi: in the morning as Brahma, at noon as Shiva, and in the evening in the form of Vishnu. Salutations to that Prabhakara.
+
+      Salutations to Parama Shiva, who worships Sri Krishna: with Ganga Devi on his head, the moon, matted locks, a trident in his hand, Ardhanarishwara, who bears the burden of all the worlds, gives wealth, and destroys everything at the time of dissolution.
+
+      O Radhanatha! Lakshmi-Narayana, who appear to devotees in Vishnu form as the auspicious Sri of all beauty! You who always protect and guard devotees, the dear mischievous child who floats on water, lying on a banyan leaf! Son of Vasudeva, Sri Krishna! You show many plays and bring joy. You who shine in the cosmic form, Mukunda who gave us the Gita! Salutations, sir! Compassionate one!
+    te: |-
+      శ్రీకృష్ణుల పదపీఠికాప్రాప్తికై నాలోని చెడుపాలద్రోలబడి, నేను ఉద్ధరింపబడిన తదుపరి, అందరికీ ప్రభువగు శ్రీకృష్ణుని ఉద్దేశించి శ్రీకృష్ణ ప్రేమకై చేయుచున్న సాధన - గణేశుడు, హిమవంతుని కుమార్తె ఉమ, చంద్రుని శిరసున దాల్చిన శివుడు, బ్రహ్మ, లక్ష్మీనారాయణులు తనచుట్టూ ఆశీనులై వున్న శ్రీకృష్ణుని, శ్రీకృష్ణపంచాయ తనముగా (పై ఐదుగురు దేవతల చుట్టూగల) శ్రీకృష్ణుదేవులను ప్రధానంగా అర్చిస్తున్నాను, ఇదీ కేవలం శ్రీకృష్ణుని అనుగ్రహ పూర్వకమైన ఆజ్ఞానుసారమే.
+
+      శ్రీకృష్ణుని సోదరిగా, అవతరించిన కృష్ణయోగమాయ, దుర్గామాత, పాదముల నాశ్రయిస్తున్నా ష్ణమాయా ప్రభావంలో పడకుండ వుండేందుకై ఆమె కాపాడుతోంది. తల్లీ! లోకమాతా! లోకేశ్వరుని హృదయరాణీ! లోకైకసుందరీ (జగత్సుందరీ!), కాశివిశాలాక్షీ (విశాలమైన కనులదేవీ), లోకములను రక్షించే, వరములిచ్చే, లక్ష్మీ పార్వతి, సరస్వతీ, విష్ణుదేవుని ఇల్లాలి విశ్వరూపంతో విరాజిల్లే, నేను కొలిచే కన్నయ్య చెల్లెమ్మా,  యోగమాయాదుర్గాదేవీ ! సరస్వతీ, గౌరీ ! సంధ్యాలక్ష్మీ! నేను సంధ్యవార్చే శ్రీకృష్ణ గాయత్రీ అంతర్గతం గావుండే సంధ్యాదేవతా (నాకున్నఅన్ని జ్యాడ్యాలు ఊడబెరికేదైవతమా! నాకోరికల నీడేర్చేమాతా! వందనం! నీకనేకానేక వందన సహస్రం
+
+      భజన కీర్తనలా పాడుకోవాలి - భావము సులభ గ్రాహ్యమేకదా!
+
+      శుభములకు కారకుడు, తలపెట్టిన పనులను నిరాటంకంగా జరిపించేవాడు, చంద్రుని వంటి, అందగాడు, ఒక దంతంకల గణేశునికి శ్రీకృష్ణుడు ఇష్టపడే చిన్నారి దైవమునకు ప్రథమంగా వందనాలు.
+
+      లక్ష్మీశక్తి, దుర్గ, గాయత్రీదేవి, విద్యలధరించిన సరస్వతి అన్ని మంగళాలనిచ్చే గౌరి, నారయణపత్ని, ఎపుడూ సంతోషము కల్గించేది, శ్రీకృష్ణసోదరి లోకమాతా! నమస్కారం.
+
+      వేయికిరణాల సమూహం, సూర్యుడు బహునామాలతో స్తుతింపబడతాడు వీరే మనందరికి చక్కటి ఆరోగ్యానికి కారకుడు, నవగ్రహములకధిపతి, ఆంజనేయునికి గురువు, మూడువేళల్లో త్రిమూర్తులకు నివాసముగా వుండే సూర్యమండలం గాయత్రీ దేవికి ఆవాసము, సంధ్యావందనమనే నిత్యకర్మలో త్రిమూర్తులు ప్రాద్దుట బ్రహ్మ, మధ్యాహ్నం శివుడు, సాయంత్రం విష్ణురూపంతో గాయత్రీ దేవిగా ఆరాధింపబడతారు. అటువంటి ప్రభాకరునికి నమస్సులు.
+
+      తలపై గంగాదేవి, చంద్రుడు, జటాజూటం, చేతశూలము, అర్ధనారీశ్వరుడు, లో కాలన్నిటి భారంవహించే, ఐశ్వర్యములనిచ్చే, ప్రళయకాలమున అన్నీనశింపజేసే శ్రీకృష్ణుని పూజించే పరమశివునికి నమోవాకములు.
+
+      రాధానాధా, సర్వసుందరమైన శుభశ్రీగా విష్ణురూపంతో భక్తులకు దర్శనమిచ్చే లక్ష్మీ నారాయణా, ఎపుడూ భక్తులను బ్రోచి, రక్షించే, మఱ్ఱి ఆకుమీద,శయనించి, నీటతేలియాడే మురిపాల చిలిపిచేష్టల చిన్నారీ, వసుదేవ సుతశ్రీకృష్ణా! ఎన్నో లీలలు ప్రదర్శించి ఆనందింపచేస్తావు. విశ్వరూపంతో విరాజిల్లే, గీతను మాకిచ్చిన ముకుందా, దండాలయ్యా, దయామయా!
+  - type: verse
+    id: v160-2
+    no: 160 (2)
+    title: A) zrI kRSNabhagini yogamAya zrI durgAmAtApAdAkrAntam
+    hk: |-
       oM..
       vandevizvamAtaram, vizvezvarahRda
       yezvarIm, vizvasundarIMvizAlAkSIm, vande.
@@ -2187,8 +2225,13 @@ items:
       sodarIm, yogamAyAm zrI durgAdevIm, vande,
       vande vidyAdharIm, sarvamaGgaLakarIm, sandhyAde
       vIm, mamasarva rogahariNiJca, vande me, yIpsitassarvadAm..
-
-      i) zrI kRSNa lIlAkIrtanam
+    en: ''
+    te: ''
+  - type: verse
+    id: v160-3
+    no: 160 (3)
+    title: i) zrI kRSNa lIlAkIrtanam
+    hk: |-
       oM harikRSNA.
       harekRSNA.
       namokRSNA.
@@ -2229,8 +2272,13 @@ items:
       harekRSNA..
       namo kRSNA.
       namAmi sadA zrI kRSNA..
-
-      I) zrI kRSNa paJcAyatanapUjA
+    en: ''
+    te: ''
+  - type: verse
+    id: v160-4
+    no: 160 (4)
+    title: I) zrI kRSNa paJcAyatanapUjA
+    hk: |-
       1)tam zrI karam sarvakAryanirvighnakaram
       gaNezaJca gajAnanam.
       zazivarNam, ekadantam herambam, zrI kRSNapriyam,
@@ -2248,8 +2296,13 @@ items:
       zazidharam sampatkaram layakaram zivam vande, sadAzrI kRSNArAdhakam muktidam..
       5) rAdhezAya vizvamaGgaLa viSNurupa darzanapradAya
       zrI lakSmInArAyaNAya sadAbhakta varadAya ca vande, vaTapatrazayana, vizvamohana mugdhabAlAya, lIlAvinoda vAsudeva zrIkRSNAya, vizvarupAya, gItAyoga pradAya, sAyUjyadAya namonamaH
-
-      u) zrI kRSNa caitanyam (zrI kRSNa margAnusaraNam)
+    en: ''
+    te: ''
+  - type: verse
+    id: v160-5
+    no: 160 (5)
+    title: u) zrI kRSNa caitanyam (zrI kRSNa margAnusaraNam)
+    hk: |-
       1) premayanna zrI kRSNuni pratirUpamu.
       ananta kSamAkaruNAdAnaguNa sammeLanamu.
       premaku paramArthamu andariyandu samabhAvamu.
@@ -2271,47 +2324,21 @@ items:
       lIlAkRSNulETulaina, dikkutocani nannutana sannidhikIDpuJcukOnipoyi,
       tama caraNamula cEntaku cera tIrtunani,
       zrI kRSNAnandamaya zAzvata zrI kRSNa sAyujyamitturani dRDhamuga nammitin
-
-
-      E) zrI kRSNa caraNa vilInam
+    en: ''
+    te: ''
+  - type: verse
+    id: v160-6
+    no: 160 (6)
+    title: E) zrI kRSNa caraNa vilInam
+    hk: |-
       (zrI kRSNAnugrahamu dvArA zrI kRSNa sAyujya siddhi)
       sarvezvaruNDu, sarvamandu tAnai, tAne sarvamaguvADu,
       satyadevuDu, sarvajJuDu, sarvakAlamulandu sthiruDu,
       sarvAzritavatsaluDu, smitavadanuDu, sthitaprajJuDu.
       sarvavaraduDu viriJci, hari sAmbazivuluga sRSTi sthiti laya kArakuDu sarvarakSakuDu.
       sarvamicci sAyujyamosagEDi tat sat cit sampUrNAvatAruDu Adi nArAyaNuDu Ananda dhAmuDu.
-    en: |-
-      After the evil in me has been driven out so that I may reach the footstool of Sri Krishna, and I have been uplifted, my practice for the love of Sri Krishna, addressed to Sri Krishna the lord of all, is this: I worship Lord Sri Krishna chiefly as Sri Krishna Panchayatana (surrounded by the five deities above), with Ganesha, Uma the daughter of Himavan, Shiva who bears the moon on his head, Brahma, and Lakshmi-Narayana seated around him. This is only in accordance with Sri Krishna's gracious command.
-
-      I take refuge at the feet of Mother Durga, Krishna Yogamaya, who appeared as Sri Krishna's sister; she protects me so that I do not fall under the influence of maya. Mother! Mother of the world! Beloved queen of the Lord of the world! Unique beauty of the world (Jagatsundari)! Kashi Vishalakshi (Goddess of wide eyes)! Protector of the worlds, giver of boons, Lakshmi, Parvati, Sarasvati, shining in the cosmic form of Vishnu's wife, younger sister of the Kannayya I worship! Yogamaya Durga Devi! Sarasvati! Gauri! Sandhya Lakshmi! The goddess of twilight, who dwells within the Sri Krishna Gayatri I recite at sandhya (the goddess who uproots all my afflictions, the Mother who fulfils my wishes)! Salutations! A thousand and many salutations to you.
-
-      This should be sung like a bhajan kirtana; its meaning is easy to grasp.
-
-      Salutations first to the dear little God, whom Sri Krishna loves: the cause of auspiciousness, who gets intended works done without hindrance, handsome like the moon, Ganesha of the single tusk.
-
-      Lakshmi Shakti, Durga, Gayatri Devi, Sarasvati who holds the sciences, Gauri who gives all auspiciousness, Narayana's wife, who always brings happiness, the sister of Sri Krishna, Mother of the world! Salutations.
-
-      A mass of a thousand rays, the Sun, praised by many names; he alone is the cause of good health for all of us, the lord of the nine planets, the teacher of Anjaneya; the orb of the Sun is the abode of the Trimurti at the three times of day, and the dwelling of Gayatri Devi. In the daily rite called Sandhyavandana the Trimurti are worshipped as Gayatri Devi: in the morning as Brahma, at noon as Shiva, and in the evening in the form of Vishnu. Salutations to that Prabhakara.
-
-      Salutations to Parama Shiva, who worships Sri Krishna: with Ganga Devi on his head, the moon, matted locks, a trident in his hand, Ardhanarishwara, who bears the burden of all the worlds, gives wealth, and destroys everything at the time of dissolution.
-
-      O Radhanatha! Lakshmi-Narayana, who appear to devotees in Vishnu form as the auspicious Sri of all beauty! You who always protect and guard devotees, the dear mischievous child who floats on water, lying on a banyan leaf! Son of Vasudeva, Sri Krishna! You show many plays and bring joy. You who shine in the cosmic form, Mukunda who gave us the Gita! Salutations, sir! Compassionate one!
-    te: |-
-      శ్రీకృష్ణుల పదపీఠికాప్రాప్తికై నాలోని చెడుపాలద్రోలబడి, నేను ఉద్ధరింపబడిన తదుపరి, అందరికీ ప్రభువగు శ్రీకృష్ణుని ఉద్దేశించి శ్రీకృష్ణ ప్రేమకై చేయుచున్న సాధన - గణేశుడు, హిమవంతుని కుమార్తె ఉమ, చంద్రుని శిరసున దాల్చిన శివుడు, బ్రహ్మ, లక్ష్మీనారాయణులు తనచుట్టూ ఆశీనులై వున్న శ్రీకృష్ణుని, శ్రీకృష్ణపంచాయ తనముగా (పై ఐదుగురు దేవతల చుట్టూగల) శ్రీకృష్ణుదేవులను ప్రధానంగా అర్చిస్తున్నాను, ఇదీ కేవలం శ్రీకృష్ణుని అనుగ్రహ పూర్వకమైన ఆజ్ఞానుసారమే.
-
-      శ్రీకృష్ణుని సోదరిగా, అవతరించిన కృష్ణయోగమాయ, దుర్గామాత, పాదముల నాశ్రయిస్తున్నా ష్ణమాయా ప్రభావంలో పడకుండ వుండేందుకై ఆమె కాపాడుతోంది. తల్లీ! లోకమాతా! లోకేశ్వరుని హృదయరాణీ! లోకైకసుందరీ (జగత్సుందరీ!), కాశివిశాలాక్షీ (విశాలమైన కనులదేవీ), లోకములను రక్షించే, వరములిచ్చే, లక్ష్మీ పార్వతి, సరస్వతీ, విష్ణుదేవుని ఇల్లాలి విశ్వరూపంతో విరాజిల్లే, నేను కొలిచే కన్నయ్య చెల్లెమ్మా,  యోగమాయాదుర్గాదేవీ ! సరస్వతీ, గౌరీ ! సంధ్యాలక్ష్మీ! నేను సంధ్యవార్చే శ్రీకృష్ణ గాయత్రీ అంతర్గతం గావుండే సంధ్యాదేవతా (నాకున్నఅన్ని జ్యాడ్యాలు ఊడబెరికేదైవతమా! నాకోరికల నీడేర్చేమాతా! వందనం! నీకనేకానేక వందన సహస్రం
-
-      భజన కీర్తనలా పాడుకోవాలి - భావము సులభ గ్రాహ్యమేకదా!
-
-      శుభములకు కారకుడు, తలపెట్టిన పనులను నిరాటంకంగా జరిపించేవాడు, చంద్రుని వంటి, అందగాడు, ఒక దంతంకల గణేశునికి శ్రీకృష్ణుడు ఇష్టపడే చిన్నారి దైవమునకు ప్రథమంగా వందనాలు.
-
-      లక్ష్మీశక్తి, దుర్గ, గాయత్రీదేవి, విద్యలధరించిన సరస్వతి అన్ని మంగళాలనిచ్చే గౌరి, నారయణపత్ని, ఎపుడూ సంతోషము కల్గించేది, శ్రీకృష్ణసోదరి లోకమాతా! నమస్కారం.
-
-      వేయికిరణాల సమూహం, సూర్యుడు బహునామాలతో స్తుతింపబడతాడు వీరే మనందరికి చక్కటి ఆరోగ్యానికి కారకుడు, నవగ్రహములకధిపతి, ఆంజనేయునికి గురువు, మూడువేళల్లో త్రిమూర్తులకు నివాసముగా వుండే సూర్యమండలం గాయత్రీ దేవికి ఆవాసము, సంధ్యావందనమనే నిత్యకర్మలో త్రిమూర్తులు ప్రాద్దుట బ్రహ్మ, మధ్యాహ్నం శివుడు, సాయంత్రం విష్ణురూపంతో గాయత్రీ దేవిగా ఆరాధింపబడతారు. అటువంటి ప్రభాకరునికి నమస్సులు.
-
-      తలపై గంగాదేవి, చంద్రుడు, జటాజూటం, చేతశూలము, అర్ధనారీశ్వరుడు, లో కాలన్నిటి భారంవహించే, ఐశ్వర్యములనిచ్చే, ప్రళయకాలమున అన్నీనశింపజేసే శ్రీకృష్ణుని పూజించే పరమశివునికి నమోవాకములు.
-
-      రాధానాధా, సర్వసుందరమైన శుభశ్రీగా విష్ణురూపంతో భక్తులకు దర్శనమిచ్చే లక్ష్మీ నారాయణా, ఎపుడూ భక్తులను బ్రోచి, రక్షించే, మఱ్ఱి ఆకుమీద,శయనించి, నీటతేలియాడే మురిపాల చిలిపిచేష్టల చిన్నారీ, వసుదేవ సుతశ్రీకృష్ణా! ఎన్నో లీలలు ప్రదర్శించి ఆనందింపచేస్తావు. విశ్వరూపంతో విరాజిల్లే, గీతను మాకిచ్చిన ముకుందా, దండాలయ్యా, దయామయా!
+    en: ''
+    te: ''
   - type: section
     id: s28
     hk: zrI kRSNa bhakti - anurAga vAhini
