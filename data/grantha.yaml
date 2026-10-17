@@ -261,6 +261,10 @@ prefaces:
         id: pt16
         text: ''
 items:
+  - type: section
+    id: s13
+    hk: zrIzrI kRSNAnandalahari
+    en: ''
   - type: verse
     id: v1
     no: '1'
@@ -500,8 +504,8 @@ items:
   - type: section
     id: s01
     hk: |-
-      zrI zrIvanalaharI hAram
-      sarva saGkaTahAra zrI rAdhAkRSNASTapadI
+      zrI zrIvanavihAri hAram
+      sarva saGkaTahAraka zrIrAdhAkRSNASTapadi
     en: 'Sri Sri Vanavihari Haram (The Garland of the Divine Forest Wanderer) - The Sri Radha-Krishna Ashtapadi that dispels all afflictions and difficulties.'
   - type: verse
     id: v26
@@ -693,6 +697,10 @@ items:
       jayamaGgaLam sarvamaGgaLam nitya zubhamaGgaLam ..
     en: Lord Sri Rama, Lord Siva, bestower of boons to devotees, he who is the beloved of Sri Rukmini, Sri Radha Krishna, all auspiciousness unto you in all its several forms!
     te: 'మంగళ వాక్యము'
+  - type: section
+    id: s14
+    hk: gItikA guccham-1
+    en: ''
   - type: verse
     id: v43
     no: '43'
@@ -779,6 +787,10 @@ items:
       prAptiH tathyam zrI kRSNaparamapadam..
     en: "The Veda, Vedanta, the meaning of the Veda, the God hidden within the Vedas, the sound of Om, the sound of the Panchajanya conch, the song of the Bhagavad Gita, and with entertainments, remembering the Lord's plays, the remembrance of Hari's name that cuts away the pains of worldly life such as fear and grief: to spend life in any way remembering Sri Krishna, the Lord, in devotion through yogic meditation is great good fortune. That being is blessed and will certainly attain eternal liberation."
     te: 'వేదం వేదాంతం, వేదానికి అర్థం, వేదములందులోన దాగియున్న దైవం, ఓంకారనాదం, పాంచ జన్యశంఖా రావం, భగవద్గీతాగానం, వినోదములతో, భగవల్లీలల స్మరణతో సంసారంలో భయం, శోకం వగైరా వ్యధలను నరికిపారవేసే హరినామస్మరణం ఏదోరకంగా శ్రీకృష్ణుని, భగవంతుని తలుచుకుంటూ భక్తి భావంతో యోగధ్యానం ద్వారా జీవితం గడపటం మహోదృష్టం. ఆ జీవి ధన్యుడు తప్పకుండా శాశ్వతంగా మోక్షం లభిస్తుంది.'
+  - type: section
+    id: s15
+    hk: zrI zivastotram
+    en: ''
   - type: verse
     id: v49
     no: '49'
@@ -802,6 +814,10 @@ items:
       ArtatrANa parAyaNam annavaravAsinam sadAzivam mama kaivalyadam..
     en: 'I take refuge in Sri Satyanarayana Swami: the compassionate one, the husband of Lakshmi, beyond the qualities of sattva, tamas and rajas, the protector of devotees who seek his shelter and of those in distress, who dwells in the Annavaram shrine in East Godavari district in the form of Shiva, who gives me liberation.'
     te: 'శ్రీ సత్యనారాయణ స్వామిని, కరుణాపూరితుని, లక్ష్మీపతిని, సత్వతమోరజో గుణములకతీతుడై బాధల్లో వున్నవారిని, ఆశ్రయించిన భక్త రక్షకుని, తూర్పు గోదావరి జిల్లాలోని అన్నవరక్షేత్రంలో వెలసియున్న శివస్వరూపుని, నాకు మోక్షమిచ్చే వానిని శరణు వేడుతున్నాను.'
+  - type: section
+    id: s16
+    hk: gItikA guccham-2
+    en: ''
   - type: verse
     id: v51
     no: '51'
@@ -840,6 +856,10 @@ items:
     hk: mAtR vakSojAMsukakarSaNodyatakaraH kRSNaHsapuSNAtunaH..
     en: When Sri Krishna says in sweet baby talk, "Mother! I am hungry, give me a snack!", and Yashoda, busy with her work, says "I'm coming in a moment", he says "No! I want it now!", and in his fondly stubborn way reaches up to pull his mother's sari end. May that charming, enchanting little hand of Krishna become the hand of fearlessness that gives lasting peace to the universe! May it protect me!
     te: '"అమ్మా! నాకు ఆకవేస్తోంది, తాయిలంపెట్టు" అని శ్రీకృష్ణుడు ముద్దుమాటలాడితే, పనిలో ఉన్న యశోద "ఒక్కక్షణం వస్తున్నా" నంటే "ఊహు! నాకిప్పులే కావాలి", అని మురిపెంగా మారాంచేస్తూ తల్లిపైట కొంగులాగటానికై ఎత్తిన, ఆ ముగ్ధమోహన కృష్ణుని చిన్నారి చిట్టి చెయ్యి విశ్వమునకు శాశ్వతముగా శాంతినిచ్చే అభయహస్తమగుగాక! నన్ను రక్షించు చుండుగాక !'
+  - type: section
+    id: s17
+    hk: tadanantara vinnapamu
+    en: ''
   - type: verse
     id: v55
     no: '55'
@@ -878,6 +898,12 @@ items:
       vande vizvamohanam vaMzI kRSNam viSNusAyujyadam me..
     en: He who is the universe Himself, the Lord of the cosmos, all-pervading, the creator of the universe, and the giver of peace! The Supreme Lord of the universe, the Master of the cosmos, the protector of the universe, and the Universal Guru! The cosmic-formed, the the one with supreme vision, the sustainer of the universe, and the bestower of cosmic boons! I bow unto that enchanting flute-bearing Lord Krishna, the enchanter of the universe, who grants unto me the eternal communion and liberation in Lord Vishnu.
     te: 'ఈ సమస్త విశ్వము తానైనవాడు, విశ్వమునకు ఈశ్వరుడు, సకల జగత్తునందు వ్యాపించి యున్నవాడు, విశ్వమును సృష్టించినవాడు, శాంతిని ప్రసాదించువాడు! విశ్వేశ్వరుడు, సమస్త విశ్వమునకు నాథుడు, విశ్వపతి, లోకాలన్నింటికీ ఆదిగురువు! విశ్వరూపుడు, విలక్షణమైన నేత్రములు గల విరూపాక్షుడు (శివస్వరూపుడు), విశ్వమును భరించి పోషించువాడు, సమస్త లోకములకు వరములనొసగువాడు! సకల జగత్తును మోహింపజేయు వంశీకృష్ణుడు మరియు నాకు శాశ్వతమైన విష్ణు సాయుజ్యమును (మోక్షమును) ప్రసాదించే ఆ పరమాత్మునికి నేను ప్రణామములు సమర్పిస్తున్నాను.'
+  - type: section
+    id: s18
+    hk: |-
+      muktAyimpu: gopAla hela
+      zrI kRSNahAsam
+    en: ''
   - type: verse
     id: v59
     no: '59'
@@ -948,6 +974,10 @@ items:
       sarvamamarci mukti niccugA bhagavadbhaktuniki sadvartanukun ..
     en: 'Whether he bears the whole universe, wields the chakra, holds the vel spear, or carries the Kodanda bow, he provides all things and grants liberation to the virtuous devotee of God.'
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
+  - type: section
+    id: s19
+    hk: gurvAzirvAkyam
+    en: ''
   - type: verse
     id: v67
     no: '67'
@@ -959,6 +989,10 @@ items:
       sarvam zrI rAdhAkRSNArpaNamastu..
     en: "Equal to the twenty-four-syllable Gayatri mantra is the literature given by God, such as hymns. Every Veda, Purana, Itihasa, hymn and kalpa: all those \"authors\" who say they wrote these are merely \"scribes\", who wrote down what God graciously placed in their minds, and not owners. However much one studies and practises any Veda, Vedanta, shastra, music, art or literature, it bears less fruit than singing God's various names. That is, reciting God's Ashtottara and Sahasranama hymns is best. In this modern age no rules are needed. Therefore, making every effort, may we keep meditating on Sri Krishna, may we be filled with love, may we travel on the path of liberation, and may liberation be ours!"
     te: 'ఇరువది నాల్గు అక్షరాల తో కూడిన గాయత్రీమంత్రంతో సరితూగేది, భగవంతుడు ప్రసాదించిన స్తోత్రములు వగైరా సాహిత్యము. ఏ వేదమైనా, పురాణం, ఇతిహాసం, స్తోత్రం కల్పం - ఇవన్నీ వ్రాసేమని చెప్పుకునే “ రచయిత” లందరూ కేవలం “ లేఖకులు” భగవంతుడు అనుగ్రహించి, వీరి మనస్సులో ప్రవేశ పెట్టిన వాటిని లిఖించే వారు మాత్రమే కాని స్వంతదారులు కాదు. ఏవేదం, వేదాంతం, శాస్త్రం, సంగీతం, కళ, సాహిత్యం, అభ్యసించి, ఉపాసించినా భగవంతుని వివిధ నామాలు గానం చెయ్యటంకన్న తక్కువ ఫలవంతం.అంటే, భగవంతుని అష్టోత్తర, సహస్రనామస్తోత్రాలు పఠించటమే ఉత్తమం. యీ ఆధునికయుగంలో, ఏ నియమాలు అవసరంలేదు. అందువల్ల అన్నివిధాలా ప్రయత్నించి, శ్రీకృష్ణ ధ్యానం చేస్తూందుముగాక! ప్రేమతో నిండి వుందుము గాక! మోక్షమార్గములో ప్రయాణింస్తూందాము-ముక్తి కలుగుగాక!'
+  - type: section
+    id: s20
+    hk: zrI rAdhAkRSNa pAdAkrAntam
+    en: ''
   - type: verse
     id: v68
     no: '68'
@@ -1099,6 +1133,10 @@ items:
       devAya, parabrahmAya, zrIzrI rAdhAkRSNAya maGgaLam..
     en: Victory to Sri Ramachandra, who brings auspiciousness to all the worlds! Blessings to the Lord, the Supreme Self, Sri Radha-Krishna! May there always be good for all people and all worlds!
     te: 'అన్ని లోకములకూ శుభములు కల్గించే, శ్రీరామచంద్రునికి జయమగుగాక! భగవంతుడు, పరమాత్మడగు శ్రీరాధాకృష్ణులకు మంగళమగుగాక! సర్వులకు, సర్వలోకములకు, సదా శుభమగుగాక!'
+  - type: section
+    id: s21
+    hk: prArthanAratnamAlika
+    en: ''
   - type: verse
     id: v82
     no: '82'
@@ -1450,6 +1488,12 @@ items:
       zrIkRSNa zaraNAgataH lekhakaH
     en: The effortless dance of Sri Krishna's feet on the hood of the serpent (on Kaliya's head), a novel way of punishing the wicked! Liberation comes by listening to the stories full of the plays of dear Gopala Krishna, or by meditating on him by each of his names.
     te: 'పాముపడగ (కాళీయుని తలపై) నిలిపిన శ్రీకృష్ణుని పదముల అలవోక నృత్యము, దుష్టులను శిక్షించే వినూత్న పద్ధతి! ముద్దు గోపాల కృష్ణుని లీలలలో నిండిన కథలు విన్నా, పేరు పేరుగా ధ్యానంచేసినా ముక్తి కల్గుతుంది.'
+  - type: section
+    id: s22
+    hk: |-
+      punaH zrIkRSNapadadhyAnam
+      navanamakam
+    en: ''
   - type: verse
     id: v111
     no: '111'
@@ -1534,6 +1578,12 @@ items:
       kRSNamAnarakSakam kRSNasArathim ca kRSNagItAcAryam tam zrIkRSNam vande me zrIkRSNakaivalyadam ..
     en: "Salutations to Sri Krishna, who gives me liberation: the auspicious, eye-pleasing beauty (the father of Manmatha), who creates desires and fulfils them, the compassionate one, shining with the colour of a blue cloud, the protector of Draupadi's honour, the charioteer of Arjuna, the giver of the Bhagavad Gita. (The name \"Krishna\" belongs also to Draupadi and Arjuna.)"
     te: 'శుభములనిచ్చే కంటికింపైన రూపసి, (మన్మధుని తండ్రి) కోరికలు పుట్టించి వాటిని తీర్చేవాడు, కరుణామయుడు, నీలిమేఘవర్ణంతో మెరిసేవాడు, ద్రౌపదీ మానరక్షకుడు, అర్జునసారథి, భగవద్గీతా ప్రదాత నాకు మోక్షకారకుడు శ్రీకృష్ణునికి వందనం. (“కృష్ణ” అన్నపేరు ద్రౌపదికీ, అర్జునునికీ కూడ వున్నది.)'
+  - type: section
+    id: s23
+    hk: |-
+      zrI kRSNa priyopaniSat
+      navakusumA
+    en: ''
   - type: verse
     id: v120-0
     no: 120 (0)
@@ -1619,10 +1669,6 @@ items:
       tanno zrIkRSNa hAsaharSitA zAntA mokSalakSmIH pracodayAta..
     en: Om, We know the form of Gayatri, Savitri, and Saraswati; We meditate on the Sandhya Goddess, whose radiant essence Is contained within the inner light of the Sun; May the serene Moksha Lakshmi, who delights in Krishna's smile, Always inspire and guide us.
     te: 'గాయత్రి, సావిత్రి, సరస్వతీ రూపములలో ప్రకాశించు త్రిసంధ్యా దేవిగా నిన్ను మేము తెలుసుకొను చున్నాము; సూర్యమండలము అంతర్భాగమున తేజోరూపమున కొలువై ఉండి, నాచేత ఉపాసించబడు దివ్యమైన తేజఃశ్రీగా నిన్ను మేము నిశ్చలముగా ధ్యానించు చున్నాము. శ్రీకృష్ణుని మందహాసముచే ఆనందించునది, ప్రశాంత స్వరూపిణి, పరమ కైవల్యమును ప్రసాదించే మోక్షలక్ష్మీ దేవి మనందరి బుద్ధులను సన్మార్గమున ప్రేరేపించుగాక!'
-  - type: section
-    id: s03
-    hk: namovAkam
-    en: Obeisance
   - type: verse
     id: v129
     no: '129'
@@ -1647,7 +1693,7 @@ items:
       హరిః ఓం తత్ సత్ (ఆ పరబ్రహ్మ తత్వమే సత్యమైనది).
   - type: section
     id: s04
-    hk: 'puruSottamapadadhyAnam :'
+    hk: 'puruSottamapadadhyAnam'
     en: Meditation on the supreme state (or abode) of the Purushottama
   - type: verse
     id: v131
@@ -1665,10 +1711,6 @@ items:
       tejazrI kRSNavAsam, bhavam, megRha, zrIkRSNahAsa prakAzamAnandadhAmam ..
     en: This house is like a bright lotus, an auspicious abode bathed in the stream of devotion to Sri Krishna, where Lakshmi and Sri Krishna always remain; Sri Krishna has graciously given this house (where we live) as a mass of his sweet smiles and joys. Lord Sri Krishna has blessed us.
     te: 'ప్రకాశవంతమైన తామరపుష్పంలా, శ్రీకృష్ణుని భక్తి ప్రవాహంలో ఓలలాడే శుభనివాసం, లక్ష్మీ శ్రీకృష్ణులు ఎల్లపుడు నిలిచేటట్లు, శ్రీకృష్ణుని మధురమైన చిరునవ్వుల సంతోషాల ప్రోగుగా శ్రీకృష్ణులు అనుగ్రహించి ప్రసాదించినదీ ఇల్లు (మేము కాపురముండేది). ధన్యులను చేసినారు శ్రీకృష్ణవిభులు.'
-  - type: section
-    id: s05
-    hk: vandanam vAsudeva zrIkRSNAya
-    en: I bow down to Vasudeva Sri Krishna
   - type: verse
     id: v133
     no: '133'
@@ -1698,6 +1740,10 @@ items:
       ceta vrAyiJci nannu tarimpacesitiri.
     en: 'My prayer: May Sri Krishna, the embodiment of conscious bliss, bless me and, through His grace, write with this hand and carry me across (liberate me)'
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
+  - type: section
+    id: s24
+    hk: zrIzrIzrI kRSNa-dAsa saMvAdam
+    en: ''
   - type: verse
     id: u2
     no: ''
@@ -1728,10 +1774,6 @@ items:
       నువ్వుల నూనె అభ్యంగన స్నానముతో, సుగంధ పరిమళాలతో శోభిల్లే మంగళకరమైన శరీరము కలవాడు; దివ్యమైన తెల్లని వస్త్రములు, ఆభరణములు మరియు నెమలిపింఛమును ధరించినవాడు; తన జన్మదినోత్సవమున తల్లి యశోద ప్రేమతో, వాత్సల్యముతో సమర్పించిన అత్యంత రుచికరమైన భోజనమును ఆరగించి తృప్తి చెందిన మూడేళ్ల ముద్దుల బాలకృష్ణుడు.
       తల్లి చేతిని పట్టుకుని నిల్చున్న, పొట్టిగా మరియు బొద్దుగా ముద్దులొలికే ఆ శ్రీకృష్ణుని చూసి దాసుడు చమత్కారంగా ఇలా పరిహాసము చేసెను: "ఓ బలిష్టమైన, బొద్దు శరీరము గల కృష్ణా! నీ రూపం ఎంత శ్లాఘనీయమైనదో కదా!"
       దానికి ఏమాత్రం చలించని చిరునవ్వు చిందించే ముఖముతో ఆ శ్రీ భగవానుడు ఇలా పలికెను: "ఓ దారి తెలియని అమాయక బాలుడా (భక్తుడా)! నీ రక్షణ కొరకై సర్వవేళలా ఎటువంటి ఆపదనైనా దాటి దూకడానికి (లంఘించడానికి) నేను ఎల్లప్పుడూ సిద్ధంగా ఉన్నాను!"
-  - type: section
-    id: s06
-    hk: mamAparAdhakSamAkrozaH
-    en: My cry (plea) for forgiveness of offenses
   - type: verse
     id: v136
     no: '136'
@@ -1747,6 +1789,10 @@ items:
       - dehime, abhayam, aparAdhakSama, asmajanmAnte, tavazrIcaraNa sAyujyam , zrIkRSNAnandamayam, zAzvatam .
     en: "Desire, anger, greed, delusion, pride and jealousy always cling to me. My nature is full of arrogance and excessive anger. I blame others and praise myself. I am an anthill of lies, and I am in the habit of talking too much. In whatever way you look, there is no good conduct in me. I remember God very little and spend my life as I please. I am not at all worthy of being forgiven. Even so, O Lord Sri Krishna, since you are a God full of endless compassion, with the nature of forgiving any sinner, forgive me. Protect me, O Lord Radha-Krishna! Take away my fear. Forgive all my faults and destroy my sin. At the end of this life, that is, the moment I die, cancel the world of Yama, punishments and so on, merge me into your feet, and let me always meditate on you and remain immersed in endless joy."
     te: 'కామ, క్రోధ, లోభ, మోహ, మద, మాత్సర్యాలు నన్నెపుడూ అంటిపెట్టుకునే వుంటాయి. దురహంకారము, అతికోపము నిండిన స్వభావము. ఇతరులను నిందిస్తూ నన్ను నేను పొగుడుకుంటూంటాను. అబద్ధాల పుట్టగా, అతివాగుడు అలవాటు. ఏవిధంగా చూసినా మంచి ప్రవర్తన లేదు. చాలా తక్కువగా భగవంతుణ్ణి తలుస్తూ జీవితం ఇష్టం వచ్చినట్లు గడిపేస్తూంటా. నేను ఎంత మాత్రం మన్నింపబడటాన్కి అర్హుణ్ణి కాదు. అయినా సరే, హే శ్రీ కృష్ణ విభో! నీవు అంతులేని కరుణతో నిండిన దైవము కనుక, ఎటువంటి పాపి నైన మన్నించే నైజం కలవాడివిగా, నన్ను క్షమించు. రక్షించు, ఓ రాధాకృష్ణదేవా! నాకు భయం పొగొట్టు. అన్ని తప్పుల్నీ మన్నించి పాపం నశింపజేయి. యీ జన్మాంతంలో, అంటే చనిపోయిన తక్షణం యమలోకం, శిక్షలు వగైరాలు రద్దుచేసి, శ్రీ చరణాలలో కలిపేసుకుని, ఎపుడూ నిన్ను ధ్యానించి, అంతులేని ఆనందంలో మునిగా వుండేలా చెయ్యి.'
+  - type: section
+    id: s25
+    hk: zrI kRSNastotram
+    en: ''
   - type: verse
     id: v137
     no: '137'
@@ -1786,7 +1832,7 @@ items:
     te: 'ఎల్లపుడూ సత్యమే స్వభావ స్వరూపముగా గల శ్రీ కృష్ణునిదే స్నేహం కోరుకుంటా. అడ్డూ అదుపులేని ధ్యానమువల్ల కలిగే దివ్యానందంతో సహా, నిజమైన భగవంతుడు కైవల్యమిచ్చే శ్రీకృష్ణుని ఆశ్రయాన్ని యాచించా - ఇదంతా శ్రీకృష్ణుని అనుమతితోనే. నా మిగిలిన జీవితం చాలా తక్కువగుగాక! ఎక్కువ శ్రమ లేకుండా శ్రీకృష్ణుని ఆశ్రయించే మార్గంలో ప్రయాణింతును గాక! ఏ రోగం, రొచ్చు లేకుండా కాలక్షేపం చేస్తూ, ఎపుడూ శ్రీ కృష్ణుని ధ్యానంలో మునిగివుందును గాక! చంగల్వ పూలదండ ధరించిన వాడా! దయానముద్రుడా! విశ్వరూపంతో విలసిల్లే వసుదేవునికుమారా! ముక్తిని అనుగ్రహించే వాడా! శ్రీకృష్ణా! నేను చనిపోయిన అనంతరం ఎట్టి జాప్యం లేకుండా తక్షణం నీ శ్రీపాదములలో విలీనం చేసుకుని, తిరిగి, పుట్టి, చచ్చు రొచ్చు లేని విధంగా ఎల్లపుడూ ఆనందంతో నిండివుండేలా అనుగ్రహించు. కాచి రక్షించు! నిన్నే నమ్ముకున్నాను - నీ ఆజ్ఞానుసారం, నీ అనుగ్రహప్రకారం.'
   - type: section
     id: s07
-    hk: zrIkRSNamokSanandamayam
+    hk: zrI kRSNa mokSAnandamayam
     en: Sri Krishna, who is liberation itself and filled with bliss
   - type: verse
     id: v140
@@ -1903,10 +1949,6 @@ items:
     hk: 'maGgaLam jaya maGgaLam sarvamaGgaLam vizvajayamaGgaLam ..'
     en: Victory, victory, completely! May there be victory at all times, for everyone, everywhere, for the dwellers of all worlds!
     te: 'జయం జయం పూర్తిగా! అన్నిటా అందరికీ అన్నివేళలా అన్ని లోకాల వాసులకూ జయమగుగాక!'
-  - type: section
-    id: s09
-    hk: 'zrIkRSNa dhyAnaphalitam:'
-    en: The fruit (result) of meditating on Sri Krishna
   - type: verse
     id: v149
     no: '149'
@@ -1938,6 +1980,10 @@ items:
       zrInRsimha kizoram, brahmANda kizoram, sadAvande, mokSadam me zrI kRSNam vizva kizoram ..
     en: "Salutations always to you, Mukunda who reclines on a banyan leaf, Lord Sri Krishna, who gives liberation, Muralimohana: to the gopa boy, the son of Vasudeva, the beloved child of Yashoda Devi, the enchanting boy, the son of Nanda, the young lion cub, the cowherd, the tender little one, who delights with games and songs, the small embodiment of love, who sings and dances, who roams Brindavan, the little darling who gave the bliss of Brahman through the Rasa Lila, and who alone, the fondly loved child, remained in all the worlds at the end of dissolution."
     te: 'గోపబాలుడు, వసుదేవ సుతుడు, యశోదాదేవి ముద్దుబిడ్డ, నందుని కుమారుడైన ముగ్ధబాలునికి, చిన్న సింహంపిల్ల, ఆవుల కాపరి, కోమలమైన చిన్నారి, ఆటపాటలతో మురిపించే, ప్రేమైక చిరుమూర్తి, పాటలు పాడే, నృత్యము నాడే, బృందావనవిహారి, రాసలీలద్వారా బ్రహ్మానందం పంచిన బుజ్జిబాబు, అన్నిలోకాలలో, ప్రళయాంతంలో, నిల్చిన ఏకైక ముద్దులమురిపాల బాల ముకుంద వటపత్రశాయీ! శ్రీకృష్ణ ప్రభో, మోక్షమిచ్చే మురళీ మోహనా, వందనం నీకెల్లపుడూ!'
+  - type: section
+    id: s26
+    hk: zrI kRSNAnugrahavaram
+    en: ''
   - type: verse
     id: v151
     no: '151'
@@ -1996,10 +2042,6 @@ items:
       నన్ను ఆశ్రయించిన సర్వులనూ రక్షించేవాడను నేనే. ఈ కలియుగంలో కేవలం నా నామస్మరణ మాత్రముచేతనే నేను అభయాన్ని ఇస్తాను; ఇహలోకంలో సమస్త సంపదలను, జన్మాంతమున శాశ్వతమైన సాయుజ్య ముక్తినీ ప్రసాదిస్తాను. నేను ఎల్లప్పుడూ భక్తులకు వశ్యుడనై ఉంటాను (భక్తవశ్యుడను).
       ఎవరి ఇష్టదైవాన్ని వారు భక్తితో ఆరాధించడం ఉత్తమోత్తమమైనది; అయితే ఇతర దైవాలను ద్వేషించడం మాత్రం నరకప్రదమైన పాపము. కాబట్టి నీ శ్రేయస్సు కొరకు, మోక్షము కొరకు నిత్యం భక్తియోగ సాధన చేయుము.
       నాచే అనుగ్రహించబడిన అమృతబీజములతో కూడిన "శివరామకృష్ణాయ నమః" అనే తొమ్మిది అక్షరాల (నవాక్షరీ) మంత్ర జపం అత్యంత ఉత్కృష్టమైనది, సర్వ మంత్రాల సారమైనది, సమస్త శాంతినీ మరియు శాశ్వత కైవల్యాన్ని (మోక్షాన్ని) ప్రసాదించునది.
-  - type: section
-    id: s10
-    hk: 'mama vinnapam :'
-    en: My humble request
   - type: verse
     id: v154
     no: '154'
@@ -2027,10 +2069,6 @@ items:
       hariH oM tatsat
     en: Always auspiciousness and victory, victory to the lord of Kantimati, the lotus-eyed one whose abode is water, the dear little mischievous child who, as a childish act, sucks the toe of his own foot, that God of gods, my master, Sri Krishna, who always remains.
     te: 'కాంతిమతీనాధునికి, నీరు నివాసముగాగల నీరజాక్షునికి, బాల్యచేష్టగా, తన కుడిపాదం బొటనవ్రేలు చీకుకునే చిన్నారి చిలిపి పాపనికి, ఆదేవాదిదేవునికి, నాకు, అధిపతి, ఎపుడూ నిలిచివుండే శ్రీకృష్ణదేవేరులకు ఎల్లపుడు శుభం శుభంజయంజయం.'
-  - type: section
-    id: s11
-    hk: 'zrI kRSNAsAyUjya sAdhanam :'
-    en: The means of attaining union with Sri Krishna
   - type: verse
     id: v156
     no: '156'
@@ -2083,10 +2121,6 @@ items:
     en: |-
       I bow my head and salute Sri Krishna, who gives wealth to all. Wholehearted salutations to Sri Krishna, the husband of Rukmini. Unbroken salutations to Radha-Krishna. Obeisance night and day to Sri Krishna, the husband of Satya. Constant homage to the pure God of gods, Sri Krishna. I worship in my heart. To Sri Krishna, the embodiment of love, I dedicate everything I have enjoyed so far as being what he himself gave. To Sri Krishna, the giver of liberation, I place my very self at his feet. Meditating constantly and steadily on Sri Krishna's feet is the way to attain liberation.
     te: 'అందరకీ ఐశ్వర్యమిచ్చే శ్రీకృష్ణునికి తల వంచి వందనం చేస్తున్నాను. రుక్మిణి పతి శ్రీకృష్ణునికి మనసారా నమస్కారం రాధాకృష్ణునికి అవిచ్ఛంన్నంగా, నమోవాకాలు. సత్యానాధుడు శ్రీకృష్ణునికి రాత్రి, పగలు కూడ అభివంధనం. విశుద్ధదేవదేవ శ్రీకృష్ణునికి ఎల్లపుడూ దండాలు. నాహృదయంలో కొలుస్తూంటాను. ప్రేమైకమూర్తి శ్రీకృష్ణునికి వారిచ్చినవే నావిగాఇంత వరకూ అనుభవిస్తున్నవన్నీ అంకితం చేస్తున్నాను. కైవల్య కర శ్రీకృష్ణునికి ఆత్మనే వారి చరణముల చెంత వుంచేస్తున్నాను. శ్రీకృష్ణుని పాదాలను తదేకంగా, ఎపుడూ ధ్యానించడమే, ముక్తి పొందడానికి మార్గము.'
-  - type: section
-    id: s12
-    hk: sarvam zrIkRSNArpaNa prakaraNam
-    en: The principle (or teaching) of offering everything to Sri Krishna
   - type: verse
     id: v158
     no: '158'
@@ -2111,6 +2145,12 @@ items:
     en: |-
       Sri Krishna's feet are my refuge; they are everything! Meditation on Sri Krishna, and what he commanded as if drawing a line, is the support of my life. By his grace my whole mind, in which he dwells, is filled with the bliss of Sri Krishna. Sri Krishna's lotus feet are the state of liberation where I have been graced to dwell forever. Always bowing, salutations again and again to Sri Krishna, the giver of liberation.
     te: 'శ్రీకృష్ణుని పాదములే నాకుగతి. అన్నీ అవ్వే! శ్రీకృష్ణుల ధ్యానం, వారు గీతగీసినట్లుగా శాశించిన ప్రకారమే, నాబ్రతుక్కు ఆలంబనం. వారి అనుగ్రహంవల్ల వారు నివాసమున్న నా మనస్సంతా శ్రీకృష్ణానందమయం. శ్రీకృష్ణ పదకమలములు నేను శాశ్వతంగా నివసింప ననుగ్రహింపబడిన ముక్తి స్థానం. ఎపుడూ నమస్త మొసగి, మోక్షమిచ్చే శ్రీకృష్ణునికి నమోనమః'
+  - type: section
+    id: s27
+    hk: |-
+      zrIzrI kRSNa caitanyam
+      zrI kRSNasAyujyasiddhikarasaptapadi
+    en: ''
   - type: verse
     id: v160
     no: '160'
@@ -2272,6 +2312,10 @@ items:
       తలపై గంగాదేవి, చంద్రుడు, జటాజూటం, చేతశూలము, అర్ధనారీశ్వరుడు, లో కాలన్నిటి భారంవహించే, ఐశ్వర్యములనిచ్చే, ప్రళయకాలమున అన్నీనశింపజేసే శ్రీకృష్ణుని పూజించే పరమశివునికి నమోవాకములు.
 
       రాధానాధా, సర్వసుందరమైన శుభశ్రీగా విష్ణురూపంతో భక్తులకు దర్శనమిచ్చే లక్ష్మీ నారాయణా, ఎపుడూ భక్తులను బ్రోచి, రక్షించే, మఱ్ఱి ఆకుమీద,శయనించి, నీటతేలియాడే మురిపాల చిలిపిచేష్టల చిన్నారీ, వసుదేవ సుతశ్రీకృష్ణా! ఎన్నో లీలలు ప్రదర్శించి ఆనందింపచేస్తావు. విశ్వరూపంతో విరాజిల్లే, గీతను మాకిచ్చిన ముకుందా, దండాలయ్యా, దయామయా!
+  - type: section
+    id: s28
+    hk: zrI kRSNa bhakti - anurAga vAhini
+    en: ''
   - type: verse
     id: v161
     no: '161'
