@@ -981,7 +981,16 @@ items:
       2. sAdhyamainadi rAmasmaraNamu, mokSa gamyamainadi rAma zaraNyamu..
       3. rAmanAmamu ramyamainadi, ramyamainadi rAma nAmamu, dhanyamainadi nAdu jIvanamu, labhyamai tArakarAmamu ..
       4. abhayamai, mukti pradamai, zrI rAdhAkRSNa caraNa zaraNyamai ..
-    en: ''
+    en: |-
+      This is a bhajan.
+
+      Chorus:
+      Charming and delightful is the sacred name of Rama; deeply touching and endearing to the heart is the sacred epic of Rama. It bestows pure devotion and divine strength, granting the supreme joy of ultimate liberation.
+      Verses:
+      1. Meditation itself becomes the path toward the goal, leading to the ultimate destination—the holy feet of the Supreme Abode (Lord Parandhama).
+      2. Easily attainable is the constant remembrance of Rama's name; taking absolute refuge in Rama is the sure destination leading to liberation.
+      3. Charming is the name of Rama, delightfully enchanting is the name of Rama; having attained the redeeming Taraka Rama mantra, my life has become truly blessed and fulfilled.
+      4. Granting complete fearlessness and bestowing supreme liberation, taking refuge at the sacred lotus feet of Sri Radha-Krishna is my sole sanctuary.
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
   - type: verse
     id: v70
@@ -1143,9 +1152,9 @@ items:
   - type: verse
     id: v88
     no: '88'
-    hk: ''
-    en: ''
-    te: ''
+    hk: 'kAntalu kopiJci aliginaveLa, svakAntulaina, zriyaHkAntulaina, zivAnIzulaina, tanavAraina, tAmEntavArainan, sadatIpAdakrAntulerA! mArgadarzakapuruSottama zrIkRSNA..'
+    en: 'When beloved women grow indignant in sulking fury, be they the lords of radiance, the consorts of Sri (Lord Vishnu), the masters of Bhavani (Lord Shiva), or one''s own people - no matter how mighty and exalted they may be - they inevitably fall prostrate at the beloved''s feet, yielding in total submission! O beacon and guide, Supreme among men, Lord Sri Krishna!'
+    te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
   - type: verse
     id: v89
     no: '89'
@@ -1273,11 +1282,13 @@ items:
   - type: verse
     id: v100
     no: '100'
+    title: nitya vandanam
     hk: |-
-      nitya vandanam tejaH puJjam harim daityaharam mamArAdhya daivam tANDava zrI kRSNam madhurassarvam madhurAdhipam mAdhavam bRndAlIlA zrI kRSNam vizvarUpam.
+      tejaH puJjam harim daityaharam mamArAdhya daivam tANDava zrI kRSNam madhurassarvam madhurAdhipam mAdhavam bRndAlIlA zrI kRSNam vizvarUpam.
       jagatsarvadaJjaganmohanam jagadAnanda kArakam rAdhezam zrI kRSNam.
       bAla kRSNam me sarvasvam zrInRsiMham gItAkRSNam dhyAnakRSNam sAyujyadam..
-      zvAsAntAzvAnam (antya vinnapam) dIna dayALA.
+      zvAsAntAzvAnam (antya vinnapam)
+      dIna dayALA.
       zrI kRSNa devA..
       dehi me, takSaNam tedivya pada sAyujyam zAzvatam..
       “bhagavadprasAdam” - sarvam zrI rAdhAkRSNArpaNamastu
@@ -1296,9 +1307,9 @@ items:
     no: '102'
     title: bahurUpa zrIkRSNadhyAnam
     hk: |-
-      oM tatsarvezam kaliyuga pratyakSa daivatam, harim sarvadam zrIveGkaTezam .
-      skandam, skandAgrajam zrI nRsimham sadAzivam ca sAIzam .
-      mAdhavam mahAviSNum hanumam zrIrAmam maGgaLakaram manasAsmarAmi .
+      oM tatsarvezam kaliyuga pratyakSa daivatam, harim sarvadam zrIveGkaTezam.
+      skandam, skandAgrajam zrI nRsimham sadAzivam ca sAIzam.
+      mAdhavam mahAviSNum hanumam zrIrAmam maGgaLakaram manasAsmarAmi.
       zirasAnamAmi kaliyuga kartRm, vizveza zrIrAdhAkRSNam sAyujyadam.
       (kaliyuganAthunito prArambhiJci kaliyuga kartAto dhyAna samApti)
     en: 'I keep in my mind and meditate on that Lord of all, Sri Maha Vishnu, who grants all boons as Sri Venkateshwara Swami, the visible God of Kali Yuga; Kumaraswami and his elder brother Vighneshwara; Narasimha Swami; Shiva; Sai Natha; Vishnu, the husband of Rama; Hanuman; and Sri Rama, the cause of auspiciousness. I bow my head to Sri Radha-Krishna, the maker of Kali Yuga, the lord of all universes, who gives liberation.'
@@ -1338,13 +1349,9 @@ items:
   - type: verse
     id: v105a
     no: 105a
-    title: bahurUpa zrIkRSNadhyAnam
+    title: zrIkRSNasASTAGgam praNAmam
     hk: |-
-      oM tatsarvezam kaliyuga pratyakSa daivatam, harim sarvadam zrIveGkaTezam .
-      skandam, skandAgrajam zrI nRsimham sadAzivam ca sAIzam .
-      mAdhavam mahAviSNum hanumam zrIrAmam maGgaLakaram manasAsmarAmi .
-      zirasAnamAmi kaliyuga kartRm, vizveza zrIrAdhAkRSNam sAyujyadam.
-      (kaliyuganAthunito {prAraMbhiMci} kaliyuga kartAto dhyAna samApti)
+      sASTAGga praNAmyAmyaham karuNAkRSNam mama sarvapApa hArakam, sarvajanmakarmaphala grahItAram cA bhayadam sarvadam zrIkRSNasAyujyadam..
     en: Prostration to Sri Krishna, the compassionate one who removes all my sins; who, with boundless mercy, takes upon himself the fruits of all the actions done in all births so that I need not bear them any longer; who removes fear, arranges everything, and gives liberation at the end of this life.
     te: 'దయామయుడు నా పాపములన్నీ పోగొట్టి, సర్వజన్మలలో చేసిన అన్ని కర్మల ఫలితములు ఇటుపై నేను భరించవలసిన అవసరం లేకుండా, అపారమైన కరుణతో తానే స్వీకరించి, భయం పోగొట్టి, అన్నీ అమర్చి, యీజన్మాంతంలో ముక్తినిచ్చే శ్రీకృష్ణునికి సాష్టాంగ నమస్కారము.'
   - type: verse
@@ -1362,13 +1369,11 @@ items:
   - type: verse
     id: v106
     no: '106'
-    title: bahurUpa zrIkRSNadhyAnam
+    title: zrI rAdhAkRSNarAgamayam
     hk: |-
-      oM tatsarvezam kaliyuga pratyakSa daivatam, harim sarvadam zrIveGkaTezam .
-      skandam, skandAgrajam zrI nRsimham sadAzivam ca sAIzam .
-      mAdhavam mahAviSNum hanumam zrIrAmam maGgaLakaram manasAsmarAmi .
-      zirasAnamAmi kaliyuga kartRm, vizveza zrIrAdhAkRSNam sAyujyadam.
-      (kaliyuganAthunito prArambhiJci kaliyuga kartAto dhyAna samApti)
+      helAlIlAhAsa vilAsa rasalAsya zizum, tam.
+      hiraNmayIhRdayAravindam harinArAyaNam veNunAdodbhavamadbhutAnu rAgajhari rAdhAbhirAmam.
+      hiraNyagarbham, zrIkRSNam, vandemokSadam..
     en: "Salutations to Sri Krishna: the mischievous, smiling, playful little child, the lotus of Sri Maha Lakshmi's heart, remover of all faults, the eternal one whose abode is water at the time of dissolution, the delighter of Radha's mind, the stream of melody born from his wonderful flute music, Hiranyagarbha, that is, the God of gods; he alone gives liberation to all, and he is the beloved God who makes me attain liberation. Salutations to such a Mukunda."
     te: 'కొంటెగా నవ్వుతూ చిలిపిచేష్టలు చేసేచిన్ని పాపడు, శ్రీమహాలక్ష్మీ హృదయ సరోజమైనవాడు, సర్వదోషహారి, ప్రళయ కాలమున నీరు నివాసముగా గల శాశ్వతుడు, తన అద్భుతమైన వేణునాదము నుంచి జనించిన, రాగప్రవాహమైన రాధామనోరంజకుడు, హిరణ్యగర్భుడు - అనగా దేవాది దేవుడు అగు శ్రీ కృష్ణునికి ప్రణామము, వారే సర్వులకు మోక్షమిచ్చేవాడు, నన్ను ముక్తి పొందునట్లుచేయు ఆరాధ్యదైవము వీరే, అట్టి ముకుందునికి వందనములు.'
   - type: verse
@@ -1927,13 +1932,13 @@ items:
       nanukOlturubhaktulu, sadAtapasvisAmba zivunigA, zivapaJcAkSarito.
       nArAyaNAkSaryupAsakulu, viSNubhaktulu, tArakarAmadhyAnadhanyulu
       zrIrAma zaraNAgatuph tatvajJalu, nAnitya satyavizvamaya zrIkRSNunigA vAsu
-      deva dvAdazAkSari japiJci tarintu, rituruliSTadevatAvigrahunigan ..
+      deva dvAdazAkSari japiJci tarintu, rituruliSTadevatAvigrahunigan..
       sarvadevAzritula samamugacUtunu, sarvamamarci santasaparacEda .
       Artulu pazcAttAptulai, sthiracittulE", sarvezvarA .
       mAtappulumannimpumu.
       nIvedikkani, OkamArannacAlu, Abhayamicci Adukuni .
       sarvasaubhAgyamulu, janmAntamuna, mokSasAyujyamOsaGgEda,
-      nizcayambugan, bhaktavazyuDanai ..
+      nizcayambugan, bhaktavazyuDanai..
     en: O Lord Krishna, the devotees worship You always as Samba Shiva, with Shiva's Panchakshara mantra. Narayana's mantra worshippers, Vishnu devotees, and those blessed with Tarak Rama meditation have surrendered to Sri Rama's shelter. Those who know the truth, eternal and universal, worship You as Sri Krishna, chanting Vasudeva's twelve-syllable mantra, while also honoring their chosen deity. I see the peace of all divine beings, dedicating everything and bringing joy. Those with wounded hearts, filled with remorse, becoming steady-minded, O Supreme Lord, please forgive our mistakes. You are our sole refuge. Just one glance is enough. Grant us fearlessness and protection. You will bestow all auspiciousness, throughout life and ultimately liberation and divine union, this I firmly believe, for You are controlled by devotion.
     te: 'ఈ గీతిక తెలుగు లోనే ఉన్నది'
   - type: verse
@@ -2108,9 +2113,8 @@ items:
       R - zrI kRSNAnugrahaprAptidvArA
       zrI kRSNasAyujyasiddhi:
 
-      A) zrI kRSNasAyujvasiddhikarasaptapadi
-      zrI kRSNasAyujyasAdhanAsaGkalpam
-      mamopAttaduritakSayadvArA, sarvezazrIkRSNa prItyartham
+      a) zrI kRSNasAyujvasiddhikarasaptapadi
+      zrI kRSNasAyujyasAdhanAsaGkalpam mamopAttaduritakSayadvArA, sarvezazrIkRSNa prItyartham
       oM heramba, himajA, himAMzuzekharaziva,
       hiraNyagarbhahiriNmayIzanArAyaNapariveSTita,
       zrI kRSNapaJcAyatanapUjAGkariSye
@@ -2118,84 +2122,80 @@ items:
       zrI kRSNasAyujyArtham, zrI kRSNAnugrahAnusAram
       zrI kRSNAnujjayA.
 
-      i) zrI kRSNabhagini yogamAya zrI durgAmAtApAdAkrAntam
+      A) zrI kRSNabhagini yogamAya zrI durgAmAtApAdAkrAntam
       oM..
       vandevizvamAtaram, vizvezvarahRda
-      yezvarIm, vizvasundarIMvizAlAkSIm, nande .
+      yezvarIm, vizvasundarIMvizAlAkSIm, vande.
       vandevizvazreyadAm, vizvarakSaDAm
       zivAm, zivAnIm, vizAradAm, vande,
-      vaiSNavIm, vizvavaradAm !
+      vaiSNavIm, vizvavaradAm!
       vande, vizvarUpa, sAyujyadamamArAdhya zrI kRSNa
       sodarIm, yogamAyAm zrI durgAdevIm, vande,
       vande vidyAdharIm, sarvamaGgaLakarIm, sandhyAde
-      vIm, mamasarva rogahariNiJca,
-      vande me, yIpsitassarvadAm ..
+      vIm, mamasarva rogahariNiJca, vande me, yIpsitassarvadAm..
 
-      I) zrI kRSNa lIlAkIrtanam
-      oM harikRSNA .
-      harekRSNA .
-      namokRSNA .
-      namAmi zrI kRSNA .
-      zizu kRSNA .
-      mAnasacora kRSNA ..
-      bAlakRSNA .
-      krIDAkRSNA ..
-      nandakRSNA .
+      i) zrI kRSNa lIlAkIrtanam
+      oM harikRSNA.
+      harekRSNA.
+      namokRSNA.
+      namAmi zrI kRSNA.
+      zizu kRSNA.
+      mAnasacora kRSNA..
+      bAlakRSNA.
+      krIDAkRSNA..
+      nandakRSNA.
       yazodAnanda kRSNA ..
-      muddu kRSNA .
-      mukunda kRSNA ..
-      gopIkRSNA .
-      gopAla kRSNA ..
-      kALIyavaradAkRSNA .
-      kAmitArdhada zrIkRSNA ..
-      muraLI kRSA .
-      mugdhamanohara zrIkRSNa ..
-      nATya kRSNA .
-      naTvara kRSNA ..
-      naLinI kRSNA .
-      nagadhara kRSNA ..
-      vamzIkRSNA .
-      mohana kRSNA ..
-      bRndA kRSNA .
-      rAsalIlA kRSNA ..
-      rAga kRSNA .
-      rAdhA kRSNA ..
-      gItA kRSNA .
-      kRSNa sAradhi kRSNA ..
-      devakIvasu kRSNA .
+      muddu kRSNA.
+      mukunda kRSNA..
+      gopIkRSNA.
+      gopAla kRSNA..
+      kALIyavaradAkRSNA.
+      kAmitArdhada zrIkRSNA..
+      muraLI kRSA.
+      mugdhamanohara zrIkRSNa..
+      nATya kRSNA.
+      naTvara kRSNA..
+      naLinI kRSNA.
+      nagadhara kRSNA..
+      vamzIkRSNA.
+      mohana kRSNA..
+      bRndA kRSNA.
+      rAsalIlA kRSNA..
+      rAga kRSNA.
+      rAdhA kRSNA..
+      gItA kRSNA.
+      kRSNa sAradhi kRSNA..
+      devakIvasu kRSNA.
       vizvarUpa zrIkRSNA..
-      sadAnanda kRSNA .
-      sASTAGga vandanam zrIkRSNA ..
-      sarvezvara zrIkRSNA .
-      sAyujyamimmA zrIkRSNA ..
-      harikRSNA .
-      harekRSNA ..
-      namo kRSNA .
-      namAmi sadA zrI kRSNA ..
+      sadAnanda kRSNA.
+      sASTAGga vandanam zrIkRSNA..
+      sarvezvara zrIkRSNA.
+      sAyujyamimmA zrIkRSNA..
+      harikRSNA.
+      harekRSNA..
+      namo kRSNA.
+      namAmi sadA zrI kRSNA..
 
-      u) zrI kRSNa paJcAyatanapUjA
+      I) zrI kRSNa paJcAyatanapUjA
       1)tam zrI karam sarvakAryanirvighnakaram
-      gaNezaJca gajAnanam .
-      zazivarNam,
-      ekadantam herambam, zrI kRSNapriyam,
-      prathamam namAmi ..
+      gaNezaJca gajAnanam.
+      zazivarNam, ekadantam herambam, zrI kRSNapriyam,
+      prathamam namAmi..
       2)zivAMzaktim zrI durgAm zrI devIm
-      vidyAdharIm sarvamaGgaLAm .
-      -nArAyaNIm nityAnandakarIm
-      kRSNAm jagadambAnnamostute..
+      vidyAdharIm sarvamaGgaLAm.
+      nArAyaNIm nityAnandakarIm kRSNAm jagadambAnnamostute..
       3) razmimantam vivasvantam sahasramsum
-      ravim raudrAdityam ca divAkaram .
+      ravim raudrAdityam ca divAkaram.
       savitAruNArogyAdhipam bhAskaram sUryam, tam.
       zrI kRSNa nirdezita gagana vihArim,
-      sadAnamAmi zrIrAma bhakta hanumadgurum grahAdhipam .
+      sadAnamAmi zrIrAma bhakta hanumadgurum grahAdhipam.
       sandhyAkAle trimurtisthAvaram gAyatrIdharam, karmasAkSim ca pratyakSadaivatam..
-      4) satidharam phaNidharam zUladharam jaTA jUTa dharam ca gaGgAdharam vizvam bharam .
+      4) satidharam phaNidharam zUladharam jaTA jUTa dharam ca gaGgAdharam vizvam bharam.
       zazidharam sampatkaram layakaram zivam vande, sadAzrI kRSNArAdhakam muktidam..
       5) rAdhezAya vizvamaGgaLa viSNurupa darzanapradAya
-      zrI lakSmInArAyaNAya sadAbhakta varadAya ca vande, vaTapatrazayana,
-      vizvamohana mugdhabAlAya, lIlAvinoda vAsudeva zrIkRSNAya, vizvarupAya, gItAyoga pradAya, sAyUjyadAya namonamaH
+      zrI lakSmInArAyaNAya sadAbhakta varadAya ca vande, vaTapatrazayana, vizvamohana mugdhabAlAya, lIlAvinoda vAsudeva zrIkRSNAya, vizvarupAya, gItAyoga pradAya, sAyUjyadAya namonamaH
 
-      U) zrI kRSNa caitanyam (zrI kRSNa margAnusaraNam)
+      u) zrI kRSNa caitanyam (zrI kRSNa margAnusaraNam)
       1) premayanna zrI kRSNuni pratirUpamu.
       ananta kSamAkaruNAdAnaguNa sammeLanamu.
       premaku paramArthamu andariyandu samabhAvamu.
@@ -2203,9 +2203,7 @@ items:
       pOgadtalanu tanaloni zrI kRSNAMzA sambhUtamaina jIvAtmaku, A zrI kRSNa paramAtma k, agAdhamU sRSTiJce agaDtagA bhAviJci, vinayamuga samhariJcuTa.
       AdhyAtmikamanna, prema pUrita zrI kRSNa bhagavadgItA sUktulananusariJci, svanta prayojanamunAzimpaka, vidhi dharmamulanAcariJcuTa.
       sarvakarmaphalamulanu zrI kRSNArpaNamu gAviJcuTa.
-      2) amRtamu atimathuramanu nAnuDi anRtamani abbura paDunaTlu,
-      ananta kRpA kRSNulu, AtmArAmulu, nA antarAtmayai vrAyan,
-      AdeziJci, upadeziJci, prasAdiJcina, varasiddhipAyasamI zrI kRSNAnandamayavaijayantamu.
+      2) amRtamu atimathuramanu nAnuDi anRtamani abbura paDunaTlu, ananta kRpA kRSNulu, AtmArAmulu, nA antarAtmayai vrAyan, AdeziJci, upadeziJci, prasAdiJcina, varasiddhipAyasamI zrI kRSNAnandamayavaijayantamu.
       3) mathurAdhipatigA thAmaya mathurAti mathurarasa sravantI tIrthamu.
       bRndAvana vihArIsparza dhanyapuNya samIramunAzvAdiJci, pulakiJci, upAsintu niratamu zrI kRSNAnugrahamuna.
       4) zrI kRSNa sAyujyamu zAzvatamuga labhimpagan.
@@ -2221,7 +2219,7 @@ items:
       zrI kRSNAnandamaya zAzvata zrI kRSNa sAyujyamitturani dRDhamuga nammitin
 
 
-      e) zrI kRSNa caraNa vilInam
+      E) zrI kRSNa caraNa vilInam
       (zrI kRSNAnugrahamu dvArA zrI kRSNa sAyujya siddhi)
       sarvezvaruNDu, sarvamandu tAnai, tAne sarvamaguvADu,
       satyadevuDu, sarvajJuDu, sarvakAlamulandu sthiruDu,
@@ -2395,7 +2393,7 @@ items:
     id: v172
     no: '172'
     hk: |-
-      oM. nayA ce, suralokapAlanam, navApsarasAsukha lAlasam, .
+      oM. nayA ce, suralokapAlanam, navApsarasAsukha lAlasam.
       navitta, ramya, harmyeSu
       cittam, na, me, kiJcidanya masti .
       iyam sustanI muktimAninIcahastAt, sumAgIm, zubhAGgIm, zrIkRSNacaraNa sthira cAriNIm dadAtu .
@@ -2448,8 +2446,7 @@ items:
     id: v177
     no: '177'
     hk: |-
-      vande vizvamohana bAlam, vizvAdhAram vanamAlim, vana vihAra
-      vAsudevam .
+      vande vizvamohana bAlam, vizvAdhAram vanamAlim, vana vihAra vAsudevam.
       gopAlam sAmUhika vanabhojana madhye, uttiSTham, dadhyAnna kabaLahastam, padmapadayugaLazobhitam! kapaTa gopagogaNa anveSaNa
       nATaka lIlA vinodinam, cirahAsavadanam, sadAvande, vidhAta garvahArakam, gopa, goga NarakSakam, zrIkRSNam, mamArAdhya rAdhA mAdhavam, me,
       zrIkRSNa Ananda, dhAma nitya nivAsa varadam ..
@@ -2545,13 +2542,12 @@ items:
   - type: verse
     id: v183
     no: '183'
+    title: mamanityAnuSThAnam - navadazavidha ArAdhana (sandhyAvandanapUrvakam)
     hk: |-
-      zrIkRSNaMvande jagadgurum
-      mamanityAnuSThAnam - navadazavidha ArAdhana, (sandhyAvandanapUrvakam)
       1. dhyAnam: dhyAnamekaMzrIrAdhAkRSNa devaram..
       2. gAnam: gAnamekaMvaMzImohana kRSNa, krIDAvinodammanoharam, sAmagAnasadRzam..
       3. japamekam,nArAyaNASTAkSariH harekRSNamantrapUrvakam (japam)
-      4. bhajanam: bhajanamekam zrIkRSNa divya nAmamanantaphalitadam.
+      4. bhajanam: bhajanamekam zrIkRSNa divya nAmamanantaphalitadam..
       5. lakSyam: lakSyamekam zrIkRSNa pAdAravinda kaivalyam..
       6. kartavyam: kartavyamekam anukSaNa zrIkRSNa padadhyAnam, nAma gAnam, zeSa jIvitaparyam tam..
       7. sphUrtiH: sphUrtirekam zrIkRSNa anugra hapUrvaka AjJApAlanam..
