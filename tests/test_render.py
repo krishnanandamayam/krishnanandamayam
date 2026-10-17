@@ -115,6 +115,7 @@ DIGITS = {
     "gujarati": "૦૧૨૩૪૫૬૭૮૯",
     "bengali": "০১২৩৪৫৬৭৮৯",
     "gurmukhi": "੦੧੨੩੪੫੬੭੮੯",
+    "grantha": "௦௧௨௩௪௫௬௭௮௯",
 }
 
 
@@ -125,8 +126,16 @@ def test_zuddha_writes_numbers_in_the_scripts_own_digits(script):
     assert not re.search("[0-9]", out)
 
 
-def test_roman_keeps_latin_digits():
-    assert render.render("guccham-1", "roman", "zuddha") == ["guccham-1"]
+@pytest.mark.parametrize("script", sorted(DIGITS))
+def test_saraLa_writes_numbers_in_latin_digits(script):
+    out = render.render("guccham-0123456789", script, "saraLa")[0]
+    assert out.endswith("-0123456789")
+    assert not any(ch in DIGITS[script] for ch in out)
+
+
+@pytest.mark.parametrize("mode", ["saraLa", "zuddha"])
+def test_roman_keeps_latin_digits(mode):
+    assert render.render("guccham-1", "roman", mode)[0].endswith("-1")
 
 
 def test_tamil_superscript_marks_survive_the_digit_change():

@@ -7,10 +7,11 @@
 #             anusvara behaviour never relies on it; it is on only where a script's own
 #             orthography needs it (short e/o marks, য়, Tamil without superscripts).
 #   post      Aksharamukha post-options
-#   digits    zuddha only: the ten native digits (0-9, in order) for a script whose Aksharamukha
-#             output leaves 0-9 as Latin digits (Telugu, Tamil, Malayalam, Gurmukhi). The other
-#             scripts already get native digits from Aksharamukha. Tamil's superscript marks
-#             (ப்³) are not 0-9 and stay as they are.
+#
+# Per script:
+#   digits    the ten native digits (0-9, in order). zuddha writes numbers in them and saraLa in
+#             Latin 0-9, whatever Aksharamukha did on its own. Tamil's superscript marks (ப்³)
+#             are not 0-9 and are left alone. Roman has none.
 
 default = "telugu"
 
@@ -20,8 +21,9 @@ name = "Telugu"
 label = "తెలుగు"
 english = "Telugu"
 lang = "te"
+digits = "౦౧౨౩౪౫౬౭౮౯"
 font = "Noto Serif Telugu"
-zuddha = { hk = "zuddha", nativize = false, digits = "౦౧౨౩౪౫౬౭౮౯" }
+zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "saraLa", nativize = false }
 
 [[script]]
@@ -30,6 +32,7 @@ name = "Devanagari"
 label = "देवनागरी"
 english = "Devanagari"
 lang = "sa"
+digits = "०१२३४५६७८९"
 font = "Noto Serif Devanagari"
 zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "saraLa", nativize = false }
@@ -40,6 +43,7 @@ name = "Kannada"
 label = "ಕನ್ನಡ"
 english = "Kannada"
 lang = "kn"
+digits = "೦೧೨೩೪೫೬೭೮೯"
 font = "Noto Serif Kannada"
 zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "saraLa", nativize = false }
@@ -50,10 +54,11 @@ name = "Tamil"
 label = "தமிழ்"
 english = "Tamil"
 lang = "ta"
+digits = "௦௧௨௩௪௫௬௭௮௯"
 font = "Noto Serif Tamil"
 # Tamil has one letter for ka kha ga gha. zuddha marks them with superscript numerals;
 # saraLa is plain Tamil. Tamil writes class nasals natively, so both take zuddha HK.
-zuddha = { hk = "zuddha", nativize = false, digits = "௦௧௨௩௪௫௬௭௮௯" }
+zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "zuddha", nativize = true, post = ["TamilRemoveApostrophe", "TamilRemoveNumbers"] }
 
 [[script]]
@@ -62,8 +67,9 @@ name = "Malayalam"
 label = "മലയാളം"
 english = "Malayalam"
 lang = "ml"
+digits = "൦൧൨൩൪൫൬൭൮൯"
 font = "Noto Serif Malayalam"
-zuddha = { hk = "zuddha", nativize = false, digits = "൦൧൨൩൪൫൬൭൮൯" }
+zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "saraLa", nativize = false }
 
 [[script]]
@@ -72,6 +78,7 @@ name = "Oriya"
 label = "ଓଡ଼ିଆ"
 english = "Odia"
 lang = "or"
+digits = "୦୧୨୩୪୫୬୭୮୯"
 font = "Noto Serif Oriya"
 zuddha = { hk = "zuddha", nativize = true }
 saraLa = { hk = "saraLa", nativize = true }
@@ -82,6 +89,7 @@ name = "Gujarati"
 label = "ગુજરાતી"
 english = "Gujarati"
 lang = "gu"
+digits = "૦૧૨૩૪૫૬૭૮૯"
 font = "Noto Serif Gujarati"
 zuddha = { hk = "zuddha", nativize = true }
 saraLa = { hk = "saraLa", nativize = true }
@@ -92,6 +100,7 @@ name = "Bengali"
 label = "বাংলা"
 english = "Bengali"
 lang = "bn"
+digits = "০১২৩৪৫৬৭৮৯"
 font = "Noto Serif Bengali"
 zuddha = { hk = "zuddha", nativize = true }
 saraLa = { hk = "saraLa", nativize = true }
@@ -102,8 +111,9 @@ name = "Gurmukhi"
 label = "ਗੁਰਮੁਖੀ"
 english = "Gurmukhi"
 lang = "pa"
+digits = "੦੧੨੩੪੫੬੭੮੯"
 font = "Noto Serif Gurmukhi"
-zuddha = { hk = "zuddha", nativize = true, digits = "੦੧੨੩੪੫੬੭੮੯" }
+zuddha = { hk = "zuddha", nativize = true }
 saraLa = { hk = "saraLa", nativize = true }
 # Aksharamukha writes the pranava as Ik Onkar, which belongs to Sikh scripture.
 replace = { "ੴ" = "ਓਂ" }
@@ -114,6 +124,7 @@ name = "Grantha"
 label = "𑌗𑍍𑌰𑌨𑍍𑌥"
 english = "Grantha"
 lang = "sa"
+digits = "௦௧௨௩௪௫௬௭௮௯"
 font = "Noto Sans Grantha"
 zuddha = { hk = "zuddha", nativize = false }
 saraLa = { hk = "saraLa", nativize = false }

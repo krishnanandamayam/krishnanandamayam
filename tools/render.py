@@ -46,8 +46,11 @@ def _transliterate(texts: list[str], sc: dict, mode: str) -> list[str]:
         )
         for a, b in sc.get("replace", {}).items():
             out = out.replace(a, b)
-        if opts.get("digits"):  # Aksharamukha leaves 0-9 Latin in some scripts
-            out = out.translate(str.maketrans("0123456789", opts["digits"]))
+        if sc.get("digits"):  # Aksharamukha's own choice differs by script: say it per mode
+            native = sc["digits"]
+            out = out.translate(
+                str.maketrans("0123456789", native) if mode == "zuddha" else str.maketrans(native, "0123456789")
+            )
         return out
 
     joined = run(_SEP.join(texts))
