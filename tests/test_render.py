@@ -102,3 +102,32 @@ def test_braces_keep_the_anusvara_in_zuddha_and_are_not_shown():
     spans = render.render_spans(hk, "telugu", "zuddha")
     assert [[hk[a:b] for _, a, b in line] for line in spans] == [["zrI{veMkaTa}ezvaram", "vande", "."]]
     assert "{" not in spans[0][0][0]
+
+
+# 0123456789 in each script's own digits, written by hand.
+DIGITS = {
+    "telugu": "౦౧౨౩౪౫౬౭౮౯",
+    "devanagari": "०१२३४५६७८९",
+    "kannada": "೦೧೨೩೪೫೬೭೮೯",
+    "tamil": "௦௧௨௩௪௫௬௭௮௯",
+    "malayalam": "൦൧൨൩൪൫൬൭൮൯",
+    "odia": "୦୧୨୩୪୫୬୭୮୯",
+    "gujarati": "૦૧૨૩૪૫૬૭૮૯",
+    "bengali": "০১২৩৪৫৬৭৮৯",
+    "gurmukhi": "੦੧੨੩੪੫੬੭੮੯",
+}
+
+
+@pytest.mark.parametrize("script", sorted(DIGITS))
+def test_zuddha_writes_numbers_in_the_scripts_own_digits(script):
+    out = render.render("guccham-0123456789", script, "zuddha")[0]
+    assert out.endswith("-" + DIGITS[script])
+    assert not re.search("[0-9]", out)
+
+
+def test_roman_keeps_latin_digits():
+    assert render.render("guccham-1", "roman", "zuddha") == ["guccham-1"]
+
+
+def test_tamil_superscript_marks_survive_the_digit_change():
+    assert render.render("gaGgA 12", "tamil", "zuddha") == ["க³ங்கா³ ௧௨"]

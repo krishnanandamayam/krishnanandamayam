@@ -46,6 +46,8 @@ def _transliterate(texts: list[str], sc: dict, mode: str) -> list[str]:
         )
         for a, b in sc.get("replace", {}).items():
             out = out.replace(a, b)
+        if opts.get("digits"):  # Aksharamukha leaves 0-9 Latin in some scripts
+            out = out.translate(str.maketrans("0123456789", opts["digits"]))
         return out
 
     joined = run(_SEP.join(texts))
